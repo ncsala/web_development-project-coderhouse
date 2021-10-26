@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Agregro Font Awesome para utilizar iconos-->
+    <script src="https://kit.fontawesome.com/09861335cf.js" crossorigin="anonymous"></script>
+
+    <!--Agrego fuentes de google-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Krub:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Oswald:wght@400;500;600;700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Rubik:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+
+
+    <!--Agrego estilos. Pongo un preload para que cargue mas rapido-->
+    <link rel="preload" href="css/styles.css" as="style">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!--Añado hoja de estilo para la animacion del menu hamburguesa-->
+    <link rel="stylesheet" href="css/hamburgers.css" />
+
+    <title>FoodHack | Hackeamos La Comida</title>
+
+    <!--<style>
+            *{
+                border: 1px solid red !important;
+            }
+        </style> -->
+
+</head>
+
+
+<body>
+
+    <header>
+
+        <!--Menu de navegacion principal-->
+        <nav class="navegacionPrincipal">
+
+            <div class="logoPrincipal">
+                <a href="index.html">
+                    <svg viewBox="-12 -16 170 50">
+
+                        <clippath id="cp-text">
+                            <text text-anchor="middle" x="50%" y="50%" class="text--line">
+                                Hack Food
+                            </text>
+                        </clippath>
+
+                        <!-- sombra -->
+                        <g clip-path="url(#cp-text)" class="shadow">
+                            <rect width="100%" height="100%" class="anim-shape anim-shape--shadow"></rect>
+                        </g>
+
+
+                        <g clip-path="url(#cp-text)" class="colortext">
+                            <rect width="100%" height="100%" class="anim-shape"></rect>
+                            <rect width="80%" height="100%" class="anim-shape"></rect>
+                            <rect width="60%" height="100%" class="anim-shape"></rect>
+                            <rect width="40%" height="100%" class="anim-shape"></rect>
+                            <rect width="20%" height="100%" class="anim-shape"></rect>
+                        </g>
+
+                        <use xlink:href="#s-text" class="text--transparent"></use>
+
+                    </svg>
+                </a>
+            </div>
+
+            <!--Boton hamburguesa-->
+            <button class="hamburger hamburger--spring-r icono" type="button" id="icono">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+
+            <ul class="enlaces ocultarEnlaces" id="enlaces">
+                <li>
+                    <a href="nuestro-equipo.html">Nuestro Equipo</a>
+                </li>
+                <li>
+                    <a href="ubicaciones.html">Ubicaciones</a>
+                </li>
+                <li>
+                    <a href="unite.html">Unite</a>
+                </li>
+                <li>
+                    <a href="contacto.html">Contacto</a>
+                </li>
+            </ul>
+
+        </nav>
+        
+    </header>
+
+    <main>
+
+        <section>
+
+            <div class="contenedorImagenPrincipalContacto">
+                <img src="images/contact/imagenPricipalContacto.jpg" class="imagenPrincipal"
+                    alt="Imagen Principal, Restaurante">
+            </div>
+
+            <h1 class="tituloContacto">Contacto</h1>
+
+            <!--Formulario-->
+            <form class="formulario" action="guardar.php" method="POST">
+
+                <fieldset>
+
+                    <legend>Contactános llenando todos los campos</legend>
+
+                    <div class="contenedorCampos">
+
+                        <div class="campo">
+                            <label for="nombre">Nombre</label>
+                            <input class="inputTexto" type="text" name="nombre" placeholder="Ingrese su nombre"
+                                id="nombre" required>
+                        </div>
+
+                        <div class="campo">
+                            <label for="apellido">Apellido</label>
+                            <input class="inputTexto" type="text" name="apellido" id="apellido"
+                                placeholder="Ingrese su apellido">
+                        </div>
+
+                        <div class="campo">
+                            <label for="email">E-Mail</label>
+                            <input class="inputTexto" type="email" name="email"
+                                placeholder="Ingrese su correo electrónico" id="email" required>
+                        </div>
+
+                        <div class="campo">
+                            <label for="telefono">Teléfono</label>
+                            <input class="inputTexto" type="tel" name="telefono" pattern="[0-9]{7,25}"
+                                placeholder="Ingrese su móvil o un teléfono fijo" id="telefono" required>
+                        </div>
+
+                        <div class="campo">
+                            <label for="ciudad">Ciudad</label>
+                            <input class="inputTexto" type="text" name="ciudad"
+                                placeholder="Ingrese ciudad de residencia" id="ciudad">
+                        </div>
+
+                        <div class="campo">
+                            <label for="asunto">Asunto</label>
+                            <select class="inputTexto" name="asunto" id="asunto">
+                                <option class="inputTexto" value="sugerencia">Sugerencia</option>
+                                <option class="inputTexto" value="consulta">Consulta</option>
+                                <option class="inputTexto" value="critica">Crítica</option>
+                                <option class="inputTexto" value="reclamo">Reclamo</option>
+                                <option class="inputTexto" value="elogio">Elogio</option>
+                                <option class="inputTexto" value="otros">Otros</option>
+                            </select>
+
+                        </div>
+
+                        <div class="campo">
+                            <label for="mensaje">Mensaje</label>
+                            <textarea class="inputTexto" name="mensaje"
+                                placeholder="Ingrese un mensaje que quiera hacernos llegar" id="mensaje"
+                                required></textarea>
+                        </div>
+
+                    </div>
+                    <!--Fin contenedorCampos-->
+
+                    <!-- Botones -->
+                    <div class="alinearDerecha contenedorBotones">
+                        <button class="boton widht100" type="submit">Enviar</button>
+                    </div>
+
+
+                </fieldset>
+
+            </form>
+            <!--Fin Formulario-->
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+
+        <p>© 2021 | Nicolás Cáceres Sala, todos los derechos reservados.</p>
+
+        <ul class="socialLinks">
+            <li>
+                <i class="fa fa-twitter"></i>
+            </li>
+            <li>
+                <i class="fa fa-facebook"></i>
+            </li>
+            <li>
+                <i class="fa fa-youtube"></i>
+            </li>
+            <li>
+                <i class="fab fa-instagram"></i>
+            </li>
+        </ul>
+
+    </footer>
+
+    <script src="js/main.js"></script>
+
+</body>
+
+
+</html>

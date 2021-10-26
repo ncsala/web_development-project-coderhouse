@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+
+
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Agregro Font Awesome para utilizar iconos-->
+    <script src="https://kit.fontawesome.com/09861335cf.js" crossorigin="anonymous"></script>
+
+    <!--Agrego fuentes de google-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Krub:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Oswald:wght@400;500;600;700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Rubik:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+
+
+    <!--Agrego estilos. Pongo un preload para que cargue mas rapido-->
+    <!-- <link rel="preload" href="css/styles.css" as="style">
+    <link rel="stylesheet" href="css/styles.css"> -->
+    <link rel="preload" href="css/main.css" as="style">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!--Añado hoja de estilos para animaciones de texto -->
+    <link rel="preload" href="css/animate.css" as="style">
+    <link rel="stylesheet" href="css/animate.css">
+
+    <!--Añado hoja de estilo para la animacion del boton del menu hamburguesa-->
+    <link rel="preload" href="css/hamburgers.css" as="style">
+    <link rel="stylesheet" href="css/hamburgers.css" />
+
+    <!-- <link rel="preload" href="https://unpkg.com/aos@next/dist/aos.css" as="style">
+        <link  rel="stylesheet " href=" https://unpkg.com/aos@next/dist/aos.css"/> -->
+    <!-- Hoja de estilo para efecto de animaciones que al hacer scroll se activan -->
+    <link rel="preload" href="css/aos.css" as="style"/>
+    <link rel="stylesheet" href="css/aos.css"/>
+
+    <title>FoodHack | Hackeamos Tus Sentidos</title>
+
+    <!--<style>
+        *{
+            border: 1px solid red !important;
+        }
+    </style> -->
+
+</head>
+
+
+<body>
+
+    <header class="header">
+
+        <!--Menu de navegacion principal-->
+        <nav class="header__navPrincipal">
+
+            <a href="index.html" class="header__navPrincipal__logoPrincipal">
+                    <svg viewBox="-12 -17 170 50">
+
+                        <clippath id="cp-text">
+                            <text text-anchor="middle" x="50%" y="50%" class="text--line">
+                                Hack Food
+                            </text>
+                        </clippath>
+
+                        <!-- sombra -->
+                        <g clip-path="url(#cp-text)" class="shadow">
+                            <rect width="100%" height="100%" class="anim-shape anim-shape--shadow"></rect>
+                        </g>
+
+
+                        <g clip-path="url(#cp-text)" class="colortext">
+                            <rect width="100%" height="100%" class="anim-shape"></rect>
+                            <rect width="80%" height="100%" class="anim-shape"></rect>
+                            <rect width="60%" height="100%" class="anim-shape"></rect>
+                            <rect width="40%" height="100%" class="anim-shape"></rect>
+                            <rect width="20%" height="100%" class="anim-shape"></rect>
+                        </g>
+
+                        <!-- <use xlink:href="#s-text" class="text--transparent"></use> -->
+
+                    </svg>
+            </a>
+
+            <!--Boton hamburguesa-->
+            <button class="hamburger hamburger--spring-r iconoHamburguesa" type="button" id="iconoHamburguesa">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+
+            <ul class="header__navPrincipal__enlaces ocultarEnlaces" id="header__navPrincipal__enlaces">
+                <li>
+                    <a href="nuestro-equipo.html">Nuestro Equipo</a>
+                </li>
+                <li>
+                    <a href="ubicaciones.html">Ubicaciones</a>
+                </li>
+                <li>
+                    <a href="unite.html">Unite</a>
+                </li>
+                <li>
+                    <a href="contacto.html">Contacto</a>
+                </li>
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <main class="mainIndex">
+
+        <section>
+
+            <section>
+                <div class="mainIndex__contenedorImagenPrincipal">
+                    <img src="images/images-index/imagenPrincipalIndex.jpg"
+                        alt="Imagen principal, imagen del local">
+                    <div class="transparenciaNegrita"></div>
+                    <!--Para insertar una transparencia sobre la imagen-->
+                    <div class="mainIndex__contenedorImagenPrincipal__titulosPrincipales">
+                        <h1 class="moviendoH1">Tu Lugar Favorito</h1>
+                        <h2 class="moviendoH2 ">Bebe, come y relájate</h2>
+                    </div>
+                </div>
+
+                <div class="centrarGenerico">
+                    <div class="contenedorTextoPrincipal item" data-aos="fade-right">
+                        <p class="item" data-aos="fade-up"> Con 20 de experiencia y un servicio galardonado, Foodhack© es
+                            una franquicia que cuenta con tres
+                            restaurantes comedor, café y cocktail bar con múltiples terrazas con espacios de trabajo
+                            relajantes y
+                            eventos flexibles. Los menús combinan reconocidas firmas con nuevas creaciones, que muestran
+                            sabores de todo el mundo, inspirados en una vida de viajes y aventuras. Nuestra sucursal
+                            principal esta abierta
+                            los días de semana de 9am a 11pm y los fines de semana de 9am a 2am. Contamos con un menú muy
+                            variado, que incluye comidas tradicionales hasta platos muy exóticos.
+                            Vista al mar, tejidos naturales, madera roble, iluminación ambar y acero componen una barra de
+                            comedor. La terraza comedor al aire libre tiene una hermosa instalación de agua y una piscina
+                            climatizada. Tenemos también una barra de café dedicada con deliciosos y únicos sabores. ¡Te
+                            damos la bienvenida todo el día, cualquier día! Amamos el arte de hackear los sabores.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h3 class="tituloPlatillos item" data-aos="fade-down">Algunos de nuestros platillos</h3>
+
+                <div class="seccionPlatos">
+
+                    <img class="imagenPlatos item" data-aos="fade-right"
+                        src="images/images-index/ensalada-vegetariana.jpeg" alt="Ensalada del Oeste">
+                    <div class="textoPlatos textoEnsalada item" data-aos="fade-right">
+                        <div class="centrar">
+                            <h4>Ensalada del Oeste</h4>
+                            <p>
+                                Las ensaladas son siempre platos frescos, livianos, apetitosos que deben atraer el
+                                interes de los comensales. En ninguna otra preparación de alimentos hay tantos gustos
+                                individuales y tantas posibilidades de variación.
+                                Nuestra reciente creación se ha convertido en una sensación entre nuestros clientes.
+
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="textoPlatos textoSopa item" data-aos="fade-left">
+                        <div class="centrar">
+                            <h4>Sopa Chowder</h4>
+                            <p>
+                                Es una sopa espesa en la que se dejan los alimentos en trozos bastantes grandes.
+                                Fácilmente puede ser el plato único, ya que es de un alto valor calórico y muy nutritivo
+                                por la variedad de ingredientes que generalmente la componen.
+                                Nuestra versión tiene un toque moderno que te encatará.
+                            </p>
+                        </div>
+                    </div>
+                    <img class="imagenPlatos item" data-aos="fade-left" src="images/images-index/sopa.jpeg"
+                        alt="Sopa Especial">
+
+                    <img class="imagenPlatos item" data-aos="fade-up" src="images/images-index/especial-chef.jpg"
+                        alt="Especial del chef">
+                    <div class="textoPlatos textoChef item" data-aos="fade-up">
+                        <div class="centrar">
+                            <h4>Especial del Chef</h4>
+                            <p>
+                                Muchos restaurantes tienen su propia versión de esta receta, en nuestro caso contamos
+                                con un clásico uruguayo, el Chupín de pescado. Se prepara recién sacado del mar y se
+                                utilizan corvinas preferentemente. Sabemos que nuestro chef siempre lo prepara a la
+                                perfección. Te deleitarás en cada bocado.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+        </section>
+
+    </main>
+
+
+    <footer class="footer">
+        <p>© 2021 | Nicolás Cáceres Sala, todos los derechos reservados.</p>
+
+        <ul class="socialLinks">
+            <li>
+                <i class="fa fa-twitter"></i>
+            </li>
+            <li>
+                <i class="fa fa-facebook"></i>
+            </li>
+            <li>
+                <i class="fa fa-youtube"></i>
+            </li>
+            <li>
+                <i class="fa fa-instagram"></i>
+            </li>
+        </ul>
+    </footer>
+
+    <!-- Java Script para efecto de animaciones que al hacer scroll se activan -->
+    <!-- <script script  src = " https://unpkg.com/aos@next/dist/aos.js " > </script>
+    <script script > 
+        AOS.init ( 
+            { duration: 1200,}); 
+    </script>  -->
+
+    <!-- Java Script para efecto de animaciones que al hacer scroll se activan -->
+    <script src="js/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+        });
+    </script>
+
+    <!--Mi archivo js-->
+    <script src="js/main.js"></script>
+
+</body>
+
+
+</html>
