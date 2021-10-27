@@ -13,7 +13,7 @@ hamburger.addEventListener("click", function()
 //--------------------Para Desplegar enlaces de menu hamburguesa-------------------///
 
 
-let boton = document.getElementById("iconoHamburguesa");
+let boton = document.getElementById("header__navPrincipal__iconoHamburguesa");
 let enlaces = document.getElementById("header__navPrincipal__enlaces");
 let contador = 0;
 
@@ -41,7 +41,7 @@ window.addEventListener('resize', function(){
 
 
 //-------------Typewriter------------------/ 
-let app = document.getElementById('typewriter');
+let app = document.getElementById('sectionUbicacion__typewriter');
 
 let typewriter = new Typewriter(app, {
     loop: true,

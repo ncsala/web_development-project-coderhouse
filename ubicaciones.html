@@ -18,8 +18,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
 
     <!--Agrego estilos. Pongo un preload para que cargue mas rapido-->
-    <link rel="preload" href="css/styles.css" as="style">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preload" href="css/main.css" as="style">
+    <link rel="stylesheet" href="css/main.css">
 
     <!--Añado hoja de estilo para la animacion del menu hamburguesa-->
     <link rel="stylesheet" href="css/hamburgers.css" />
@@ -42,14 +42,13 @@
 
 <body class="bodyUbicacion">
 
-    <header>
-        
-        <!--Menu de navegacion principal-->
-        <nav class="navegacionPrincipal">
+    <header class="header">
 
-            <div class="logoPrincipal">
-                <a href="index.html">
-                    <svg viewBox="-12 -16 170 50">
+        <!--Menu de navegacion principal-->
+        <nav class="header__navPrincipal">
+
+            <a href="index.html" class="header__navPrincipal__logoPrincipal">
+                    <svg viewBox="-12 -17 170 50">
 
                         <clippath id="cp-text">
                             <text text-anchor="middle" x="50%" y="50%" class="text--line">
@@ -71,20 +70,19 @@
                             <rect width="20%" height="100%" class="anim-shape"></rect>
                         </g>
 
-                        <use xlink:href="#s-text" class="text--transparent"></use>
+                        <!-- <use xlink:href="#s-text" class="text--transparent"></use> -->
 
                     </svg>
-                </a>
-            </div>
+            </a>
 
             <!--Boton hamburguesa-->
-            <button class="hamburger hamburger--spring-r icono" type="button" id="icono">
+            <button class="hamburger hamburger--spring-r header__navPrincipal__iconoHamburguesa" type="button" id="header__navPrincipal__iconoHamburguesa">
                 <span class="hamburger-box">
                     <span class="hamburger-inner"></span>
                 </span>
             </button>
 
-            <ul class="enlaces ocultarEnlaces" id="enlaces">
+            <ul class="header__navPrincipal__enlaces ocultarEnlaces" id="header__navPrincipal__enlaces">
                 <li>
                     <a href="nuestro-equipo.html">Nuestro Equipo</a>
                 </li>
@@ -105,42 +103,39 @@
 
     <main>
 
-        <section>
-            <!-- <div class="contenedorImagenPrincipalContacto">
-                <img src="/images/imagenPricipalContacto.jpg" class="imagenPrincipal" alt="Imagen Principal, Restaurante">
-            </div> -->
+        <section class="sectionUbicacion">
 
-            <h1 class="tituloContacto">Nuestros Locales</h1>    
+            <h1 class="sectionUbicacion__h1">Nuestros Locales</h1>    
 
-            <h2 class="tituloContacto">Ubicados en Wellington</h2> 
-            <h2 id="typewriter"></h2>
+            <h2 class="sectionUbicacion__h2">Ubicados en Wellington</h2> 
+            <h2 id="sectionUbicacion__typewriter"></h2>
                             
-            <section class="ubicacionSucursal">
+            <section class="sectionSucursal">
 
-                    <div class="contenedorListado">
+                    <div class="sectionSucursal__contenedor">
 
-                        <div class="listadoUbicaciones">
-                            <h3>Sucursal Punta Carretas</h3>
-                            <ul>
+                        <div class="sectionSucursal__contenedor__listado">
+                            <h3 class="sectionSucursal__listado_h3">Sucursal Punta Carretas</h3>
+                            <ul class="sectionSucursal__listado__ul">
                                 <li>
-                                    <h4>Horario</h4>
-                                    <ul>
+                                    <h4 class="sectionSucursal__listado_h4">Horario</h4>
+                                    <ul class="sectionSucursal__listado__ul__ul">
                                         <li>Lunes a jueves: 09:00 - 23:00</li>
                                         <li>Lunes a jueves: 09:00 - 02:00</li>
                                     </ul>
                                 </li>
                                 
                                 <li>
-                                    <h4>Teléfono</h4>
-                                    <ul>
+                                    <h4 class="sectionSucursal__listado_h4">Teléfono</h4>
+                                    <ul class="sectionSucursal__listado__ul__ul">
                                         <li>26986578</li>
                                         <li>099354987</li>
                                     </ul>
                                 </li>
                             
                                 <li>
-                                    <h4>Dirección</h4>
-                                    <ul>
+                                    <h4 class="sectionSucursal__listado_h4">Dirección</h4>
+                                    <ul class="sectionSucursal__listado__ul__ul">
                                         <li>Rivera 8432 Esq. Monserrat.</li>
                                     </ul>
                                 </li>    
@@ -149,83 +144,86 @@
                         
                     </div>
                 
-                    <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2315.854839600672!2d-55.968507336849825!3d-34.82824998223416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f89a6bf9a00c5%3A0x7591edaaa2cc894c!2sDe%20Madrid!5e0!3m2!1ses-419!2suy!4v1633223521558!5m2!1ses-419!2suy" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    <iframe class="sectionSucursal__contenedor__mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2315.854839600672!2d-55.968507336849825!3d-34.82824998223416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f89a6bf9a00c5%3A0x7591edaaa2cc894c!2sDe%20Madrid!5e0!3m2!1ses-419!2suy!4v1633223521558!5m2!1ses-419!2suy" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                     
-                    
-
             </section>
 
-            <section class="ubicacionSucursal item" data-aos="fade-up">
-                
-                <div class="contenedorListado">
-                    <div class="listadoUbicaciones">
-                        <h3>Sucursal Punta Carretas</h3>
-                        <ul>
+            <section class="sectionSucursal item" data-aos="fade-up">
+
+                <div class="sectionSucursal__contenedor">
+
+                    <div class="sectionSucursal__contenedor__listado">
+                        <h3 class="sectionSucursal__listado_h3">Sucursal Punta Carretas</h3>
+                        <ul class="sectionSucursal__listado__ul">
                             <li>
-                                <h4>Horario</h4>
-                                <ul>
+                                <h4 class="sectionSucursal__listado_h4">Horario</h4>
+                                <ul class="sectionSucursal__listado__ul__ul">
                                     <li>Lunes a jueves: 09:00 - 23:00</li>
                                     <li>Lunes a jueves: 09:00 - 02:00</li>
                                 </ul>
                             </li>
                             
                             <li>
-                                <h4>Teléfono</h4>
-                                <ul>
+                                <h4 class="sectionSucursal__listado_h4">Teléfono</h4>
+                                <ul class="sectionSucursal__listado__ul__ul">
                                     <li>26986578</li>
                                     <li>099354987</li>
                                 </ul>
                             </li>
                         
                             <li>
-                                <h4>Dirección</h4>
-                                <ul>
+                                <h4 class="sectionSucursal__listado_h4">Dirección</h4>
+                                <ul class="sectionSucursal__listado__ul__ul">
                                     <li>Rivera 8432 Esq. Monserrat.</li>
                                 </ul>
                             </li>    
                         </ul>
                     </div>
+                    
                 </div>
-
-                <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2315.854839600672!2d-55.968507336849825!3d-34.82824998223416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f89a6bf9a00c5%3A0x7591edaaa2cc894c!2sDe%20Madrid!5e0!3m2!1ses-419!2suy!4v1633223521558!5m2!1ses-419!2suy" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            
+                <iframe class="sectionSucursal__contenedor__mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2315.854839600672!2d-55.968507336849825!3d-34.82824998223416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f89a6bf9a00c5%3A0x7591edaaa2cc894c!2sDe%20Madrid!5e0!3m2!1ses-419!2suy!4v1633223521558!5m2!1ses-419!2suy" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 
             </section>
 
-            <section class="ubicacionSucursal item" data-aos="fade-up">
-                
-                <div class="contenedorListado">
-                    <div class="listadoUbicaciones">
-                        <h3>Sucursal Punta Carretas</h3>
-                        <ul>
+            <section class="sectionSucursal item" data-aos="fade-up">
+
+                <div class="sectionSucursal__contenedor">
+
+                    <div class="sectionSucursal__contenedor__listado">
+                        <h3 class="sectionSucursal__listado_h3">Sucursal Punta Carretas</h3>
+                        <ul class="sectionSucursal__listado__ul">
                             <li>
-                                <h4>Horario</h4>
-                                <ul>
+                                <h4 class="sectionSucursal__listado_h4">Horario</h4>
+                                <ul class="sectionSucursal__listado__ul__ul">
                                     <li>Lunes a jueves: 09:00 - 23:00</li>
                                     <li>Lunes a jueves: 09:00 - 02:00</li>
                                 </ul>
                             </li>
                             
                             <li>
-                                <h4>Teléfono</h4>
-                                <ul>
+                                <h4 class="sectionSucursal__listado_h4">Teléfono</h4>
+                                <ul class="sectionSucursal__listado__ul__ul">
                                     <li>26986578</li>
                                     <li>099354987</li>
                                 </ul>
                             </li>
                         
                             <li>
-                                <h4>Dirección</h4>
-                                <ul>
+                                <h4 class="sectionSucursal__listado_h4">Dirección</h4>
+                                <ul class="sectionSucursal__listado__ul__ul">
                                     <li>Rivera 8432 Esq. Monserrat.</li>
                                 </ul>
                             </li>    
                         </ul>
                     </div>
+                    
                 </div>
-                
-                <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2315.854839600672!2d-55.968507336849825!3d-34.82824998223416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f89a6bf9a00c5%3A0x7591edaaa2cc894c!2sDe%20Madrid!5e0!3m2!1ses-419!2suy!4v1633223521558!5m2!1ses-419!2suy" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                
+        
+                <iframe class="sectionSucursal__contenedor__mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2315.854839600672!2d-55.968507336849825!3d-34.82824998223416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f89a6bf9a00c5%3A0x7591edaaa2cc894c!2sDe%20Madrid!5e0!3m2!1ses-419!2suy!4v1633223521558!5m2!1ses-419!2suy" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            
             </section>
+
 
         </section>
 
@@ -236,10 +234,9 @@
 
 
     <footer class="footer">
+        <p class="footer__p">© 2021 | Nicolás Cáceres Sala, todos los derechos reservados.</p>
 
-        <p>© 2021 | Nicolás Cáceres Sala, todos los derechos reservados.</p>
-
-        <ul class="socialLinks">
+        <ul class="footer__socialLinks">
             <li>
                 <i class="fa fa-twitter"></i>
             </li>
@@ -250,10 +247,9 @@
                 <i class="fa fa-youtube"></i>
             </li>
             <li>
-                <i class="fab fa-instagram"></i>
+                <i class="fa fa-instagram"></i>
             </li>
         </ul>
-
     </footer>
 
     <!--Scripts de JavaScript-->

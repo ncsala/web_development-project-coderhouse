@@ -18,8 +18,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
 
     <!--Agrego estilos. Pongo un preload para que cargue mas rapido-->
-    <link rel="preload" href="css/styles.css" as="style">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preload" href="css/main.css" as="style">
+    <link rel="stylesheet" href="css/main.css">
 
     <title>FoodHack | Hackeamos La Comida</title>
 
@@ -37,14 +37,13 @@
 
 <body>
 
-    <header>
+    <header class="header">
 
         <!--Menu de navegacion principal-->
-        <nav class="navegacionPrincipal">
+        <nav class="header__navPrincipal">
 
-            <div class="logoPrincipal">
-                <a href="index.html">
-                    <svg viewBox="-12 -16 170 50">
+            <a href="index.html" class="header__navPrincipal__logoPrincipal">
+                    <svg viewBox="-12 -17 170 50">
 
                         <clippath id="cp-text">
                             <text text-anchor="middle" x="50%" y="50%" class="text--line">
@@ -66,20 +65,19 @@
                             <rect width="20%" height="100%" class="anim-shape"></rect>
                         </g>
 
-                        <use xlink:href="#s-text" class="text--transparent"></use>
+                        <!-- <use xlink:href="#s-text" class="text--transparent"></use> -->
 
                     </svg>
-                </a>
-            </div>
+            </a>
 
             <!--Boton hamburguesa-->
-            <button class="hamburger hamburger--spring-r icono" type="button" id="icono">
+            <button class="hamburger hamburger--spring-r header__navPrincipal__iconoHamburguesa" type="button" id="header__navPrincipal__iconoHamburguesa">
                 <span class="hamburger-box">
                     <span class="hamburger-inner"></span>
                 </span>
             </button>
 
-            <ul class="enlaces ocultarEnlaces" id="enlaces">
+            <ul class="header__navPrincipal__enlaces ocultarEnlaces" id="header__navPrincipal__enlaces">
                 <li>
                     <a href="nuestro-equipo.html">Nuestro Equipo</a>
                 </li>
@@ -102,14 +100,13 @@
     <main>
 
         <section>
-
-                        
+            
             <h1>Queremos Conocerte</h1>
             
             <section class="queremosConocerte">
                 
-                <div class="contenedorImagenUnite">
-                    <img class="imagenConocerte" src="images/queremos-conocerte/queremos-conocerte2.jpg" alt="Quiénes somos"> 
+                <div class="contenedorImgPrincipal__imgPrincipal contenedorImgPrincipal--unite ">
+                    <img class="contenedorImgPrincipal__imgPrincipal contenedorImgPrincipal__imgPrincipal--unite" src="images/queremos-conocerte/queremos-conocerte2.jpg" alt="Quiénes somos"> 
                 </div>
                             
 
@@ -170,10 +167,9 @@
 
 
     <footer class="footer">
+        <p class="footer__p">© 2021 | Nicolás Cáceres Sala, todos los derechos reservados.</p>
 
-        <p>© 2021 | Nicolás Cáceres Sala, todos los derechos reservados.</p>
-
-        <ul class="socialLinks">
+        <ul class="footer__socialLinks">
             <li>
                 <i class="fa fa-twitter"></i>
             </li>
@@ -184,10 +180,9 @@
                 <i class="fa fa-youtube"></i>
             </li>
             <li>
-                <i class="fab fa-instagram"></i>
+                <i class="fa fa-instagram"></i>
             </li>
         </ul>
-
     </footer>
 
 

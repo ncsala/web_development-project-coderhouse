@@ -1,8 +1,6 @@
 @charset "UTF-8";
 /*Defino paleta de colores y fuentes a usar*/
 /* --font6: 'Oswald', sans-serif; */
-/* $box-shadow: 5px 0 15px rgb(0 0 0 / 0.2); */
-/* me da problemas con sass*/
 /*GENERAL----------------------------------------------------------------------------------------------------------------------------*/
 /*Configuro para utilizar REM en lugar de PX, 1 rem = 10 px------*/
 /*Tambien para manejar mejor el Box Model*/
@@ -25,16 +23,16 @@ body {
   margin: 0;
   padding: 0; }
 
-/* h1, h2, h3 {
-    font-family: $font6;
-} */
-/* h1 {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    font-size: 3.5rem;
-    text-align: center;
-    color: $negro;
-} */
+h1, h2, h3 {
+  font-family: "Krub", sans-serif; }
+
+h1 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-size: 3.5rem;
+  text-align: center;
+  color: #000000; }
+
 /*FIN GENERAL----------------------------------------------------------------------------------------------------------------------------*/
 /*HEADER---------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 .header {
@@ -44,9 +42,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 100;
-  opacity: 0.9;
-  /*para desplegar y ocultar los enlaces del menu hamburguesa*/
-  /*--------------------------------------------------------------*/ }
+  opacity: 0.9; }
   .header .header__navPrincipal {
     height: 100%;
     width: 100%;
@@ -113,7 +109,7 @@ body {
         font-family: "Krub", sans-serif;
         font-weight: 700;
         font-style: italic; }
-    .header .header__navPrincipal .iconoHamburguesa {
+    .header .header__navPrincipal .header__navPrincipal__iconoHamburguesa {
       z-index: 110; }
     .header .header__navPrincipal .header__navPrincipal__enlaces {
       position: fixed;
@@ -137,7 +133,7 @@ body {
         cursor: pointer;
         color: #d83863; }
     @media (min-width: 769px) {
-      .header .header__navPrincipal #iconoHamburguesa {
+      .header .header__navPrincipal .header__navPrincipal__iconoHamburguesa {
         display: none;
         color: #d83863; }
       .header .header__navPrincipal .header__navPrincipal__enlaces {
@@ -154,6 +150,7 @@ body {
           --clippy1: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
           --clippy2: polygon(0 0, 0 0, 0 100%, 0% 100%); }
         .header .header__navPrincipal .header__navPrincipal__enlaces a:hover {
+          cursor: pointer;
           color: #f8f3e3; }
         .header .header__navPrincipal .header__navPrincipal__enlaces a::before {
           content: "";
@@ -179,16 +176,19 @@ body {
         .header .header__navPrincipal .header__navPrincipal__enlaces a:hover:after {
           --clippy2: polygon(0 0, 100% 0, 100% 100%, 0 100%);
           color: #d83863; } }
-  @media screen and (max-width: 769px) {
-    .header {
-      /*para ocultar el menu*/ }
-      .header .ocultarEnlaces {
-        -webkit-clip-path: circle(0% at 100% 0%);
-        clip-path: circle(0% at 100% 0%); }
-      .header .circuloEnlace {
-        -webkit-clip-path: circle(150% at 100% 0%);
-        clip-path: circle(150% at 100% 0%); } }
 
+/*para desplegar y ocultar los enlaces del menu hamburguesa*/
+@media screen and (max-width: 769px) {
+  /*para ocultar el menu*/
+  .ocultarEnlaces {
+    -webkit-clip-path: circle(0% at 100% 0%);
+    clip-path: circle(0% at 100% 0%); }
+  /*para que muestre el despliegue del menu con forma circular*/
+  .circuloEnlace {
+    -webkit-clip-path: circle(150% at 100% 0%);
+    clip-path: circle(150% at 100% 0%); } }
+
+/*--------------------------------------------------------------*/
 /*Para agrandar un poquito el header en pantalla grande*/
 @media (min-width: 769px) {
   .header {
@@ -197,13 +197,13 @@ body {
 /*FIN HEADER---------------------------------------------------------------------------------------------------------------------------------------------------------*/
 /*MAIN----------------------------------------------------------------------------------------------------------------------------------------------------------*/
 /*PAGINA PRINCIPAL INDEX--------------------------------------------------------------------------------------------------------------------------------------------------*/
-.mainIndex__contenedorImagenPrincipal {
+.contenedorImgPrincipal {
   width: 100%;
   height: 100%;
   position: relative;
   z-index: 1; }
 
-.mainIndex__contenedorImagenPrincipal img {
+.contenedorImgPrincipal__imgPrincipal {
   width: 100%;
   height: 100%;
   object-fit: cover; }
@@ -220,7 +220,7 @@ body {
     background-color: $negrotransparentado;
 }
  */
-.mainIndex__contenedorImagenPrincipal__titulosPrincipales {
+.contenedorImgPrincipal__titulos {
   /*  overflow: hidden; */
   white-space: nowrap;
   display: initial;
@@ -230,7 +230,7 @@ body {
   transform: translate(-50%, -50%);
   margin: 0; }
 
-.mainIndex__contenedorImagenPrincipal__titulosPrincipales h1 {
+.contenedorImgPrincipal__titulos__h1 {
   width: 100%;
   margin: 0;
   font-family: "Krub", sans-serif;
@@ -238,27 +238,36 @@ body {
   font-weight: 700;
   color: #f8f3e3; }
 
-.mainIndex__contenedorImagenPrincipal__titulosPrincipales h2 {
+.contenedorImgPrincipal__titulos__h2 {
   margin: 0;
   font-family: "Krub", sans-serif;
   font-size: 1.8rem;
   font-weight: 700;
   color: #f8f3e3; }
 
+.contenedorImgPrincipal__titulos__h2--moviendoH1 {
+  display: inline-block;
+  margin: 0 0.5rem;
+  animation: bounceInLeft;
+  animation-duration: 2.5s; }
+
+.contenedorImgPrincipal__titulos__h2--moviendoH2 {
+  margin: 0 0.5rem;
+  animation: bounceInUp;
+  animation-duration: 2.5s; }
+
 /*ocultar en celular?*/
 /* .titulosPrincipales  {
     display: none;
 } */
 .contenedorTextoPrincipal {
-  padding: 5%; }
-
-.centrarGenerico {
   display: flex;
   justify-content: center;
   align-items: center; }
 
-.contenedorTextoPrincipal p {
-  padding: 4% 0;
+.contenedorTextoPrincipal__p {
+  margin: 3%;
+  padding: 4% 3%;
   border-top-left-radius: 2rem;
   border-bottom-right-radius: 2rem;
   border-top: #242121 0.7rem solid;
@@ -267,27 +276,25 @@ body {
   font-weight: 500;
   font-size: 1.7rem;
   text-align: left;
-  /* color: #333; */
   line-height: 2.8rem; }
 
 /*Texto  principal- para pantalla grande ---------------*/
 @media (min-width: 769px) {
-  .mainIndex__contenedorImagenPrincipal__titulosPrincipales h1 {
+  .contenedorImgPrincipal__titulos__h1 {
     font-size: 5rem; }
-  .mainIndex__contenedorImagenPrincipal__titulosPrincipales h2 {
+  .contenedorImgPrincipal__titulos__h2 {
     font-size: 2.8rem; }
   .contenedorTextoPrincipal {
+    width: 100%; }
+  .contenedorTextoPrincipal__p {
     width: 90%;
-    border-bottom-right-radius: 2rem;
-    border-left: #242121 5rem solid;
-    border-right: #242121 5rem solid;
-    border-top: #242121 0.7rem solid;
-    border-bottom: #242121 0.7rem solid;
     margin: 2%;
-    padding: 0% 1%; }
-  .contenedorTextoPrincipal p {
     padding: 2%;
-    border: initial; } }
+    border-bottom-right-radius: 2rem;
+    border-left: #242121 4rem solid;
+    border-right: #242121 4rem solid;
+    border-top: #242121 0.7rem solid;
+    border-bottom: #242121 0.7rem solid; } }
 
 /*------------------------------------------------------*/
 .tituloPlatillos {
@@ -355,9 +362,6 @@ body {
 /*Pagina Ubicaciones--------------------------------------------*/
 .bodyUbicacion {
   background-image: url(../images/buenas/AB5I6799_NikkiTo.jpg);
-  /*    background-image: url(/images/img-varias/pexels-adrienn-1537635.jpg);  */
-  /*     background-image: url(/images/ubicaciones.jpg); 
- */
   /* Para dejar la imagen de fondo centrada, vertical y
     horizontalmente */
   background-position: center center;
@@ -371,19 +375,18 @@ body {
     de fondo o si hay problemas para cargarla */
   background-color: #f8f3e3; }
 
-.bodyUbicacion h1, .bodyUbicacion h2 {
-  font-family: "Krub", sans-serif;
-  font-weight: 700;
+.sectionUbicacion__h1, .sectionUbicacion__h2 {
+  font-weight: 600;
   color: #f8f3e3; }
 
-.bodyUbicacion h1 {
+.sectionUbicacion__h1 {
   font-size: 3.5rem; }
 
-.bodyUbicacion h2 {
+.sectionUbicacion__h2 {
   margin-top: 3rem;
   font-size: 2.8rem; }
 
-#typewriter {
+#sectionUbicacion__typewriter {
   margin-top: 0.5rem;
   margin-bottom: 4rem;
   font-family: "Krub", sans-serif;
@@ -391,88 +394,77 @@ body {
   font-size: 2.8rem;
   font-weight: 600; }
 
-.bodyUbicacion section section {
+.sectionSucursal {
   border: #106BA0 solid;
   margin-bottom: 8rem;
   border-radius: 1rem;
-  /* border: $rojo) solid 0.2rem; */
+  /* border: $rojo solid 0.2rem; */
   opacity: 0.9; }
 
-.contenedorListado {
+.sectionSucursal__contenedor {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* padding-top: 2rem; */
-  /* width: 100%; */
   background-color: #242121;
-  border-radius: 0.5rem; }
+  border-radius: 0.5rem;
+  color: #f8f3e3; }
 
-.mapa {
+.sectionSucursal__contenedor__mapa {
   width: 100%; }
 
-.ubicacionSucursal h3, .ubicacionSucursal h4 {
+.sectionSucursal__listado_h3, .sectionSucursal__listado_h4 {
   font-size: 2.3rem;
   font-weight: 500;
   font-family: "Krub", sans-serif; }
 
-.ubicacionSucursal h3 {
+.sectionSucursal__listado_h3 {
   color: #d83863;
   margin-bottom: 2rem;
   margin-top: 2rem; }
 
-.ubicacionSucursal h4 {
+.sectionSucursal__listado_h4 {
   margin-top: 1rem;
   color: #f8c25c; }
 
-.listadoUbicaciones {
-  color: #f8f3e3;
-  /* margin-left: 5%;
-    padding-bottom: 1%; */ }
-
-.listadoUbicaciones ul {
+.sectionSucursal__listado__ul {
   padding: 0;
   margin: 1rem;
   font-family: "Krub", sans-serif;
   font-size: 2.2rem;
-  list-style: none;
-  margin-top: 1.5rem; }
+  margin-top: 1.5rem;
+  list-style: none; }
 
-.listadoUbicaciones ul ul {
-  margin-top: 3rem; }
+.sectionSucursal__listado__ul__ul {
+  margin-top: 3rem;
+  list-style: none; }
 
 @media (min-width: 769px) {
-  .contenedorListado {
+  .sectionSucursal {
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 8rem; }
+  .sectionUbicacion__h2 {
+    margin-left: 10%; }
+  #sectionUbicacion__typewriter {
+    margin-left: 10%; }
+  .sectionSucursal__contenedor {
     display: flex;
     justify-content: center;
-    align-items: center; }
-  .bodyUbicacion h2 {
-    margin-left: 10%; }
-  #typewriter {
-    margin-left: 10%; }
-  .bodyUbicacion section {
-    width: 95%;
-    margin: 0 auto; }
-  .bodyUbicacion section section {
-    display: flex;
-    flex-direction: row; }
-  .mapa {
-    width: 50%;
-    height: 55rem;
-    border-radius: 0.5rem;
-    /* margin-left: 4rem; */ }
-  .contenedorListado {
+    align-items: center;
     width: 50%;
     border-radius: 0.5rem; }
-  /* 
-    .listadoUbicaciones { 
-        margin-top: 3rem;
-    }
- */ }
+  .sectionSucursal__contenedor__mapa {
+    width: 50%;
+    height: 55rem;
+    border-radius: 0.5rem; } }
 
 @media (min-width: 1200px) {
-  .bodyUbicacion section {
+  .sectionSucursal {
     width: 80%;
-    margin: 0 auto; } }
+    margin: 0 auto;
+    margin-bottom: 8rem; } }
 
 /*Fin pagina Ubicacion----------------------------------------------*/
 /*PAGINA NUESTRO EQUIPO--------------------------------------------*/
@@ -507,31 +499,9 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  cursor: pointer;
-  /* position:absolute;
-    left: -100%;
-    right: -100%;
-    top: -100%;
-    bottom: -100%;
-    margin: auto;
-    min-height: 100%;
-    min-width: 100%;
-    object-fit: cover;
-    cursor: pointer; */ }
+  cursor: pointer; }
 
 .equipoHover {
-  --primario: #242121;
-  --secundario: #f8c25c;
-  --blanco: #f8f3e3;
-  --rojo: #d83863;
-  --azul: #0097a7;
-  --otroAzul: #106BA0;
-  --azulOscuro: #06273a;
-  --rojizo: #ff2047;
-  --gris: #f3f3f3;
-  --otroGris: #757575;
-  --negro: #000000;
-  --negrotransparentado: #00000050;
   background: #06273aab;
   /* background: #00000069;  */
   /* background: #dc143c8c; */
@@ -553,41 +523,13 @@ body {
 .fotosItem:hover .equipoHover {
   transform: translateX(0%); }
 
-/* .quienesSomos {
-    display: flex;
-    margin: auto;
-    width: 65%;
-}
-
-.quienesSomos img {
-    transform: rotate(-3deg);
-}
-
-.textoQuienesSomos {
-    margin-left: 5rem;
-    width: 80%;
-    font-family: $font6);
-    font-weight: 500;
-    font-size: 2.1rem;
-}
-
-.textoQuienesSomos p {
-    margin-top: 5rem;
-} */
 /*FIN PAGINA NUESTRO EQUIPO---------------------------------------------*/
 /* PAGINA UNITE QUEREMOS CONOCERTE--------------------------------------------*/
-.contenedorImagenUnite {
-  width: 100%;
-  height: 100%; }
-
-/* .cajaTextoUnite {
-    margin: auto;
+/*quito pq uso clases generales para imagen */
+/* .contenedorImagenUnite {
+    width: 100%;
+    height: 100%;
 } */
-.imagenConocerte {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; }
-
 .textoFormularioUnite p {
   width: 95%;
   font-family: "Krub", sans-serif;
@@ -602,8 +544,7 @@ body {
   .textoFormularioUnite {
     margin-left: 4rem;
     width: 85%; }
-  .imagenConocerte {
-    width: 100%;
+  .contenedorImgPrincipal__imgPrincipal--unite {
     height: 70rem; }
   .queremosConocerte {
     display: flex;
@@ -649,15 +590,14 @@ body {
 
 /*FIN PAGINA QUEREMOS CONOCERTE--------------------------------------------------- ------------*/
 /*PAGINA CONTACTO---------------------------------------------------------------------------------*/
-.contenedorImagenPrincipalContacto {
-  width: 100%;
-  height: 20rem;
-  position: relative; }
+.contenedorImgPrincipal__imgPrincipal--contacto {
+  /* width: 100%; */
+  height: 20rem; }
 
 /*formulario---------------------------------------------------------------*/
 .formulario {
   background-color: #242121;
-  width: min(100rem, 100px);
+  width: min(100rem, 100%);
   /*utilizar el valor mas pequeño VERSION*/
   /* width: min(100rem, 100%); */
   /*utilizar el valor mas pequeño*/
@@ -793,7 +733,7 @@ body {
   background-color: #000000;
   /* box-shadow: $box-shadow; */ }
 
-.footer p {
+.footer__p {
   text-align: center;
   font-family: "Krub", sans-serif;
   font-size: 2rem;
@@ -801,11 +741,11 @@ body {
   color: #f8f3e3;
   margin-bottom: 0.7rem; }
 
-@media screen and (min-width: 760px) {
+@media screen and (min-width: 769px) {
   .footer {
     height: 17.5rem; } }
 
-.socialLinks {
+.footer__socialLinks {
   display: flex;
   justify-content: space-between;
   width: 15rem;
@@ -813,86 +753,21 @@ body {
   cursor: pointer; }
 
 .fa-twitter:hover {
-  color: #7adcf9;
   color: #4bc9f5; }
 
 .fa-facebook:hover {
-  color: #548abf;
   color: #295b9e; }
 
 .fa-youtube:hover {
-  color: #df192a;
   color: #c41222; }
 
 .fa-instagram:hover {
-  color: #7fc121;
-  color: #298733;
   color: #ff9259; }
 
 /*FIN FOOTER-----------------------------------------------------*/
 /*----------------------------------------*/
 /*FIN FOOTER-----------------------------------------------------------------------------------------------------------------------------------------------*/
 /*OBJETOS ANIMADOS-------------------------------*/
-.moviendoH1 {
-  display: inline-block;
-  margin: 0 0.5rem;
-  animation: bounceInLeft;
-  /* referring directly to the animation's @keyframe declaration */
-  animation-duration: 2.5s;
-  /* don't forget to set a duration! */
-  /* animation: movimientoTituloH1 1.5s ease-in; */ }
-
-.moviendoH2 {
-  /*  animation: movimientoTituloH2 1.5s ease-in; */
-  /* display: inline-block; */
-  margin: 0 0.5rem;
-  animation: bounceInUp;
-  /* referring directly to the animation's @keyframe declaration */
-  animation-duration: 2.5s;
-  /* don't forget to set a duration! */ }
-
-/* 
-@keyframes movimientoTituloH1 {
-    0% {
-        transform: translateX(-75rem);
-        opacity: 0.3;
-    }
-
-    100% {
-        transform: translateX(0);
-    }
-}
-
-@keyframes movimientoTituloH2 {
-    0%
-    {
-        transform: translateY(40rem);
-        opacity: 0;
-    }
-    100%
-    {
-        transform: translateY(0);
-    }
-} */
-/*Efectos de botones -----------------------------------*/
-/*efecto boton rojo*/
-/* .boton:hover {
-    animation: sombra_pulso 1000ms 1;
-    background-color: $rojo);
-    color:$primario);
-}
-
-@keyframes sombra_pulso {
-    0% 
-    {
-        box-shadow: 0 0 0 0 #d83863;
-    }
-    100% 
-    {
-        box-shadow: 0 0 8px 16px rgba(32, 226, 215, 0);
-    }
-} */
-/*efecto boton rojo*/
 /*boton de contacto*/
 .boton:hover {
   animation: sombra_pulso 1000ms 1;

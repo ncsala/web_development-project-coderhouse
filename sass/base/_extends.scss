@@ -1,0 +1,19 @@
+%flexRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin cuadrado($ancho, $alto)
+{
+    width: $ancho;
+    height: $alto;
+}
+
+/*como se pone*/
+/*
+.clase {
+    @include cuadrado(20px,50px) 
+}
+*/
