@@ -7,6 +7,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="restaurante, platillos, sobre nosotros">
+    <meta name="description" content="Bienvenida al restaurante con fotos, breve descripcion del restaurante y algunos platillos">
 
     <!--Agregro Font Awesome para utilizar iconos-->
     <script src="https://kit.fontawesome.com/09861335cf.js" crossorigin="anonymous"></script>
@@ -18,28 +20,31 @@
         href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Krub:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Oswald:wght@400;500;600;700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Rubik:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
         rel="stylesheet">
 
+    <!--Agrego normalize. Pongo un preload para que cargue mas rapido-->
+    <link rel="preload" href="./css/normalize.css" as="style">
+    <link rel="stylesheet" href="./css/normalize.css">
 
-    <!--Agrego estilos. Pongo un preload para que cargue mas rapido-->
+    <!--Agrego mis estilos. Pongo un preload para que cargue mas rapido-->
     <!-- <link rel="preload" href="css/styles.css" as="style">
     <link rel="stylesheet" href="css/styles.css"> -->
-    <link rel="preload" href="css/main.css" as="style">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="preload" href="./css/main.css" as="style">
+    <link rel="stylesheet" href="./css/main.css">
 
     <!--Añado hoja de estilos para animaciones de texto -->
-    <link rel="preload" href="css/animate.css" as="style">
-    <link rel="stylesheet" href="css/animate.css">
+    <link rel="preload" href="./css/animate.css" as="style">
+    <link rel="stylesheet" href="./css/animate.css">
 
     <!--Añado hoja de estilo para la animacion del boton del menu hamburguesa-->
-    <link rel="preload" href="css/hamburgers.css" as="style">
-    <link rel="stylesheet" href="css/hamburgers.css" />
+    <link rel="preload" href="./css/hamburgers.css" as="style">
+    <link rel="stylesheet" href="./css/hamburgers.css" />
 
     <!-- <link rel="preload" href="https://unpkg.com/aos@next/dist/aos.css" as="style">
         <link  rel="stylesheet " href=" https://unpkg.com/aos@next/dist/aos.css"/> -->
     <!-- Hoja de estilo para efecto de animaciones que al hacer scroll se activan -->
-    <link rel="preload" href="css/aos.css" as="style"/>
-    <link rel="stylesheet" href="css/aos.css"/>
+    <link rel="preload" href="./css/aos.css" as="style"/>
+    <link rel="stylesheet" href="./css/aos.css"/>
 
-    <title>FoodHack | Hackeamos Tus Sentidos</title>
+    <title>FoodHack | Hackeamos Los Sabores</title>
 
     <!--<style>
         *{
@@ -118,32 +123,32 @@
 
             <section>
                 <div class="contenedorImgPrincipal">
-                    <img src="images/images-index/imagenPrincipalIndex.jpg"
-                        class="contenedorImgPrincipal__imgPrincipal" alt="Imagen principal, imagen del local">
-                    <div class="transparenciaNegrita"></div>
                     <!--Para insertar una transparencia sobre la imagen-->
                     <div class="contenedorImgPrincipal__titulos">
                         <h1 class="contenedorImgPrincipal__titulos__h1 contenedorImgPrincipal__titulos__h2--moviendoH1">Tu Lugar Favorito</h1>
                         <h2 class="contenedorImgPrincipal__titulos__h2 contenedorImgPrincipal__titulos__h2--moviendoH2 ">Bebe, come y relájate</h2>
                     </div>
+                    <img src="images/images-index/imagenPrincipalIndex.jpg"
+                        class="contenedorImgPrincipal__imgPrincipal" alt="Imagen principal, imagen del local">
+                    <div class="transparenciaNegrita"></div>
                 </div>
                 
-                    <div class="contenedorTextoPrincipal item" data-aos="fade-right">
-                        <p class="contenedorTextoPrincipal__p item" data-aos="fade-up"> Con 20 de experiencia y un servicio galardonado, Foodhack© es
-                            una franquicia que cuenta con tres
-                            restaurantes comedor, café y cocktail bar con múltiples terrazas con espacios de trabajo
-                            relajantes y
-                            eventos flexibles. Los menús combinan reconocidas firmas con nuevas creaciones, que muestran
-                            sabores de todo el mundo, inspirados en una vida de viajes y aventuras. Nuestra sucursal
-                            principal esta abierta
-                            los días de semana de 9am a 11pm y los fines de semana de 9am a 2am. Contamos con un menú muy
-                            variado, que incluye comidas tradicionales hasta platos muy exóticos.
-                            Vista al mar, tejidos naturales, madera roble, iluminación ambar y acero componen una barra de
-                            comedor. La terraza comedor al aire libre tiene una hermosa instalación de agua y una piscina
-                            climatizada. Tenemos también una barra de café dedicada con deliciosos y únicos sabores. ¡Te
-                            damos la bienvenida todo el día, cualquier día! Amamos el arte de hackear los sabores.
-                        </p>
-                    </div>
+                <div class="contenedorTextoPrincipal item" data-aos="fade-right">
+                    <p class="contenedorTextoPrincipal__p item" data-aos="fade-up"> Con 20 de experiencia y un servicio galardonado, Foodhack© es
+                        una franquicia que cuenta con tres
+                        restaurantes comedor, café y cocktail bar con múltiples terrazas con espacios de trabajo
+                        relajantes y
+                        eventos flexibles. Los menús combinan reconocidas firmas con nuevas creaciones, que muestran
+                        sabores de todo el mundo, inspirados en una vida de viajes y aventuras. Nuestra sucursal
+                        principal esta abierta
+                        los días de semana de 9am a 11pm y los fines de semana de 9am a 2am. Contamos con un menú muy
+                        variado, que incluye comidas tradicionales hasta platos muy exóticos.
+                        Vista al mar, tejidos naturales, madera roble, iluminación ambar y acero componen una barra de
+                        comedor. La terraza comedor al aire libre tiene una hermosa instalación de agua y una piscina
+                        climatizada. Tenemos también una barra de café dedicada con deliciosos y únicos sabores. ¡Te
+                        damos la bienvenida todo el día, cualquier día! Amamos el arte de hackear los sabores.
+                    </p>
+                </div>
             </section>
 
             <section>

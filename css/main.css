@@ -10,7 +10,9 @@ html {
   /*para manejar mejor el box model*/ }
 
 /*para manejar mejor el box model*/
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit; }
 
 body {
@@ -23,7 +25,9 @@ body {
   margin: 0;
   padding: 0; }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: "Krub", sans-serif; }
 
 h1 {
@@ -160,7 +164,7 @@ h1 {
           margin-bottom: 0.4rem;
           height: 0.3rem;
           clip-path: var(--clippy1);
-          transition: clip-path .4s; }
+          transition: clip-path 0.4s; }
         .header .header__navPrincipal .header__navPrincipal__enlaces a::after {
           content: "";
           display: block;
@@ -169,7 +173,7 @@ h1 {
           margin-top: 0.4rem;
           height: 0.3rem;
           clip-path: var(--clippy2);
-          transition: clip-path .4s; }
+          transition: clip-path 0.4s; }
         .header .header__navPrincipal .header__navPrincipal__enlaces a:hover:before {
           --clippy1: polygon(0 0, 100% 0, 100% 100%, 0 100%);
           color: #d83863; }
@@ -201,60 +205,61 @@ h1 {
   width: 100%;
   height: 100%;
   position: relative;
-  z-index: 1; }
-
-.contenedorImgPrincipal__imgPrincipal {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; }
-
-/*Para insertar color negro transparente encima de la imagen   */
-/* .transparenciaNegrita {
-    position:absolute;
+  z-index: 1;
+  /*Para insertar color negro transparente encima de la imagen   */
+  /* .transparenciaNegrita {
+        position:absolute;
+        width: 100%;
+        height: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0;
+        background-color: $negrotransparentado;
+    }
+    */ }
+  .contenedorImgPrincipal .contenedorImgPrincipal__imgPrincipal {
     width: 100%;
     height: 100%;
-    top: 50%;
+    object-fit: cover; }
+  .contenedorImgPrincipal .contenedorImgPrincipal__titulos {
+    /*  overflow: hidden; */
+    white-space: nowrap;
+    display: initial;
+    position: absolute;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     margin: 0;
-    background-color: $negrotransparentado;
-}
- */
-.contenedorImgPrincipal__titulos {
-  /*  overflow: hidden; */
-  white-space: nowrap;
-  display: initial;
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  margin: 0; }
-
-.contenedorImgPrincipal__titulos__h1 {
-  width: 100%;
-  margin: 0;
-  font-family: "Krub", sans-serif;
-  font-size: 2.4rem;
-  font-weight: 700;
-  color: #f8f3e3; }
-
-.contenedorImgPrincipal__titulos__h2 {
-  margin: 0;
-  font-family: "Krub", sans-serif;
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: #f8f3e3; }
-
-.contenedorImgPrincipal__titulos__h2--moviendoH1 {
-  display: inline-block;
-  margin: 0 0.5rem;
-  animation: bounceInLeft;
-  animation-duration: 2.5s; }
-
-.contenedorImgPrincipal__titulos__h2--moviendoH2 {
-  margin: 0 0.5rem;
-  animation: bounceInUp;
-  animation-duration: 2.5s; }
+    /*Titulos- para pantalla grande ---------------*/
+    /*------------------------------------------------------*/ }
+    .contenedorImgPrincipal .contenedorImgPrincipal__titulos .contenedorImgPrincipal__titulos__h1 {
+      width: 100%;
+      margin: 0;
+      font-family: "Krub", sans-serif;
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: #f8f3e3; }
+    .contenedorImgPrincipal .contenedorImgPrincipal__titulos .contenedorImgPrincipal__titulos__h2 {
+      margin: 0;
+      font-family: "Krub", sans-serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #f8f3e3; }
+    .contenedorImgPrincipal .contenedorImgPrincipal__titulos .contenedorImgPrincipal__titulos__h2--moviendoH1 {
+      display: inline-block;
+      margin: 0 0.5rem;
+      animation: bounceInLeft;
+      animation-duration: 2.5s; }
+    .contenedorImgPrincipal .contenedorImgPrincipal__titulos .contenedorImgPrincipal__titulos__h2--moviendoH2 {
+      margin: 0 0.5rem;
+      animation: bounceInUp;
+      animation-duration: 2.5s; }
+    @media (min-width: 769px) {
+      .contenedorImgPrincipal .contenedorImgPrincipal__titulos .contenedorImgPrincipal__titulos__h1 {
+        font-size: 5rem; }
+      .contenedorImgPrincipal .contenedorImgPrincipal__titulos .contenedorImgPrincipal__titulos__h2 {
+        font-size: 2.8rem; } }
 
 /*ocultar en celular?*/
 /* .titulosPrincipales  {
@@ -263,38 +268,36 @@ h1 {
 .contenedorTextoPrincipal {
   display: flex;
   justify-content: center;
-  align-items: center; }
-
-.contenedorTextoPrincipal__p {
-  margin: 3%;
-  padding: 4% 3%;
-  border-top-left-radius: 2rem;
-  border-bottom-right-radius: 2rem;
-  border-top: #242121 0.7rem solid;
-  border-bottom: #242121 0.7rem solid;
-  font-family: "Krub", sans-serif, Charter, Georgia, serif;
-  font-weight: 500;
-  font-size: 1.7rem;
-  text-align: left;
-  line-height: 2.8rem; }
+  align-items: center;
+  /*Texto  principal- para pantalla grande ---------------*/
+  /*------------------------------------------------------*/ }
+  .contenedorTextoPrincipal .contenedorTextoPrincipal__p {
+    margin: 3%;
+    padding: 4% 3%;
+    border-top-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    border-top: #242121 0.7rem solid;
+    border-bottom: #242121 0.7rem solid;
+    font-family: "Krub", sans-serif, Charter, Georgia, serif;
+    font-weight: 500;
+    font-size: 1.7rem;
+    text-align: left;
+    line-height: 2.8rem; }
+  @media (min-width: 769px) {
+    .contenedorTextoPrincipal .contenedorTextoPrincipal__p {
+      width: 90%;
+      margin: 2%;
+      padding: 2%;
+      border-bottom-right-radius: 2rem;
+      border-left: #242121 4rem solid;
+      border-right: #242121 4rem solid;
+      border-top: #242121 0.7rem solid;
+      border-bottom: #242121 0.7rem solid; } }
 
 /*Texto  principal- para pantalla grande ---------------*/
 @media (min-width: 769px) {
-  .contenedorImgPrincipal__titulos__h1 {
-    font-size: 5rem; }
-  .contenedorImgPrincipal__titulos__h2 {
-    font-size: 2.8rem; }
   .contenedorTextoPrincipal {
-    width: 100%; }
-  .contenedorTextoPrincipal__p {
-    width: 90%;
-    margin: 2%;
-    padding: 2%;
-    border-bottom-right-radius: 2rem;
-    border-left: #242121 4rem solid;
-    border-right: #242121 4rem solid;
-    border-top: #242121 0.7rem solid;
-    border-bottom: #242121 0.7rem solid; } }
+    width: 100%; } }
 
 /*------------------------------------------------------*/
 .tituloPlatillos {
@@ -310,28 +313,38 @@ h1 {
   grid-template-columns: 100%;
   grid-template-rows: fr 1fr 1fr 1fr 1fr 1fr;
   overflow: hidden;
-  /*cuando la imagen se sale del contenedor, oculta esa parte*/ }
-
-.textoPlatos {
-  font-size: 1.5rem;
-  color: #f8f3e3;
-  font-family: "Krub", sans-serif;
-  background-color: #242121; }
-
-.textoPlatos .centrar {
-  margin: 5% 18%; }
-
-.textoPlatos h4 {
-  font-size: 2.2rem;
-  color: #d83863;
-  font-family: "Krub", sans-serif; }
-
-.textoSopa {
-  grid-row: 4; }
-
-.imagenPlatos {
-  width: 100%;
-  height: 100%; }
+  /*cuando la imagen se sale del contenedor, oculta esa parte*/
+  /*Platos para pantalla grande----------------------------------*/
+  /*--------------------------------------------*/ }
+  .seccionPlatos .textoPlatos {
+    font-size: 1.5rem;
+    color: #f8f3e3;
+    font-family: "Krub", sans-serif;
+    background-color: #242121; }
+  .seccionPlatos .textoPlatos .centrar {
+    margin: 5% 18%; }
+  .seccionPlatos .textoPlatos h4 {
+    font-size: 2.2rem;
+    color: #d83863;
+    font-family: "Krub", sans-serif; }
+  .seccionPlatos .textoSopa {
+    grid-row: 4; }
+  .seccionPlatos .imagenPlatos {
+    width: 100%;
+    height: 100%; }
+  @media (min-width: 769px) {
+    .seccionPlatos .textoPlatos {
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
+    .seccionPlatos .textoEnsalada {
+      grid-row: 2 / 3; }
+    .seccionPlatos .textoSopa {
+      grid-column: 3 / 4;
+      grid-row: 2; }
+    .seccionPlatos .textoChef {
+      grid-row: 1;
+      grid-column: -3 / -2; } }
 
 /*Platos para pantalla grande----------------------------------*/
 @media (min-width: 769px) {
@@ -343,23 +356,11 @@ h1 {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
     overflow: hidden;
-    /*cuando la imagen se sale del contenedor, oculata esa parte*/ }
-  .textoPlatos {
-    display: flex;
-    flex-direction: column;
-    justify-content: center; }
-  .textoEnsalada {
-    grid-row: 2 / 3; }
-  .textoSopa {
-    grid-column: 3 / 4;
-    grid-row: 2; }
-  .textoChef {
-    grid-row: 1;
-    grid-column: -3 / -2; } }
+    /*cuando la imagen se sale del contenedor, oculata esa parte*/ } }
 
 /*--------------------------------------------*/
 /*FIN PAGINA PRINCIPAL INDEX--------------------------------------------------------------------------------------------------------------------------------------------*/
-/*Pagina Ubicaciones--------------------------------------------*/
+/*PAGINA UBICACIONES--------------------------------------------*/
 .bodyUbicacion {
   background-image: url(../images/buenas/AB5I6799_NikkiTo.jpg);
   /* Para dejar la imagen de fondo centrada, vertical y
@@ -375,7 +376,8 @@ h1 {
     de fondo o si hay problemas para cargarla */
   background-color: #f8f3e3; }
 
-.sectionUbicacion__h1, .sectionUbicacion__h2 {
+.sectionUbicacion__h1,
+.sectionUbicacion__h2 {
   font-weight: 600;
   color: #f8f3e3; }
 
@@ -394,79 +396,74 @@ h1 {
   font-size: 2.8rem;
   font-weight: 600; }
 
+@media (min-width: 769px) {
+  .sectionUbicacion {
+    width: 95%;
+    margin: 0 auto; } }
+
+@media (min-width: 1200px) {
+  .sectionUbicacion {
+    width: 70%;
+    margin: 0 auto; } }
+
 .sectionSucursal {
-  border: #106BA0 solid;
+  border: #106ba0 solid;
   margin-bottom: 8rem;
   border-radius: 1rem;
   /* border: $rojo solid 0.2rem; */
   opacity: 0.9; }
-
-.sectionSucursal__contenedor {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #242121;
-  border-radius: 0.5rem;
-  color: #f8f3e3; }
-
-.sectionSucursal__contenedor__mapa {
-  width: 100%; }
-
-.sectionSucursal__listado_h3, .sectionSucursal__listado_h4 {
-  font-size: 2.3rem;
-  font-weight: 500;
-  font-family: "Krub", sans-serif; }
-
-.sectionSucursal__listado_h3 {
-  color: #d83863;
-  margin-bottom: 2rem;
-  margin-top: 2rem; }
-
-.sectionSucursal__listado_h4 {
-  margin-top: 1rem;
-  color: #f8c25c; }
-
-.sectionSucursal__listado__ul {
-  padding: 0;
-  margin: 1rem;
-  font-family: "Krub", sans-serif;
-  font-size: 2.2rem;
-  margin-top: 1.5rem;
-  list-style: none; }
-
-.sectionSucursal__listado__ul__ul {
-  margin-top: 3rem;
-  list-style: none; }
-
-@media (min-width: 769px) {
-  .sectionSucursal {
-    width: 95%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 8rem; }
-  .sectionUbicacion__h2 {
-    margin-left: 10%; }
-  #sectionUbicacion__typewriter {
-    margin-left: 10%; }
-  .sectionSucursal__contenedor {
+  .sectionSucursal .sectionSucursal__contenedor {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50%;
-    border-radius: 0.5rem; }
-  .sectionSucursal__contenedor__mapa {
-    width: 50%;
-    height: 55rem;
-    border-radius: 0.5rem; } }
+    background-color: #242121;
+    border-radius: 0.5rem;
+    color: #f8f3e3;
+    height: 44rem; }
+    .sectionSucursal .sectionSucursal__contenedor .sectionSucursal__listado_h3 {
+      font-size: 2.3rem;
+      font-weight: 500;
+      font-family: "Krub", sans-serif;
+      color: #d83863;
+      margin-bottom: 2rem;
+      margin-top: 2rem; }
+    .sectionSucursal .sectionSucursal__contenedor .sectionSucursal__listado__ul {
+      padding: 0;
+      margin: 1rem;
+      font-family: "Krub", sans-serif;
+      font-size: 2.2rem;
+      margin-top: 1.5rem;
+      list-style: none; }
+      .sectionSucursal .sectionSucursal__contenedor .sectionSucursal__listado__ul .sectionSucursal__listado_h4 {
+        margin-top: 4rem;
+        font-size: 2.3rem;
+        font-weight: 500;
+        font-family: "Krub", sans-serif;
+        color: #f8c25c; }
+      .sectionSucursal .sectionSucursal__contenedor .sectionSucursal__listado__ul .sectionSucursal__listado__ul__ul {
+        list-style: none; }
+  .sectionSucursal .sectionSucursal__contenedor__mapa {
+    width: 100%; }
+  @media (min-width: 769px) {
+    .sectionSucursal .sectionSucursal__contenedor {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+      border-radius: 0.5rem;
+      height: 55rem; }
+    .sectionSucursal .sectionSucursal__contenedor__mapa {
+      width: 50%;
+      height: 55rem;
+      border-radius: 0.5rem; } }
 
-@media (min-width: 1200px) {
+@media (min-width: 769px) {
   .sectionSucursal {
-    width: 80%;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
     margin-bottom: 8rem; } }
 
-/*Fin pagina Ubicacion----------------------------------------------*/
+/*FIN PAGINA UBICACION----------------------------------------------*/
 /*PAGINA NUESTRO EQUIPO--------------------------------------------*/
 .fotosEquipo {
   margin: 0 auto;
@@ -474,21 +471,13 @@ h1 {
   display: grid;
   grid-auto-rows: auto;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-  /* grid-template-areas: 
-    "img1 img2 img3 img4" 
-    "img5 img6 img7 img8"; */
   gap: 1.5rem; }
 
 .fotosItem {
   position: relative;
   width: 100%;
   height: 30rem;
-  overflow: hidden;
-  /* width: 35rem;
-    height: 45rem;
-    overflow: hidden;
-    margin: 10px;
-    position: relative; */ }
+  overflow: hidden; }
 
 .fotosItem img {
   /* background-color: #f8d086; */
@@ -573,7 +562,7 @@ h1 {
   color: #000000;
   background-color: #f8c25c;
   display: inline-block;
-  transition: all .5s;
+  transition: all 0.5s;
   cursor: pointer;
   text-transform: uppercase;
   width: fit-content;
@@ -606,11 +595,13 @@ h1 {
   padding: 2rem;
   border-radius: 1rem; }
 
-.formulario fieldset, .formulario2 fieldset {
+.formulario fieldset,
+.formulario2 fieldset {
   border: none;
   /* margin-right: 1.5rem; */ }
 
-.formulario legend, .formulario2 legend {
+.formulario legend,
+.formulario2 legend {
   text-align: center;
   font-size: 1.8rem;
   font-family: "Krub", sans-serif;
