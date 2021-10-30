@@ -1,4 +1,8 @@
-@import "./base/variables";
+@import "./base/colors";
+@import "./base/fonts";
+@import "./functions/extends";
+@import "./functions/mixins";
+
 
 /*GENERAL----------------------------------------------------------------------------------------------------------------------------*/
 /*Configuro para utilizar REM en lugar de PX, 1 rem = 10 px------*/
@@ -45,7 +49,7 @@ h1 {
 .header {
     width: 100%;
     height: 6.5rem;
-    background-color: $negro;
+    background-color: $primario;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -54,8 +58,9 @@ h1 {
     .header__navPrincipal {
         height: 100%;
         width: 100%;
-        display: flex;
-        justify-content: space-between;
+        /* display: flex;
+        justify-content: space-between; */
+        @include flexbox(row, space-between, normal);
 
         .header__navPrincipal__logoPrincipal {
             /*LOGO-------------------------------------*/
@@ -154,13 +159,10 @@ h1 {
             position: fixed;
             height: 100vh;
             width: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            align-items: center;
+            @include flexbox(column, space-around, center);
             list-style: none;
             transition: all 0.5s ease-out; /*transicion cuando se despliega menu hamburguesa*/
-            background: $negro;
+            /* background: $negro; */
 
             a {
                 text-decoration: none;
@@ -260,6 +262,7 @@ h1 {
 @media (min-width: 769px) {
     .header {
         height: 8rem;
+        opacity: 0.9;
     }
 }
 /*FIN HEADER---------------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -352,9 +355,8 @@ h1 {
 } */
 
 .contenedorTextoPrincipal {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexbox(row, center, center);
+    
 
     .contenedorTextoPrincipal__p {
         margin: 3%;
@@ -436,9 +438,7 @@ h1 {
     /*Platos para pantalla grande----------------------------------*/
     @media (min-width: 769px) {
         .textoPlatos {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+            @include flexbox(column, center, center);
         }
 
         .textoEnsalada {
@@ -542,9 +542,10 @@ h1 {
     opacity: 0.9;
 
     .sectionSucursal__contenedor {
-        display: flex;
+        /* display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: center; */
+        @include flexbox(row, center, center);
         background-color: $primario;
         border-radius: 0.5rem;
         color: $blanco;
@@ -588,9 +589,6 @@ h1 {
 
     @media (min-width: 769px) {
         .sectionSucursal__contenedor {
-            display: flex;
-            justify-content: center;
-            align-items: center;
             width: 50%;
             border-radius: 0.5rem;
             height: 55rem;
@@ -607,8 +605,7 @@ h1 {
 
 @media (min-width: 769px) {
     .sectionSucursal {
-        display: flex;
-        flex-direction: row;
+        @include flexbox(row, center, center);
         margin-bottom: 8rem;
     }
 }
@@ -657,9 +654,10 @@ h1 {
     height: 100%;
     color: $blanco;
     text-align: center;
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center; */
+    @include flexbox(column, center, center);
     transform: translateX(100%);
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
@@ -744,7 +742,8 @@ h1 {
 
 @media (min-width: 769px) {
     .queremosConocerte {
-        display: flex;
+        /* display: flex; */
+        @include flexbox(row, center, center);
         margin: 0 auto;
         width: 95%;
     }
@@ -874,14 +873,21 @@ h1 {
     overflow: hidden;
 }
 
+.boton:hover {
+    animation: sombra_pulso 1000ms 1;
+    background-color: #20e2d7;
+    color: #434343;
+}
+
 .contenedorBotones {
-    display: flex;
+    /* display: flex; */
+    @include flexbox(column, center, flex-end);
 }
 
 /*Cuando es mas grande q 769 px se alinea derecha*/
-.alinearDerecha {
+/* .alinearDerecha {
     justify-content: flex-end;
-}
+} */
 
 .widht100 {
     width: 100%;
@@ -893,8 +899,19 @@ h1 {
         width: auto;
     }
 }
-/*Fin Boton-----------------------------------------------*/
 
+/*animacion de boton---------------------------------*/
+@keyframes sombra_pulso {
+    0% {
+        box-shadow: 0 0 0 0 rgba(32, 226, 215, 0.6);
+    }
+    100% {
+        box-shadow: 0 0 8px 16px rgba(32, 226, 215, 0);
+    }
+}
+/*Fin Efectos de botones --------------------------*/
+
+/*Fin Boton-----------------------------------------------*/
 /*FIN PAGINA CONTACTO----------------------------------------------------*/
 
 /*FIN MAIN----------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -905,10 +922,11 @@ h1 {
     padding: 1rem;
     color: $blanco;
     font-size: 3rem;
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: center; 
+    align-items:center;*/
+    @include flexbox(column, center, center);
     width: 100%;
     background-color: $negro;
     /* box-shadow: $box-shadow; */
@@ -930,8 +948,9 @@ h1 {
 }
 
 .footer__socialLinks {
-    display: flex;
-    justify-content: space-between;
+    /* display: flex;
+    justify-content: space-between; */
+    @include flexbox(row, space-between, center);
     width: 15rem;
     list-style: none;
     cursor: pointer;
@@ -959,19 +978,4 @@ h1 {
 
 /*OBJETOS ANIMADOS-------------------------------*/
 
-/*boton de contacto*/
-.boton:hover {
-    animation: sombra_pulso 1000ms 1;
-    background-color: #20e2d7;
-    color: #434343;
-}
 
-@keyframes sombra_pulso {
-    0% {
-        box-shadow: 0 0 0 0 rgba(32, 226, 215, 0.6);
-    }
-    100% {
-        box-shadow: 0 0 8px 16px rgba(32, 226, 215, 0);
-    }
-}
-/*Fin Efectos de botones -----------------------------------*/

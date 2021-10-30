@@ -1,6 +1,12 @@
 @charset "UTF-8";
-/*Defino paleta de colores y fuentes a usar*/
-/* --font6: 'Oswald', sans-serif; */
+/*Defino paleta de colores a usar*/
+/*Defino fuentes a usar*/
+/*como se pone*/
+/*
+.clase {
+    @include cuadrado(20px,50px) 
+}
+*/
 /*GENERAL----------------------------------------------------------------------------------------------------------------------------*/
 /*Configuro para utilizar REM en lugar de PX, 1 rem = 10 px------*/
 /*Tambien para manejar mejor el Box Model*/
@@ -42,7 +48,7 @@ h1 {
 .header {
   width: 100%;
   height: 6.5rem;
-  background-color: #000000;
+  background-color: #242121;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -50,8 +56,12 @@ h1 {
   .header .header__navPrincipal {
     height: 100%;
     width: 100%;
+    /* display: flex;
+        justify-content: space-between; */
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
+    align-items: normal;
     /*fin de logo-----------------------------------------------------*/
     /*Navegacion principal para pantalla grande--------*/ }
     .header .header__navPrincipal .header__navPrincipal__logoPrincipal {
@@ -126,7 +136,7 @@ h1 {
       list-style: none;
       transition: all 0.5s ease-out;
       /*transicion cuando se despliega menu hamburguesa*/
-      background: #000000; }
+      /* background: $negro; */ }
       .header .header__navPrincipal .header__navPrincipal__enlaces a {
         text-decoration: none;
         color: #f8f3e3;
@@ -196,7 +206,8 @@ h1 {
 /*Para agrandar un poquito el header en pantalla grande*/
 @media (min-width: 769px) {
   .header {
-    height: 8rem; } }
+    height: 8rem;
+    opacity: 0.9; } }
 
 /*FIN HEADER---------------------------------------------------------------------------------------------------------------------------------------------------------*/
 /*MAIN----------------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -267,6 +278,7 @@ h1 {
 } */
 .contenedorTextoPrincipal {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   /*Texto  principal- para pantalla grande ---------------*/
@@ -336,7 +348,8 @@ h1 {
     .seccionPlatos .textoPlatos {
       display: flex;
       flex-direction: column;
-      justify-content: center; }
+      justify-content: center;
+      align-items: center; }
     .seccionPlatos .textoEnsalada {
       grid-row: 2 / 3; }
     .seccionPlatos .textoSopa {
@@ -413,7 +426,11 @@ h1 {
   /* border: $rojo solid 0.2rem; */
   opacity: 0.9; }
   .sectionSucursal .sectionSucursal__contenedor {
+    /* display: flex;
+        justify-content: center;
+        align-items: center; */
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     background-color: #242121;
@@ -446,9 +463,6 @@ h1 {
     width: 100%; }
   @media (min-width: 769px) {
     .sectionSucursal .sectionSucursal__contenedor {
-      display: flex;
-      justify-content: center;
-      align-items: center;
       width: 50%;
       border-radius: 0.5rem;
       height: 55rem; }
@@ -461,6 +475,8 @@ h1 {
   .sectionSucursal {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 8rem; } }
 
 /*FIN PAGINA UBICACION----------------------------------------------*/
@@ -502,9 +518,13 @@ h1 {
   height: 100%;
   color: #f8f3e3;
   text-align: center;
+  /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   transform: translateX(100%);
   cursor: pointer;
   transition: transform 0.3s ease-in-out; }
@@ -572,7 +592,11 @@ h1 {
 
 @media (min-width: 769px) {
   .queremosConocerte {
+    /* display: flex; */
     display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     margin: 0 auto;
     width: 95%; }
   .textoFormularioUnite {
@@ -682,13 +706,22 @@ h1 {
   cursor: pointer;
   overflow: hidden; }
 
+.boton:hover {
+  animation: sombra_pulso 1000ms 1;
+  background-color: #20e2d7;
+  color: #434343; }
+
 .contenedorBotones {
-  display: flex; }
+  /* display: flex; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end; }
 
 /*Cuando es mas grande q 769 px se alinea derecha*/
-.alinearDerecha {
-  justify-content: flex-end; }
-
+/* .alinearDerecha {
+    justify-content: flex-end;
+} */
 .widht100 {
   width: 100%; }
 
@@ -697,6 +730,14 @@ h1 {
   .widht100 {
     width: auto; } }
 
+/*animacion de boton---------------------------------*/
+@keyframes sombra_pulso {
+  0% {
+    box-shadow: 0 0 0 0 rgba(32, 226, 215, 0.6); }
+  100% {
+    box-shadow: 0 0 8px 16px rgba(32, 226, 215, 0); } }
+
+/*Fin Efectos de botones --------------------------*/
 /*Fin Boton-----------------------------------------------*/
 /*FIN PAGINA CONTACTO----------------------------------------------------*/
 /*FIN MAIN----------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -706,6 +747,10 @@ h1 {
   padding: 1rem;
   color: #f8f3e3;
   font-size: 3rem;
+  /* display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items:center;*/
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -727,8 +772,12 @@ h1 {
     height: 17.5rem; } }
 
 .footer__socialLinks {
+  /* display: flex;
+    justify-content: space-between; */
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   width: 15rem;
   list-style: none;
   cursor: pointer; }
@@ -749,16 +798,3 @@ h1 {
 /*----------------------------------------*/
 /*FIN FOOTER-----------------------------------------------------------------------------------------------------------------------------------------------*/
 /*OBJETOS ANIMADOS-------------------------------*/
-/*boton de contacto*/
-.boton:hover {
-  animation: sombra_pulso 1000ms 1;
-  background-color: #20e2d7;
-  color: #434343; }
-
-@keyframes sombra_pulso {
-  0% {
-    box-shadow: 0 0 0 0 rgba(32, 226, 215, 0.6); }
-  100% {
-    box-shadow: 0 0 8px 16px rgba(32, 226, 215, 0); } }
-
-/*Fin Efectos de botones -----------------------------------*/
