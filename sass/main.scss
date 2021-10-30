@@ -674,10 +674,22 @@ h1 {
 /* PAGINA UNITE QUEREMOS CONOCERTE--------------------------------------------*/
 
 /*quito pq uso clases generales para imagen */
-/* .contenedorImagenUnite {
+.contenedorImgPrincipalUnite {
     width: 100%;
     height: 100%;
-} */
+
+    .contenedorImgPrincipalUnite__imgPrincipal {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    @media (min-width: 769px) {
+        .contenedorImgPrincipal__imgPrincipal--unite {
+            height: 75rem;
+        }
+    }
+}
 
 .textoFormularioUnite p {
     width: 95%;
@@ -692,67 +704,75 @@ h1 {
         width: 100%;
         margin: 0 auto 3rem auto;
     }
-
-    .textoFormularioUnite {
-        margin-left: 4rem;
-        width: 85%;
-    }
-
-    .contenedorImgPrincipal__imgPrincipal--unite {
-        height: 70rem;
-    }
-
-    .queremosConocerte {
-        display: flex;
-        margin: auto;
-        width: 95%;
-        /* justify-content: center;
-        align-items: center; */
-    }
 }
 
-/*ocultar el input file*/
-.adjuntarCurriculum {
-    width: 0.1px;
-    height: 0.1px;
-    opacity: 0;
-    overflow: hidden;
-    position: absolute;
-    z-index: -1;
-}
-
-#labelCurriculum {
-    font-family: $font6;
-    color: $blanco;
-    font-weight: 700;
-    font-size: 1.4rem;
-    margin-bottom: 0.5rem;
-    margin-top: 1.5rem;
-    padding: 1.5rem 4rem;
-    color: $negro;
-    background-color: $secundario;
-    display: inline-block;
-    transition: all 0.5s;
-    cursor: pointer;
-    text-transform: uppercase;
-    width: fit-content;
-    border-radius: 0.5rem;
-}
-
-.formulario2 {
+.formularioUnite {
     background-color: $primario;
-    width: 100%; /*utilizar el valor mas pequeño*/
+    width: 100%; 
     margin: 0 auto; /*Se centra asi cuando: el padre no tiene display flex y es elemento de bloque*/
     padding: 2rem;
     border-radius: 1rem;
+    
+    /*ocultar el input file*/
+    .adjuntarCurriculum {
+        width: 0.1px;
+        height: 0.1px;
+        opacity: 0;
+        overflow: hidden;
+        position: absolute;
+        z-index: -1;
+    }
+
+    #labelAdjuntarCV {
+        font-family: $font6;
+        color: $blanco;
+        font-weight: 700;
+        font-size: 1.4rem;
+        margin-bottom: 0.5rem;
+        margin-top: 1.5rem;
+        padding: 1.5rem 4rem;
+        color: $negro;
+        background-color: $secundario;
+        display: inline-block;
+        transition: all 0.5s;
+        cursor: pointer;
+        text-transform: uppercase;
+        width: fit-content;
+        border-radius: 0.5rem;
+    }
+}
+
+@media (min-width: 769px) {
+    .queremosConocerte {
+        display: flex;
+        margin: 0 auto;
+        width: 95%;
+    }
+    
+    .textoFormularioUnite {
+        margin-left: 3rem;
+        width: 85%;
+    }
 }
 
 /*FIN PAGINA QUEREMOS CONOCERTE--------------------------------------------------- ------------*/
 
 /*PAGINA CONTACTO---------------------------------------------------------------------------------*/
-.contenedorImgPrincipal__imgPrincipal--contacto {
-    /* width: 100%; */
-    height: 20rem;
+
+.contenedorImgPrincipal {
+    width: 100%;
+    height: 100%;
+
+    .contenedorImgPrincipal__imgPrincipal {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .contenedorImgPrincipal__imgPrincipal--contacto {
+        /* width: 100%; */
+        height: 20rem;
+    }
 }
 
 /*formulario---------------------------------------------------------------*/
@@ -766,13 +786,13 @@ h1 {
 }
 
 .formulario fieldset,
-.formulario2 fieldset {
+.formularioUnite fieldset {
     border: none;
     /* margin-right: 1.5rem; */
 }
 
 .formulario legend,
-.formulario2 legend {
+.formularioUnite legend {
     text-align: center;
     font-size: 1.8rem;
     font-family: $font6;
@@ -854,26 +874,6 @@ h1 {
     overflow: hidden;
 }
 
-/*efecto de boton rojo*/
-/* .boton::before {
-    content: "";
-    position: absolute;
-    left: -85rem;
-    right: 0;
-    top: -2rem;
-    background-color: $rojo);
-    z-index: -1;
-    width: 200%;
-    height: 200%;
-    transition: all 1.3s ease;
-    transform: rotate(45deg);
-    box-shadow: 0 0 10px $rojo), 0 0 20px $rojo), 0 0 20px $rojo);
-}
-.boton:hover::before {
-    left: 50rem;
-} */
-/*-------------------*/
-
 .contenedorBotones {
     display: flex;
 }
@@ -893,7 +893,6 @@ h1 {
         width: auto;
     }
 }
-
 /*Fin Boton-----------------------------------------------*/
 
 /*FIN PAGINA CONTACTO----------------------------------------------------*/

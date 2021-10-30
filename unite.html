@@ -103,15 +103,16 @@
             
             <h1>Queremos Conocerte</h1>
             
-            <section class="queremosConocerte">
+            <div class="queremosConocerte">
                 
-                <div class="contenedorImgPrincipal__imgPrincipal contenedorImgPrincipal--unite ">
-                    <img class="contenedorImgPrincipal__imgPrincipal contenedorImgPrincipal__imgPrincipal--unite" src="images/queremos-conocerte/queremos-conocerte2.jpg" alt="Quiénes somos"> 
-                </div>
+                <section class="contenedorImgPrincipalUnite">
+                    <img class="contenedorImgPrincipalUnite__imgPrincipal contenedorImgPrincipal__imgPrincipal--unite" src="images/queremos-conocerte/queremos-conocerte2.jpg" alt="Quiénes somos"> 
+                </section>
                             
 
-                <div class="textoFormularioUnite"> 
-                    <div class="cajaTextoUnite">
+                <section class="textoFormularioUnite">
+
+                    <div>
                         <p> En HackFood siempre estamos buscando personal. Te invitamos a sumarte a nuestro equipo en alguna de nuestras tres sucursales.
                             Buscamos personas creativas, que amen lo que hacen, con capacidad de innovar y de trabajar en equipo. 
                         </p>
@@ -120,17 +121,16 @@
                             ¡Postúlate!
                             
                             Cargá tu CV!
-                            
                         </p>
                     </div>
 
-                    <form class="formulario2" action="guardar.php" method="POST">
+                    <form class="formularioUnite" action="guardar.php" method="POST">
 
                         <fieldset>
         
                             <legend>Cargá tu currículum</legend>
         
-                            <div class="contenedorCampos2">
+                            <div>
         
                                 <div class="campo">
                                     <label for="nombre">Nombre</label>
@@ -145,7 +145,7 @@
                                 </div>
         
                                 <div class="campoCurriculum">
-                                    <label for="adjuntarCurriculum" id="labelCurriculum">Carga tu CV</label>
+                                    <label for="adjuntarCurriculum" id="labelAdjuntarCV">Carga tu CV</label>
                                     <input class="adjuntarCurriculum" type="file" name="adjuntarCurriculum" accept=".doc,.docx,.pdf" id="adjuntarCurriculum" required>
                                 </div>
         
@@ -153,12 +153,14 @@
                             <div class="alinearDerecha contenedorBotones">
                                 <button class="boton widht100" type="submit">Enviar</button>
                             </div>
+
                         </fieldset>
+
                     </form>
 
-                </div>
+                </section>
 
-            </section>
+            </div>
                 
         </section>
 
@@ -187,8 +189,6 @@
 
 
     <script src="js/main.js"></script>
-
-
 
 </body>
 
