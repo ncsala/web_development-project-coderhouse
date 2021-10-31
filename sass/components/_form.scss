@@ -1,0 +1,91 @@
+
+/*formulario---------------------------------------------------------------*/
+.formulario {
+    background-color: $primario;
+    width: unquote("min(100rem, 100%)"); /*utilizar el valor mas pequeño VERSION*/
+    /* width: min(100rem, 100%); */ /*utilizar el valor mas pequeño*/
+    margin: 0 auto; /*Se centra asi cuando: el padre no tiene display flex y es elemento de bloque*/
+    padding: 2rem;
+    border-radius: 1rem;
+
+    fieldset {
+        border: none;
+        /* margin-right: 1.5rem; */
+
+        legend {
+            text-align: center;
+            font-size: 1.8rem;
+            font-family: $font6;
+            font-weight: 700;
+            color: $secundario;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+        }
+
+        /*el textarea*/
+        .campo:nth-child(7) {
+            grid-column: 1/4;
+        }
+
+        .campo {
+            margin-bottom: 1rem;
+
+            label {
+                font-family: $font6;
+                font-weight: 400;
+                color: $blanco;
+                font-weight: 700;
+                margin-bottom: 0.5rem;
+                display: block; /* los labels toman todo el espacio disponible*/
+            }
+
+            textarea {
+                height: 90%;
+                resize: none;
+            }
+            
+            select {
+                background-color: $secundario;
+            }
+
+            .inputTexto {
+                border-color: $primario;
+                font-family: $font6;
+                font-weight: 400;
+                width: 100%;
+                border: none;
+                padding: 1.5rem;
+                border-radius: 0.5rem;
+            }
+            
+            //Borde de los input
+            .inputTexto:focus {
+                outline: none;
+                border: 2px solid $secundario;
+                box-shadow: 0 0 1rem $secundario;
+            }
+            
+        }
+
+        /*para poner el formulario en tres columnas cuando es mas grande que 769 pixeles*/
+        @media (min-width: 769px) {
+            .contenedorCampos {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: auto auto 20rem;
+                column-gap: 1rem;
+            }
+        }
+    }
+}
+/*fin formulario------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+

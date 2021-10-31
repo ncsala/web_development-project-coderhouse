@@ -1,0 +1,59 @@
+/*FOOTER-----------------------------------------------------------------------------------------------------------------------------------------------------*/
+.footer {
+    margin-top: 8rem;
+    padding: 1rem;
+    color: $blanco;
+    font-size: 3rem;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items:center;*/
+    @include flexbox(column, center, center);
+    width: 100%;
+    background-color: $negro;
+
+    .footer__p {
+        text-align: center;
+        font-family: $font6;
+        font-size: 2rem;
+        font-weight: 500;
+        color: $blanco;
+        margin-bottom: 0.7rem;
+    }    
+
+    .footer__socialLinks {
+        /* display: flex;
+        justify-content: space-between; */
+        @include flexbox(row, space-between, center);
+        width: 15rem;
+        list-style: none;
+        cursor: pointer;
+
+        a {
+            color: $blanco;
+        }
+
+        .fa-twitter:hover {
+            color: #4bc9f5;
+        }
+        
+        .fa-facebook:hover {
+            color: #295b9e;
+        }
+        
+        .fa-youtube:hover {
+            color: #c41222;
+        }
+        
+        .fa-instagram:hover {
+            color: #ff9259;
+        }
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .footer {
+        height: 17.5rem;
+    }
+}
+/*FIN FOOTER--------------------------------------------------------------------------------------------*/

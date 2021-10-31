@@ -2,7 +2,10 @@
 @import "./base/fonts";
 @import "./functions/extends";
 @import "./functions/mixins";
-
+@import "./components/header";
+@import "./components/footer";
+@import "./components/buttons";
+@import "./components/form";
 
 /*GENERAL----------------------------------------------------------------------------------------------------------------------------*/
 /*Configuro para utilizar REM en lugar de PX, 1 rem = 10 px------*/
@@ -41,238 +44,16 @@ h1 {
     margin-bottom: 2rem;
     font-size: 3.5rem;
     text-align: center;
-    color: $negro;
+    color: map-get($colorsMaps, negro);
 }
 /*FIN GENERAL----------------------------------------------------------------------------------------------------------------------------*/
 
-/*HEADER---------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-.header {
-    width: 100%;
-    height: 6.5rem;
-    background-color: $primario;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    opacity: 0.9;
-
-    .header__navPrincipal {
-        height: 100%;
-        width: 100%;
-        /* display: flex;
-        justify-content: space-between; */
-        @include flexbox(row, space-between, normal);
-
-        .header__navPrincipal__logoPrincipal {
-            /*LOGO-------------------------------------*/
-            /* .text--transparent {
-                fill: transparent;
-            } */
-            .anim-shape {
-                -webkit-transform-origin: 0x 15rem;
-                -ms-transform-origin: 0x 15rem;
-                transform-origin: 0x 15rem;
-                -webkit-animation: moving-panel 3s ease-in alternate;
-                animation: moving-panel 3s ease-in alternate;
-                -webkit-transform: scale(1, 1) translate(2rem, 0);
-                transform: scale(1, 1) translate(2rem, 0);
-            }
-
-            .colortext .anim-shape:nth-child(1) {
-                fill: $negro;
-            }
-
-            .colortext .anim-shape:nth-child(2) {
-                fill: #32a1ac;
-            }
-
-            .colortext .anim-shape:nth-child(3) {
-                fill: #9dd6c6;
-            }
-
-            .colortext .anim-shape:nth-child(4) {
-                fill: $secundario;
-            }
-
-            .colortext .anim-shape:nth-child(5) {
-                fill: $rojo;
-            }
-
-            .shadow {
-                -webkit-transform: translate(4px, 4px);
-                -ms-transform: translate(4px, 4px);
-                transform: translate(4px, 4px);
-            }
-
-            .anim-shape--shadow {
-                fill: $otroGris;
-                fill-opacity: 0.2;
-            }
-
-            @-webkit-keyframes moving-panel {
-                0% {
-                    -webkit-transform: scale(0, 1) translate(0, 0);
-                    -ms-transform: scale(0, 1) translate(0, 0);
-                    transform: scale(0, 1) translate(0, 0);
-                }
-                100% {
-                    -webkit-transform: scale(1, 1) translate(20px, 0);
-                    transform: scale(1, 1) translate(20px, 0px);
-                }
-            }
-
-            @keyframes moving-panel {
-                0% {
-                    -webkit-transform: scale(0, 1) translate(0, 0);
-                    -ms-transform: scale(0, 1) translate(0, 0);
-                    transform: scale(0, 1) translate(0, 0);
-                }
-                100% {
-                    -webkit-transform: scale(1, 1) translate(2rem, 0);
-                    transform: scale(1, 1) translate(2rem, 0);
-                }
-            }
-
-            svg {
-                width: 100%;
-                height: 5rem;
-            }
-
-            @media (min-width: 769px) {
-                svg {
-                    height: 6rem;
-                }
-            }
-
-            text {
-                font-size: 2.5rem;
-                font-family: $font6;
-                font-weight: 700;
-                font-style: italic;
-            }
-        } /*fin de logo-----------------------------------------------------*/
-
-        .header__navPrincipal__iconoHamburguesa {
-            z-index: 110;
-        }
-
-        .header__navPrincipal__enlaces {
-            position: fixed;
-            height: 100vh;
-            width: 100%;
-            @include flexbox(column, space-around, center);
-            list-style: none;
-            transition: all 0.5s ease-out; /*transicion cuando se despliega menu hamburguesa*/
-            /* background: $negro; */
-
-            a {
-                text-decoration: none;
-                color: $blanco;
-                font-family: $font6;
-                font-weight: 600;
-                font-size: 2.4rem;
-            }
-
-            a:hover {
-                cursor: pointer;
-                color: $rojo;
-            }
-        }
-
-        /*Navegacion principal para pantalla grande--------*/
-        @media (min-width: 769px) {
-            .header__navPrincipal__iconoHamburguesa {
-                display: none;
-                color: $rojo;
-            }
-
-            .header__navPrincipal__enlaces {
-                position: initial;
-                height: 100%;
-                width: 100%;
-                flex-direction: row;
-                background-color: transparent;
-                transition: all 0.1s ease-out;
-
-                a {
-                    --clippy1: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
-                    --clippy2: polygon(0 0, 0 0, 0 100%, 0% 100%);
-                }
-
-                a:hover {
-                    cursor: pointer;
-                    color: $blanco;
-                }
-
-                /*animacion linea hacia la izquierda*/
-                a::before {
-                    content: "";
-                    display: block;
-                    background: $rojo;
-                    width: 100%;
-                    margin-bottom: 0.4rem;
-                    height: 0.3rem;
-                    clip-path: var(--clippy1);
-                    transition: clip-path 0.4s;
-                }
-
-                /*animacion linea hacia la derecha*/
-                a::after {
-                    content: "";
-                    display: block;
-                    background: $rojo;
-                    width: 100%;
-                    margin-top: 0.4rem;
-                    height: 0.3rem;
-                    clip-path: var(--clippy2);
-                    transition: clip-path 0.4s;
-                }
-
-                /*muestra las lineas horizontales en los enlaces*/
-                a:hover:before {
-                    --clippy1: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-                    color: $rojo;
-                }
-
-                a:hover:after {
-                    --clippy2: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-                    color: $rojo;
-                }
-            }
-        }
-    }
-}
-
-/*para desplegar y ocultar los enlaces del menu hamburguesa*/
-@media screen and (max-width: 769px) {
-    /*para ocultar el menu*/
-    .ocultarEnlaces {
-        -webkit-clip-path: circle(0% at 100% 0%);
-        clip-path: circle(0% at 100% 0%);
-    }
-
-    /*para que muestre el despliegue del menu con forma circular*/
-    .circuloEnlace {
-        -webkit-clip-path: circle(150% at 100% 0%);
-        clip-path: circle(150% at 100% 0%);
-    }
-}
-/*--------------------------------------------------------------*/
-
-/*Para agrandar un poquito el header en pantalla grande*/
-@media (min-width: 769px) {
-    .header {
-        height: 8rem;
-        opacity: 0.9;
-    }
-}
-/*FIN HEADER---------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 /*MAIN----------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 /*PAGINA PRINCIPAL INDEX--------------------------------------------------------------------------------------------------------------------------------------------------*/
 .contenedorImgPrincipal {
-    width: 100%;
-    height: 100%;
+    @include widthHeight(100%, 100%);
     position: relative;
     z-index: 1;
 
@@ -290,9 +71,10 @@ h1 {
     */
 
     .contenedorImgPrincipal__imgPrincipal {
-        width: 100%;
+        /* width: 100%;
         height: 100%;
-        object-fit: cover;
+        object-fit: cover; */
+        @extend %images;
     }
 
     .contenedorImgPrincipal__titulos {
@@ -357,7 +139,6 @@ h1 {
 .contenedorTextoPrincipal {
     @include flexbox(row, center, center);
     
-
     .contenedorTextoPrincipal__p {
         margin: 3%;
         padding: 4% 3%;
@@ -367,7 +148,7 @@ h1 {
         border-bottom: $primario 0.7rem solid;
         font-family: $font6, Charter, Georgia, serif;
         font-weight: 500;
-        font-size: 1.7rem;
+        font-size: 1.5rem;
         text-align: left;
         line-height: 2.8rem;
     }
@@ -378,6 +159,7 @@ h1 {
             width: 90%;
             margin: 2%;
             padding: 2%;
+            font-size: 1.7rem;
             border-bottom-right-radius: 2rem;
             border-left: $primario 4rem solid;
             border-right: $primario 4rem solid;
@@ -409,6 +191,7 @@ h1 {
     grid-template-columns: 100%;
     grid-template-rows: fr 1fr 1fr 1fr 1fr 1fr;
     overflow: hidden; /*cuando la imagen se sale del contenedor, oculta esa parte*/
+    
     .textoPlatos {
         font-size: 1.5rem;
         color: $blanco;
@@ -480,7 +263,6 @@ h1 {
 
 .bodyUbicacion {
     background-image: url(../images/buenas/AB5I6799_NikkiTo.jpg);
-    
     /* Para dejar la imagen de fondo centrada, vertical y
     horizontalmente */
     background-position: center center;
@@ -494,7 +276,6 @@ h1 {
     de fondo o si hay problemas para cargarla */
     background-color: $blanco;
 }
-
 
 .sectionUbicacion__h1,
 .sectionUbicacion__h2 {
@@ -609,9 +390,8 @@ h1 {
         margin-bottom: 8rem;
     }
 }
-
-
 /*FIN PAGINA UBICACION----------------------------------------------*/
+
 
 /*PAGINA NUESTRO EQUIPO--------------------------------------------*/
 .fotosEquipo {
@@ -636,9 +416,10 @@ h1 {
     /* background-color: #8bc79188; uso dos? */
     /* background-color: #66757e79; */
     /* background-color: #dae083; */
-    width: 100%;
+    /* width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; */
+    @extend %images;
     cursor: pointer;
 }
 
@@ -669,17 +450,18 @@ h1 {
 
 /*FIN PAGINA NUESTRO EQUIPO---------------------------------------------*/
 
+
 /* PAGINA UNITE QUEREMOS CONOCERTE--------------------------------------------*/
 
 /*quito pq uso clases generales para imagen */
 .contenedorImgPrincipalUnite {
-    width: 100%;
-    height: 100%;
+    @include widthHeight(100%, 100%);
 
     .contenedorImgPrincipalUnite__imgPrincipal {
-        width: 100%;
+        /* width: 100%;
         height: 100%;
-        object-fit: cover;
+        object-fit: cover; */
+        @extend %images;
     }
 
     @media (min-width: 769px) {
@@ -704,13 +486,7 @@ h1 {
     }
 }
 
-.formularioUnite {
-    background-color: $primario;
-    width: 100%; 
-    margin: 0 auto; /*Se centra asi cuando: el padre no tiene display flex y es elemento de bloque*/
-    padding: 2rem;
-    border-radius: 1rem;
-    
+.formulario--unite {
     /*ocultar el input file*/
     .adjuntarCurriculum {
         width: 0.1px;
@@ -729,7 +505,7 @@ h1 {
         margin-bottom: 0.5rem;
         margin-top: 1.5rem;
         padding: 1.5rem 4rem;
-        color: $negro;
+        color: map-get($colorsMaps, negro);
         background-color: $secundario;
         display: inline-block;
         transition: all 0.5s;
@@ -756,16 +532,17 @@ h1 {
 
 /*FIN PAGINA QUEREMOS CONOCERTE--------------------------------------------------- ------------*/
 
+
 /*PAGINA CONTACTO---------------------------------------------------------------------------------*/
 
 .contenedorImgPrincipal {
-    width: 100%;
-    height: 100%;
+    @include widthHeight(100%, 100%);
 
     .contenedorImgPrincipal__imgPrincipal {
-        width: 100%;
+        /* width: 100%;
         height: 100%;
-        object-fit: cover;
+        object-fit: cover; */
+        @extend %images;
     }
 
     .contenedorImgPrincipal__imgPrincipal--contacto {
@@ -773,209 +550,11 @@ h1 {
         height: 20rem;
     }
 }
-
-/*formulario---------------------------------------------------------------*/
-.formulario {
-    background-color: $primario;
-    width: unquote("min(100rem, 100%)"); /*utilizar el valor mas pequeño VERSION*/
-    /* width: min(100rem, 100%); */ /*utilizar el valor mas pequeño*/
-    margin: 0 auto; /*Se centra asi cuando: el padre no tiene display flex y es elemento de bloque*/
-    padding: 2rem;
-    border-radius: 1rem;
-}
-
-.formulario fieldset,
-.formularioUnite fieldset {
-    border: none;
-    /* margin-right: 1.5rem; */
-}
-
-.formulario legend,
-.formularioUnite legend {
-    text-align: center;
-    font-size: 1.8rem;
-    font-family: $font6;
-    font-weight: 700;
-    color: $secundario;
-    text-transform: uppercase;
-    margin-bottom: 2rem;
-}
-
-/*para poner el formulario en tres columnas cuando es mas grande que 769 pixeles*/
-@media (min-width: 769px) {
-    .contenedorCampos {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: auto auto 20rem;
-        column-gap: 1rem;
-    }
-}
-
-/*el textarea*/
-.campo:nth-child(7) {
-    grid-column: 1/4;
-}
-
-.campo {
-    margin-bottom: 1rem;
-}
-
-.campo label {
-    font-family: $font6;
-    font-weight: 400;
-    color: $blanco;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-    display: block; /* los labels toman todo el espacio disponible*/
-}
-
-.campo textarea {
-    height: 90%;
-    resize: none;
-}
-
-.campo select {
-    background-color: $secundario;
-}
-
-.inputTexto {
-    border-color: $primario;
-    font-family: $font6;
-    font-weight: 400;
-    width: 100%;
-    border: none;
-    padding: 1.5rem;
-    border-radius: 0.5rem;
-}
-
-.inputTexto:focus {
-    outline: none;
-    border: 2px solid $secundario;
-    box-shadow: 0 0 1rem $secundario;
-}
-
-/*Boton formulario----------------------------------------------------*/
-.boton {
-    position: relative;
-    padding: 1rem 3rem;
-    margin-top: 2rem;
-    background-color: $rojo;
-    font-family: $font6;
-    font-size: 2rem;
-    text-transform: uppercase;
-    font-weight: bold;
-    border-radius: 0.5rem;
-    color: $blanco;
-    background-color: transparent;
-    border: 2px solid #20e2d7;
-    z-index: 0;
-    cursor: pointer;
-    overflow: hidden;
-}
-
-.boton:hover {
-    animation: sombra_pulso 1000ms 1;
-    background-color: #20e2d7;
-    color: #434343;
-}
-
-.contenedorBotones {
-    /* display: flex; */
-    @include flexbox(column, center, flex-end);
-}
-
-/*Cuando es mas grande q 769 px se alinea derecha*/
-/* .alinearDerecha {
-    justify-content: flex-end;
-} */
-
-.widht100 {
-    width: 100%;
-}
-
-@media (min-width: 769px) {
-    /*cuando es mas de 769 pixeles se resetea y el boton se muestra mas chico. es para verlo grande en movil*/
-    .widht100 {
-        width: auto;
-    }
-}
-
-/*animacion de boton---------------------------------*/
-@keyframes sombra_pulso {
-    0% {
-        box-shadow: 0 0 0 0 rgba(32, 226, 215, 0.6);
-    }
-    100% {
-        box-shadow: 0 0 8px 16px rgba(32, 226, 215, 0);
-    }
-}
-/*Fin Efectos de botones --------------------------*/
-
-/*Fin Boton-----------------------------------------------*/
 /*FIN PAGINA CONTACTO----------------------------------------------------*/
 
 /*FIN MAIN----------------------------------------------------------------------------------------------------------------------------------------------------*/
 
-/*FOOTER-----------------------------------------------------------------------------------------------------------------------------------------------------*/
-.footer {
-    margin-top: 8rem;
-    padding: 1rem;
-    color: $blanco;
-    font-size: 3rem;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center; 
-    align-items:center;*/
-    @include flexbox(column, center, center);
-    width: 100%;
-    background-color: $negro;
-    /* box-shadow: $box-shadow; */
-}
 
-.footer__p {
-    text-align: center;
-    font-family: $font6;
-    font-size: 2rem;
-    font-weight: 500;
-    color: $blanco;
-    margin-bottom: 0.7rem;
-}
 
-@media screen and (min-width: 769px) {
-    .footer {
-        height: 17.5rem;
-    }
-}
-
-.footer__socialLinks {
-    /* display: flex;
-    justify-content: space-between; */
-    @include flexbox(row, space-between, center);
-    width: 15rem;
-    list-style: none;
-    cursor: pointer;
-}
-
-.fa-twitter:hover {
-    color: #4bc9f5;
-}
-
-.fa-facebook:hover {
-    color: #295b9e;
-}
-
-.fa-youtube:hover {
-    color: #c41222;
-}
-
-.fa-instagram:hover {
-    color: #ff9259;
-}
-/*FIN FOOTER-----------------------------------------------------*/
-
-/*----------------------------------------*/
-/*FIN FOOTER-----------------------------------------------------------------------------------------------------------------------------------------------*/
-
-/*OBJETOS ANIMADOS-------------------------------*/
 
 

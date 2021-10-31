@@ -1,54 +1,16 @@
 @charset "UTF-8";
 /*Defino paleta de colores a usar*/
 /*Defino fuentes a usar*/
-/*como se pone*/
-/*
-.clase {
-    @include cuadrado(20px,50px) 
-}
-*/
-/*GENERAL----------------------------------------------------------------------------------------------------------------------------*/
-/*Configuro para utilizar REM en lugar de PX, 1 rem = 10 px------*/
-/*Tambien para manejar mejor el Box Model*/
-html {
-  font-size: 62.5%;
-  box-sizing: border-box;
-  /*para manejar mejor el box model*/ }
+.contenedorImgPrincipal .contenedorImgPrincipal__imgPrincipal, .fotosItem img, .contenedorImgPrincipalUnite .contenedorImgPrincipalUnite__imgPrincipal {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; }
 
-/*para manejar mejor el box model*/
-*,
-*:before,
-*:after {
-  box-sizing: inherit; }
-
-body {
-  font-size: 16px;
-  /*1 rem = 10px*/
-  background-color: #f8f3e3; }
-
-/*"Reseteamos" CSS*/
-* {
-  margin: 0;
-  padding: 0; }
-
-h1,
-h2,
-h3 {
-  font-family: "Krub", sans-serif; }
-
-h1 {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  font-size: 3.5rem;
-  text-align: center;
-  color: #000000; }
-
-/*FIN GENERAL----------------------------------------------------------------------------------------------------------------------------*/
 /*HEADER---------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 .header {
   width: 100%;
   height: 6.5rem;
-  background-color: #242121;
+  background-color: #000000;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -136,7 +98,7 @@ h1 {
       list-style: none;
       transition: all 0.5s ease-out;
       /*transicion cuando se despliega menu hamburguesa*/
-      /* background: $negro; */ }
+      background-color: #000000; }
       .header .header__navPrincipal .header__navPrincipal__enlaces a {
         text-decoration: none;
         color: #f8f3e3;
@@ -157,6 +119,7 @@ h1 {
         flex-direction: row;
         background-color: transparent;
         transition: all 0.1s ease-out;
+        opacity: 0.9;
         /*animacion linea hacia la izquierda*/
         /*animacion linea hacia la derecha*/
         /*muestra las lineas horizontales en los enlaces*/ }
@@ -206,10 +169,203 @@ h1 {
 /*Para agrandar un poquito el header en pantalla grande*/
 @media (min-width: 769px) {
   .header {
-    height: 8rem;
-    opacity: 0.9; } }
+    height: 8rem; } }
 
 /*FIN HEADER---------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*FOOTER-----------------------------------------------------------------------------------------------------------------------------------------------------*/
+.footer {
+  margin-top: 8rem;
+  padding: 1rem;
+  color: #f8f3e3;
+  font-size: 3rem;
+  /* display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items:center;*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #000000; }
+  .footer .footer__p {
+    text-align: center;
+    font-family: "Krub", sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #f8f3e3;
+    margin-bottom: 0.7rem; }
+  .footer .footer__socialLinks {
+    /* display: flex;
+        justify-content: space-between; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 15rem;
+    list-style: none;
+    cursor: pointer; }
+    .footer .footer__socialLinks a {
+      color: #f8f3e3; }
+    .footer .footer__socialLinks .fa-twitter:hover {
+      color: #4bc9f5; }
+    .footer .footer__socialLinks .fa-facebook:hover {
+      color: #295b9e; }
+    .footer .footer__socialLinks .fa-youtube:hover {
+      color: #c41222; }
+    .footer .footer__socialLinks .fa-instagram:hover {
+      color: #ff9259; }
+
+@media screen and (min-width: 769px) {
+  .footer {
+    height: 17.5rem; } }
+
+/*FIN FOOTER--------------------------------------------------------------------------------------------*/
+/*Boton formulario----------------------------------------------------*/
+.boton {
+  position: relative;
+  padding: 1rem 3rem;
+  margin-top: 2rem;
+  background-color: #d83863;
+  font-family: "Krub", sans-serif;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 0.5rem;
+  color: #f8f3e3;
+  background-color: transparent;
+  border: 2px solid #20e2d7;
+  z-index: 0;
+  cursor: pointer;
+  overflow: hidden; }
+
+.boton:hover {
+  animation: sombra_pulso 1000ms 1;
+  background-color: #20e2d7;
+  color: #434343; }
+
+.contenedorBotones {
+  /* display: flex; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end; }
+
+.widht100 {
+  width: 100%; }
+
+@media (min-width: 769px) {
+  /*cuando es mas de 769 pixeles se resetea y el boton se muestra mas chico. es para verlo grande en movil*/
+  .widht100 {
+    width: auto; } }
+
+/*animacion de boton---------------------------------*/
+@keyframes sombra_pulso {
+  0% {
+    box-shadow: 0 0 0 0 #20E2D780; }
+  100% {
+    box-shadow: 0 0 0.8rem 1.6rem #20E2D700; } }
+
+/*Fin Efectos de botones --------------------------*/
+/*Fin Boton-----------------------------------------------*/
+/*formulario---------------------------------------------------------------*/
+.formulario {
+  background-color: #242121;
+  width: min(100rem, 100%);
+  /*utilizar el valor mas pequeño VERSION*/
+  /* width: min(100rem, 100%); */
+  /*utilizar el valor mas pequeño*/
+  margin: 0 auto;
+  /*Se centra asi cuando: el padre no tiene display flex y es elemento de bloque*/
+  padding: 2rem;
+  border-radius: 1rem; }
+  .formulario fieldset {
+    border: none;
+    /* margin-right: 1.5rem; */
+    /*el textarea*/
+    /*para poner el formulario en tres columnas cuando es mas grande que 769 pixeles*/ }
+    .formulario fieldset legend {
+      text-align: center;
+      font-size: 1.8rem;
+      font-family: "Krub", sans-serif;
+      font-weight: 700;
+      color: #f8c25c;
+      text-transform: uppercase;
+      margin-bottom: 2rem; }
+    .formulario fieldset .campo:nth-child(7) {
+      grid-column: 1/4; }
+    .formulario fieldset .campo {
+      margin-bottom: 1rem; }
+      .formulario fieldset .campo label {
+        font-family: "Krub", sans-serif;
+        font-weight: 400;
+        color: #f8f3e3;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        display: block;
+        /* los labels toman todo el espacio disponible*/ }
+      .formulario fieldset .campo textarea {
+        height: 90%;
+        resize: none; }
+      .formulario fieldset .campo select {
+        background-color: #f8c25c; }
+      .formulario fieldset .campo .inputTexto {
+        border-color: #242121;
+        font-family: "Krub", sans-serif;
+        font-weight: 400;
+        width: 100%;
+        border: none;
+        padding: 1.5rem;
+        border-radius: 0.5rem; }
+      .formulario fieldset .campo .inputTexto:focus {
+        outline: none;
+        border: 2px solid #f8c25c;
+        box-shadow: 0 0 1rem #f8c25c; }
+    @media (min-width: 769px) {
+      .formulario fieldset .contenedorCampos {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto auto 20rem;
+        column-gap: 1rem; } }
+
+/*fin formulario------------------------------------------------------------*/
+/*GENERAL----------------------------------------------------------------------------------------------------------------------------*/
+/*Configuro para utilizar REM en lugar de PX, 1 rem = 10 px------*/
+/*Tambien para manejar mejor el Box Model*/
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  /*para manejar mejor el box model*/ }
+
+/*para manejar mejor el box model*/
+*,
+*:before,
+*:after {
+  box-sizing: inherit; }
+
+body {
+  font-size: 16px;
+  /*1 rem = 10px*/
+  background-color: #f8f3e3; }
+
+/*"Reseteamos" CSS*/
+* {
+  margin: 0;
+  padding: 0; }
+
+h1,
+h2,
+h3 {
+  font-family: "Krub", sans-serif; }
+
+h1 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-size: 3.5rem;
+  text-align: center;
+  color: #000000; }
+
+/*FIN GENERAL----------------------------------------------------------------------------------------------------------------------------*/
 /*MAIN----------------------------------------------------------------------------------------------------------------------------------------------------------*/
 /*PAGINA PRINCIPAL INDEX--------------------------------------------------------------------------------------------------------------------------------------------------*/
 .contenedorImgPrincipal {
@@ -230,9 +386,9 @@ h1 {
     }
     */ }
   .contenedorImgPrincipal .contenedorImgPrincipal__imgPrincipal {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; }
+    /* width: 100%;
+        height: 100%;
+        object-fit: cover; */ }
   .contenedorImgPrincipal .contenedorImgPrincipal__titulos {
     /*  overflow: hidden; */
     white-space: nowrap;
@@ -292,7 +448,7 @@ h1 {
     border-bottom: #242121 0.7rem solid;
     font-family: "Krub", sans-serif, Charter, Georgia, serif;
     font-weight: 500;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     text-align: left;
     line-height: 2.8rem; }
   @media (min-width: 769px) {
@@ -300,6 +456,7 @@ h1 {
       width: 90%;
       margin: 2%;
       padding: 2%;
+      font-size: 1.7rem;
       border-bottom-right-radius: 2rem;
       border-left: #242121 4rem solid;
       border-right: #242121 4rem solid;
@@ -501,9 +658,9 @@ h1 {
   /* background-color: #8bc79188; uso dos? */
   /* background-color: #66757e79; */
   /* background-color: #dae083; */
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  /* width: 100%;
+    height: 100%;
+    object-fit: cover; */
   cursor: pointer; }
 
 .equipoHover {
@@ -539,9 +696,9 @@ h1 {
   width: 100%;
   height: 100%; }
   .contenedorImgPrincipalUnite .contenedorImgPrincipalUnite__imgPrincipal {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; }
+    /* width: 100%;
+        height: 100%;
+        object-fit: cover; */ }
   @media (min-width: 769px) {
     .contenedorImgPrincipalUnite .contenedorImgPrincipal__imgPrincipal--unite {
       height: 75rem; } }
@@ -558,22 +715,16 @@ h1 {
     width: 100%;
     margin: 0 auto 3rem auto; } }
 
-.formularioUnite {
-  background-color: #242121;
-  width: 100%;
-  margin: 0 auto;
-  /*Se centra asi cuando: el padre no tiene display flex y es elemento de bloque*/
-  padding: 2rem;
-  border-radius: 1rem;
+.formulario--unite {
   /*ocultar el input file*/ }
-  .formularioUnite .adjuntarCurriculum {
+  .formulario--unite .adjuntarCurriculum {
     width: 0.1px;
     height: 0.1px;
     opacity: 0;
     overflow: hidden;
     position: absolute;
     z-index: -1; }
-  .formularioUnite #labelAdjuntarCV {
+  .formulario--unite #labelAdjuntarCV {
     font-family: "Krub", sans-serif;
     color: #f8f3e3;
     font-weight: 700;
@@ -609,192 +760,12 @@ h1 {
   width: 100%;
   height: 100%; }
   .contenedorImgPrincipal .contenedorImgPrincipal__imgPrincipal {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; }
+    /* width: 100%;
+        height: 100%;
+        object-fit: cover; */ }
   .contenedorImgPrincipal .contenedorImgPrincipal__imgPrincipal--contacto {
     /* width: 100%; */
     height: 20rem; }
 
-/*formulario---------------------------------------------------------------*/
-.formulario {
-  background-color: #242121;
-  width: min(100rem, 100%);
-  /*utilizar el valor mas pequeño VERSION*/
-  /* width: min(100rem, 100%); */
-  /*utilizar el valor mas pequeño*/
-  margin: 0 auto;
-  /*Se centra asi cuando: el padre no tiene display flex y es elemento de bloque*/
-  padding: 2rem;
-  border-radius: 1rem; }
-
-.formulario fieldset,
-.formularioUnite fieldset {
-  border: none;
-  /* margin-right: 1.5rem; */ }
-
-.formulario legend,
-.formularioUnite legend {
-  text-align: center;
-  font-size: 1.8rem;
-  font-family: "Krub", sans-serif;
-  font-weight: 700;
-  color: #f8c25c;
-  text-transform: uppercase;
-  margin-bottom: 2rem; }
-
-/*para poner el formulario en tres columnas cuando es mas grande que 769 pixeles*/
-@media (min-width: 769px) {
-  .contenedorCampos {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto auto 20rem;
-    column-gap: 1rem; } }
-
-/*el textarea*/
-.campo:nth-child(7) {
-  grid-column: 1/4; }
-
-.campo {
-  margin-bottom: 1rem; }
-
-.campo label {
-  font-family: "Krub", sans-serif;
-  font-weight: 400;
-  color: #f8f3e3;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-  display: block;
-  /* los labels toman todo el espacio disponible*/ }
-
-.campo textarea {
-  height: 90%;
-  resize: none; }
-
-.campo select {
-  background-color: #f8c25c; }
-
-.inputTexto {
-  border-color: #242121;
-  font-family: "Krub", sans-serif;
-  font-weight: 400;
-  width: 100%;
-  border: none;
-  padding: 1.5rem;
-  border-radius: 0.5rem; }
-
-.inputTexto:focus {
-  outline: none;
-  border: 2px solid #f8c25c;
-  box-shadow: 0 0 1rem #f8c25c; }
-
-/*Boton formulario----------------------------------------------------*/
-.boton {
-  position: relative;
-  padding: 1rem 3rem;
-  margin-top: 2rem;
-  background-color: #d83863;
-  font-family: "Krub", sans-serif;
-  font-size: 2rem;
-  text-transform: uppercase;
-  font-weight: bold;
-  border-radius: 0.5rem;
-  color: #f8f3e3;
-  background-color: transparent;
-  border: 2px solid #20e2d7;
-  z-index: 0;
-  cursor: pointer;
-  overflow: hidden; }
-
-.boton:hover {
-  animation: sombra_pulso 1000ms 1;
-  background-color: #20e2d7;
-  color: #434343; }
-
-.contenedorBotones {
-  /* display: flex; */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-end; }
-
-/*Cuando es mas grande q 769 px se alinea derecha*/
-/* .alinearDerecha {
-    justify-content: flex-end;
-} */
-.widht100 {
-  width: 100%; }
-
-@media (min-width: 769px) {
-  /*cuando es mas de 769 pixeles se resetea y el boton se muestra mas chico. es para verlo grande en movil*/
-  .widht100 {
-    width: auto; } }
-
-/*animacion de boton---------------------------------*/
-@keyframes sombra_pulso {
-  0% {
-    box-shadow: 0 0 0 0 rgba(32, 226, 215, 0.6); }
-  100% {
-    box-shadow: 0 0 8px 16px rgba(32, 226, 215, 0); } }
-
-/*Fin Efectos de botones --------------------------*/
-/*Fin Boton-----------------------------------------------*/
 /*FIN PAGINA CONTACTO----------------------------------------------------*/
 /*FIN MAIN----------------------------------------------------------------------------------------------------------------------------------------------------*/
-/*FOOTER-----------------------------------------------------------------------------------------------------------------------------------------------------*/
-.footer {
-  margin-top: 8rem;
-  padding: 1rem;
-  color: #f8f3e3;
-  font-size: 3rem;
-  /* display: flex;
-    flex-direction: column;
-    justify-content: center; 
-    align-items:center;*/
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  background-color: #000000;
-  /* box-shadow: $box-shadow; */ }
-
-.footer__p {
-  text-align: center;
-  font-family: "Krub", sans-serif;
-  font-size: 2rem;
-  font-weight: 500;
-  color: #f8f3e3;
-  margin-bottom: 0.7rem; }
-
-@media screen and (min-width: 769px) {
-  .footer {
-    height: 17.5rem; } }
-
-.footer__socialLinks {
-  /* display: flex;
-    justify-content: space-between; */
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  width: 15rem;
-  list-style: none;
-  cursor: pointer; }
-
-.fa-twitter:hover {
-  color: #4bc9f5; }
-
-.fa-facebook:hover {
-  color: #295b9e; }
-
-.fa-youtube:hover {
-  color: #c41222; }
-
-.fa-instagram:hover {
-  color: #ff9259; }
-
-/*FIN FOOTER-----------------------------------------------------*/
-/*----------------------------------------*/
-/*FIN FOOTER-----------------------------------------------------------------------------------------------------------------------------------------------*/
-/*OBJETOS ANIMADOS-------------------------------*/
