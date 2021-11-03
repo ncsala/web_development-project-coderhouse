@@ -6,6 +6,7 @@
 @import "./components/footer";
 @import "./components/buttons";
 @import "./components/form";
+@import "./sections/error404";
 
 /*GENERAL----------------------------------------------------------------------------------------------------------------------------*/
 /*Configuro para utilizar REM en lugar de PX, 1 rem = 10 px------*/
@@ -25,6 +26,9 @@ html {
 body {
     font-size: 16px; /*1 rem = 10px*/
     background-color: $blanco;
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: auto 1fr auto;
 }
 
 /*"Reseteamos" CSS*/
@@ -530,7 +534,7 @@ h1 {
     }
 }
 
-/*FIN PAGINA QUEREMOS CONOCERTE--------------------------------------------------- ------------*/
+/*FIN PAGINA QUEREMOS CONOCERTE---------------------------------------------------------------*/
 
 
 /*PAGINA CONTACTO---------------------------------------------------------------------------------*/
