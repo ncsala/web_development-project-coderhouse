@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*Defino paleta de colores a usar*/
 /*Defino fuentes a usar*/
-.contenedorImgPrincipal .contenedorImgPrincipal__imgPrincipal, .fotosItem img, .contenedorImgPrincipalUnite .contenedorImgPrincipalUnite__imgPrincipal {
+.contenedorImgPrincipal .contenedorImgPrincipal__imgPrincipal, .fotosEquipo .fotosItem img, .contenedorImgPrincipalUnite .contenedorImgPrincipalUnite__imgPrincipal {
   width: 100%;
   height: 100%;
   object-fit: cover; }
@@ -710,49 +710,52 @@ h1 {
   grid-auto-rows: auto;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   gap: 1.5rem; }
-
-.fotosItem {
-  position: relative;
-  width: 100%;
-  height: 30rem;
-  overflow: hidden; }
-
-.fotosItem img {
-  /* background-color: #f8d086; */
-  background-color: #8bc791cb;
-  /* background-color: #8bc79188; uso dos? */
-  /* background-color: #66757e79; */
-  /* background-color: #dae083; */
-  /* width: 100%;
-    height: 100%;
-    object-fit: cover; */
-  cursor: pointer; }
-
-.equipoHover {
-  background: #06273aab;
-  /* background: #00000069;  */
-  /* background: #dc143c8c; */
-  /* background: #d8386383;  */
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  color: #f8f3e3;
-  text-align: center;
-  /* display: flex;
-    flex-direction: column;
-    justify-content: center; */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  transform: translateX(100%);
-  cursor: pointer;
-  transition: transform 0.3s ease-in-out; }
-
-.fotosItem:hover .equipoHover {
-  transform: translateX(0%); }
+  .fotosEquipo .fotosItem {
+    position: relative;
+    width: 100%;
+    height: 30rem;
+    overflow: hidden; }
+    .fotosEquipo .fotosItem img {
+      /* background-color: #f8d086; */
+      background-color: #8bc791cb;
+      /* background-color: #8bc79188; uso dos? */
+      /* background-color: #66757e79; */
+      /* background-color: #dae083; */
+      /* width: 100%;
+            height: 100%;
+            object-fit: cover; */
+      cursor: pointer; }
+    .fotosEquipo .fotosItem .equipoHover {
+      background: #06273aab;
+      /* background: #00000069;  */
+      /* background: #dc143c8c; */
+      /* background: #d8386383;  */
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      color: #f8f3e3;
+      text-align: center;
+      /* display: flex;
+            flex-direction: column;
+            justify-content: center; */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transform: translateX(100%);
+      cursor: pointer;
+      transition: transform 0.3s ease-in-out; }
+    .fotosEquipo .fotosItem h2 {
+      margin-bottom: 0.4rem; }
+    .fotosEquipo .fotosItem p {
+      margin: 0.4rem;
+      font-family: "Krub", sans-serif;
+      font-weight: 500;
+      font-size: 1.4rem; }
+  .fotosEquipo .fotosItem:hover .equipoHover {
+    transform: translateX(0%); }
 
 /*FIN PAGINA NUESTRO EQUIPO---------------------------------------------*/
 /* PAGINA UNITE QUEREMOS CONOCERTE--------------------------------------------*/
