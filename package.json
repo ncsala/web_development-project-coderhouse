@@ -1,7 +1,7 @@
 {
-  "name": "proyecto-desarrolo_web-coderhouse-sin_bootstrap",
+  "name": "proyecto-desarrolo_web-coderhouse",
   "version": "1.0.0",
-  "description": "",
+  "description": "Para la creación del proyecto se utilizaron las tecnologías HTML, CSS, SASS y Javascript",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
