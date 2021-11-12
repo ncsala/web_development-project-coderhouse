@@ -1,0 +1,133 @@
+
+/*PAGINA UBICACIONES--------------------------------------------*/
+
+.bodyUbicacion {
+    background-image: url(../images/ubicaciones/AB5I6799_NikkiTo.jpg);
+    /* Para dejar la imagen de fondo centrada, vertical y
+    horizontalmente */
+    background-position: center center;
+    /* Para que la imagen de fondo no se repita */
+    background-repeat: no-repeat;
+    /* La imagen se fija en la ventana de visualización para que la altura de la imagen no supere a la del contenido */
+    background-attachment: fixed;
+    /* La imagen de fondo se reescala automáticamente con el cambio del ancho de ventana del navegador */
+    background-size: cover;
+    /* Se muestra un color de fondo mientras se está cargando la imagen
+    de fondo o si hay problemas para cargarla */
+    background-color: $blanco;
+}
+
+.sectionUbicacion__h1,
+.sectionUbicacion__h2 {
+    font-weight: 600;
+    color: $blanco;
+}
+
+.sectionUbicacion__h1 {
+    font-size: 3.5rem;
+}
+
+.sectionUbicacion__h2 {
+    margin-top: 3rem;
+    font-size: 2.8rem;
+}
+
+#sectionUbicacion__typewriter {
+    margin-top: 0.5rem;
+    margin-bottom: 4rem;
+    font-family: $font6;
+    color: $secundario;
+    font-size: 2.8rem;
+    font-weight: 600;
+}
+
+@media (min-width: 769px) {
+    .sectionUbicacion {
+        width: 95%;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 1200px) {
+    .sectionUbicacion {
+        width: 70%;
+        margin: 0 auto;
+    }
+}
+
+.sectionSucursal {
+    border: #106ba0 solid;
+    margin-bottom: 8rem;
+    border-radius: 1rem;
+    /* border: $rojo solid 0.2rem; */
+    opacity: 0.9;
+
+    .sectionSucursal__contenedor {
+        /* display: flex;
+        justify-content: center;
+        align-items: center; */
+        @include flexbox(row, center, center);
+        background-color: $primario;
+        border-radius: 0.5rem;
+        color: $blanco;
+        height: 44rem;
+        
+        .sectionSucursal__listado_h3
+        {
+            font-size: 2.3rem;
+            font-weight: 500;
+            font-family: $font6;
+            color: $rojo;
+            margin-bottom: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .sectionSucursal__listado__ul {
+            padding: 0;
+            margin: 1rem;
+            font-family: $font6;
+            font-size: 2.2rem;
+            margin-top: 1.5rem;
+            list-style: none;
+            
+            .sectionSucursal__listado_h4 {
+                margin-top: 4rem;
+                font-size: 2.3rem;
+                font-weight: 500;
+                font-family: $font6;
+                color: $secundario;
+            }
+            
+            .sectionSucursal__listado__ul__ul {
+                list-style: none;
+            }
+        }     
+    }
+
+    .sectionSucursal__contenedor__mapa {
+        width: 100%;
+    }
+
+    @media (min-width: 769px) {
+        .sectionSucursal__contenedor {
+            width: 50%;
+            border-radius: 0.5rem;
+            height: 55rem;
+        }
+    
+        .sectionSucursal__contenedor__mapa {
+            width: 50%;
+            height: 55rem;
+            border-radius: 0.5rem;
+        }
+    }
+}
+
+
+@media (min-width: 769px) {
+    .sectionSucursal {
+        @include flexbox(row, center, center);
+        margin-bottom: 8rem;
+    }
+}
+/*FIN PAGINA UBICACION----------------------------------------------*/

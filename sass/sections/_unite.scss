@@ -1,0 +1,80 @@
+/* PAGINA UNITE QUEREMOS CONOCERTE--------------------------------------------*/
+
+/*quito pq uso clases generales para imagen */
+.contenedorImgPrincipalUnite {
+    @include widthHeight(100%, 100%);
+
+    .contenedorImgPrincipalUnite__imgPrincipal {
+        /* width: 100%;
+        height: 100%;
+        object-fit: cover; */
+        @extend %images;
+    }
+
+    @media (min-width: 769px) {
+        .contenedorImgPrincipal__imgPrincipal--unite {
+            height: 75rem;
+        }
+    }
+}
+
+.textoFormularioUnite p {
+    width: 95%;
+    font-family: $font6;
+    font-weight: 500;
+    font-size: 2.1rem;
+    margin: 2rem auto 3rem auto;
+}
+
+@media (min-width: 769px) {
+    .textoFormularioUnite p {
+        width: 100%;
+        margin: 0 auto 3rem auto;
+    }
+}
+
+.formulario--unite {
+    /*ocultar el input file*/
+    .adjuntarCurriculum {
+        width: 0.1px;
+        height: 0.1px;
+        opacity: 0;
+        overflow: hidden;
+        position: absolute;
+        z-index: -1;
+    }
+
+    #labelAdjuntarCV {
+        font-family: $font6;
+        color: $blanco;
+        font-weight: 700;
+        font-size: 1.4rem;
+        margin-bottom: 0.5rem;
+        margin-top: 1.5rem;
+        padding: 1.5rem 4rem;
+        color: map-get($colorsMaps, negro);
+        background-color: $secundario;
+        display: inline-block;
+        transition: all 0.5s;
+        cursor: pointer;
+        text-transform: uppercase;
+        width: fit-content;
+        border-radius: 0.5rem;
+    }
+}
+
+@media (min-width: 769px) {
+    .queremosConocerte {
+        /* display: flex; */
+        @include flexbox(row, center, center);
+        margin: 0 auto;
+        width: 95%;
+    }
+    
+    .textoFormularioUnite {
+        margin-left: 3rem;
+        width: 85%;
+    }
+}
+
+/*FIN PAGINA QUEREMOS CONOCERTE---------------------------------------------------------------*/

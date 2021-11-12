@@ -431,7 +431,6 @@ h1 {
   color: #000000; }
 
 /*FIN GENERAL----------------------------------------------------------------------------------------------------------------------------*/
-/*MAIN----------------------------------------------------------------------------------------------------------------------------------------------------------*/
 /*PAGINA PRINCIPAL INDEX--------------------------------------------------------------------------------------------------------------------------------------------------*/
 .contenedorImgPrincipal {
   width: 100%;
@@ -595,6 +594,62 @@ h1 {
 
 /*--------------------------------------------*/
 /*FIN PAGINA PRINCIPAL INDEX--------------------------------------------------------------------------------------------------------------------------------------------*/
+/*PAGINA NUESTRO EQUIPO--------------------------------------------*/
+.fotosEquipo {
+  margin: 0 auto;
+  width: 80%;
+  display: grid;
+  grid-auto-rows: auto;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.5rem; }
+  .fotosEquipo .fotosItem {
+    position: relative;
+    width: 100%;
+    height: 30rem;
+    overflow: hidden; }
+    .fotosEquipo .fotosItem img {
+      /* background-color: #f8d086; */
+      background-color: #8bc791cb;
+      /* background-color: #8bc79188; uso dos? */
+      /* background-color: #66757e79; */
+      /* background-color: #dae083; */
+      /* width: 100%;
+            height: 100%;
+            object-fit: cover; */
+      cursor: pointer; }
+    .fotosEquipo .fotosItem .equipoHover {
+      background: #06273aab;
+      /* background: #00000069;  */
+      /* background: #dc143c8c; */
+      /* background: #d8386383;  */
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      color: #f8f3e3;
+      text-align: center;
+      /* display: flex;
+            flex-direction: column;
+            justify-content: center; */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transform: translateX(100%);
+      cursor: pointer;
+      transition: transform 0.3s ease-in-out; }
+    .fotosEquipo .fotosItem h2 {
+      margin-bottom: 0.4rem; }
+    .fotosEquipo .fotosItem p {
+      margin: 0.4rem;
+      font-family: "Krub", sans-serif;
+      font-weight: 500;
+      font-size: 1.4rem; }
+  .fotosEquipo .fotosItem:hover .equipoHover {
+    transform: translateX(0%); }
+
+/*FIN PAGINA NUESTRO EQUIPO---------------------------------------------*/
 /*PAGINA UBICACIONES--------------------------------------------*/
 .bodyUbicacion {
   background-image: url(../images/ubicaciones/AB5I6799_NikkiTo.jpg);
@@ -702,62 +757,6 @@ h1 {
     margin-bottom: 8rem; } }
 
 /*FIN PAGINA UBICACION----------------------------------------------*/
-/*PAGINA NUESTRO EQUIPO--------------------------------------------*/
-.fotosEquipo {
-  margin: 0 auto;
-  width: 80%;
-  display: grid;
-  grid-auto-rows: auto;
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-  gap: 1.5rem; }
-  .fotosEquipo .fotosItem {
-    position: relative;
-    width: 100%;
-    height: 30rem;
-    overflow: hidden; }
-    .fotosEquipo .fotosItem img {
-      /* background-color: #f8d086; */
-      background-color: #8bc791cb;
-      /* background-color: #8bc79188; uso dos? */
-      /* background-color: #66757e79; */
-      /* background-color: #dae083; */
-      /* width: 100%;
-            height: 100%;
-            object-fit: cover; */
-      cursor: pointer; }
-    .fotosEquipo .fotosItem .equipoHover {
-      background: #06273aab;
-      /* background: #00000069;  */
-      /* background: #dc143c8c; */
-      /* background: #d8386383;  */
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      color: #f8f3e3;
-      text-align: center;
-      /* display: flex;
-            flex-direction: column;
-            justify-content: center; */
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      transform: translateX(100%);
-      cursor: pointer;
-      transition: transform 0.3s ease-in-out; }
-    .fotosEquipo .fotosItem h2 {
-      margin-bottom: 0.4rem; }
-    .fotosEquipo .fotosItem p {
-      margin: 0.4rem;
-      font-family: "Krub", sans-serif;
-      font-weight: 500;
-      font-size: 1.4rem; }
-  .fotosEquipo .fotosItem:hover .equipoHover {
-    transform: translateX(0%); }
-
-/*FIN PAGINA NUESTRO EQUIPO---------------------------------------------*/
 /* PAGINA UNITE QUEREMOS CONOCERTE--------------------------------------------*/
 /*quito pq uso clases generales para imagen */
 .contenedorImgPrincipalUnite {
