@@ -1,7 +1,7 @@
 
 
 /*PAGINA PRINCIPAL INDEX--------------------------------------------------------------------------------------------------------------------------------------------------*/
-.contenedorImgPrincipal {
+.contenedorImgIndex {
     @include widthHeight(100%, 100%);
     position: relative;
     z-index: 1;
@@ -19,15 +19,11 @@
     }
     */
 
-    .contenedorImgPrincipal__imgPrincipal {
-        /* width: 100%;
-        height: 100%;
-        object-fit: cover; */
+    .contenedorImgIndex__imgPrincipal {
         @extend %images;
     }
 
-    .contenedorImgPrincipal__titulos {
-        /*  overflow: hidden; */
+    .contenedorImgIndex__titulos {
         white-space: nowrap;
         display: initial;
         position: absolute;
@@ -36,8 +32,7 @@
         transform: translate(-50%, -50%);
         margin: 0;
 
-        .contenedorImgPrincipal__titulos__h1 {
-            width: 100%;
+        .contenedorImgIndex__titulos__h1 {
             margin: 0;
             font-family: $font6;
             font-size: 2.4rem;
@@ -45,7 +40,7 @@
             color: $blanco;
         }
 
-        .contenedorImgPrincipal__titulos__h2 {
+        .contenedorImgIndex__titulos__h2 {
             margin: 0;
             font-family: $font6;
             font-size: 1.8rem;
@@ -53,37 +48,30 @@
             color: $blanco;
         }
 
-        .contenedorImgPrincipal__titulos__h2--moviendoH1 {
+        .contenedorImgIndex__titulos__h2--moviendoH1 {
             display: inline-block;
             margin: 0 0.5rem;
             animation: bounceInLeft;
             animation-duration: 2.5s;
         }
 
-        .contenedorImgPrincipal__titulos__h2--moviendoH2 {
+        .contenedorImgIndex__titulos__h2--moviendoH2 {
             margin: 0 0.5rem;
             animation: bounceInUp;
             animation-duration: 2.5s;
         }
 
-        /*Titulos- para pantalla grande ---------------*/
         @media (min-width: 769px) {
-            .contenedorImgPrincipal__titulos__h1 {
+            .contenedorImgIndex__titulos__h1 {
                 font-size: 5rem;
             }
 
-            .contenedorImgPrincipal__titulos__h2 {
+            .contenedorImgIndex__titulos__h2 {
                 font-size: 2.8rem;
             }
         }
-        /*------------------------------------------------------*/
     }
 }
-
-/*ocultar en celular?*/
-/* .titulosPrincipales  {
-    display: none;
-} */
 
 .contenedorTextoPrincipal {
     @include flexbox(row, center, center);
@@ -102,7 +90,6 @@
         line-height: 2.8rem;
     }
 
-    /*Texto  principal- para pantalla grande ---------------*/
     @media (min-width: 769px) {
         .contenedorTextoPrincipal__p {
             width: 90%;
@@ -116,92 +103,89 @@
             border-bottom: $primario 0.7rem solid;
         }
     }
-    /*------------------------------------------------------*/
 }
-/*Texto  principal- para pantalla grande ---------------*/
+
 @media (min-width: 769px) {
     .contenedorTextoPrincipal {
         width: 100%;
     }
 }
-/*------------------------------------------------------*/
 
-.tituloPlatillos {
-    text-align: center;
-    font-family: $font6;
-    margin-bottom: 2rem;
-    font-size: 3.4rem;
-    font-weight: 600;
-    color: $azulOscuro;
-}
 
-.seccionPlatos {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: fr 1fr 1fr 1fr 1fr 1fr;
-    overflow: hidden; /*cuando la imagen se sale del contenedor, oculta esa parte*/
-    
-    .textoPlatos {
-        font-size: 1.5rem;
-        color: $blanco;
+.sectionPlatillos {
+
+    .sectionPlatillos__h3 {
+        text-align: center;
         font-family: $font6;
-        background-color: $primario;
-    }
-
-    .textoPlatos .centrar {
-        margin: 5% 18%;
-    }
-
-    .textoPlatos h4 {
-        font-size: 2.2rem;
-        color: $rojo;
-        font-family: $font6;
-    }
-
-    .textoSopa {
-        grid-row: 4;
+        margin-bottom: 2rem;
+        font-size: 3.4rem;
+        font-weight: 600;
+        color: $azulOscuro;
     }
     
-    .imagenPlatos {
-        width: 100%;
-        height: 100%;
-    }
-
-    /*Platos para pantalla grande----------------------------------*/
-    @media (min-width: 769px) {
-        .textoPlatos {
-            @include flexbox(column, center, center);
-        }
-
-        .textoEnsalada {
-            grid-row: 2 / 3;
-        }
-
-        .textoSopa {
-            grid-column: 3 / 4;
-            grid-row: 2;
-        }
-
-        .textoChef {
-            grid-row: 1;
-            grid-column: -3 / -2;
-        }
-    }
-    /*--------------------------------------------*/
-}
-
-/*Platos para pantalla grande----------------------------------*/
-@media (min-width: 769px) {
-    .seccionPlatos {
-        margin: 0 auto;
-        width: 95%;
-        height: 100%;
+    .sectionPlatillos__platos {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        overflow: hidden; /*cuando la imagen se sale del contenedor, oculata esa parte*/
+        grid-template-columns: 100%;
+        grid-template-rows: fr 1fr 1fr 1fr 1fr 1fr;
+        overflow: hidden;
+    
+        .sectionPlatillos__txt {
+            font-size: 1.5rem;
+            color: $blanco;
+            font-family: $font6;
+            background-color: $primario;
+            
+            .sectionPlatillos__txt__h4 {
+                font-size: 2.2rem;
+                color: $rojo;
+                font-family: $font6;    
+            }
+        }
+        
+        .sectionPlatillos__txt--sopa {
+            grid-row: 4;
+        }
+
+        .sectionPlatillos__txt .centrar {
+            margin: 5% 18%;
+        }
+        
+        .sectionPlatillos__img {
+            @include widthHeight(100%, 100%);
+        }
+
+        @media (min-width: 769px) {
+            .sectionPlatillos__txt {
+                @include flexbox(column, center, center);
+            }
+
+            .sectionPlatillos__txt--ensalada {
+                grid-row: 2 / 3;
+            }
+            
+            .sectionPlatillos__txt--sopa {
+                grid-column: 3 / 4;
+                grid-row: 2;
+            }
+            
+            .sectionPlatillos__txt--chef {
+                grid-row: 1;
+                grid-column: -3 / -2;
+            }
+
+        }
+    }
+
+    @media (min-width: 769px) {
+        .sectionPlatillos__platos {
+            margin: 0 auto;
+            @include widthHeight(95%, 100%);
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            overflow: hidden; 
+        }
     }
 }
-/*--------------------------------------------*/
-
+    
 /*FIN PAGINA PRINCIPAL INDEX--------------------------------------------------------------------------------------------------------------------------------------------*/

@@ -20,23 +20,23 @@
         href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Krub:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Oswald:wght@400;500;600;700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Rubik:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
         rel="stylesheet">
 
-    <!--Agrego normalize. Pongo un preload para que cargue mas rapido-->
+    <!--Normalize. Pongo un preload para que cargue mas rapido-->
     <link rel="preload" href="./css/normalize.css" as="style">
     <link rel="stylesheet" href="./css/normalize.css">
 
-    <!--Agrego mis estilos. Pongo un preload para que cargue mas rapido-->
+    <!--Mis estilos.-->
     <link rel="preload" href="./css/main.css" as="style">
     <link rel="stylesheet" href="./css/main.css">
 
-    <!--Añado hoja de estilos para animaciones de texto -->
+    <!--Hoja de estilos para animaciones de texto -->
     <link rel="preload" href="./css/animate.css" as="style">
     <link rel="stylesheet" href="./css/animate.css">
 
-    <!--Añado hoja de estilo para la animacion del boton del menu hamburguesa-->
+    <!--Hoja de estilo para la animacion del boton del menu hamburguesa-->
     <link rel="preload" href="./css/hamburgers.css" as="style">
     <link rel="stylesheet" href="./css/hamburgers.css" />
 
-    <!-- Hoja de estilo para efecto de animaciones que al hacer scroll se activan -->
+    <!--Hoja de estilo para efecto de animaciones que al hacer scroll se activan -->
     <link rel="preload" href="./css/aos.css" as="style" />
     <link rel="stylesheet" href="./css/aos.css" />
 
@@ -118,17 +118,17 @@
         <section>
 
             <section>
-                <div class="contenedorImgPrincipal">
-                    <!--Para insertar una transparencia sobre la imagen-->
-                    <div class="contenedorImgPrincipal__titulos">
-                        <h1 class="contenedorImgPrincipal__titulos__h1 contenedorImgPrincipal__titulos__h2--moviendoH1">
+                <div class="contenedorImgIndex">
+                    <div class="contenedorImgIndex__titulos">
+                        <h1 class="contenedorImgIndex__titulos__h1 contenedorImgIndex__titulos__h2--moviendoH1">
                             Tu Lugar Favorito</h1>
-                        <h2
-                            class="contenedorImgPrincipal__titulos__h2 contenedorImgPrincipal__titulos__h2--moviendoH2 ">
+                            <h2
+                            class="contenedorImgIndex__titulos__h2 contenedorImgIndex__titulos__h2--moviendoH2 ">
                             Bebe, come y relájate</h2>
-                    </div>
-                    <img src="./images/images-index/imagenPrincipalIndex.jpg" class="contenedorImgPrincipal__imgPrincipal"
+                        </div>
+                        <img src="./images/images-index/imagenPrincipalIndex.jpg" class="contenedorImgIndex__imgPrincipal"
                         alt="Imagen principal, imagen del local">
+                    <!--Para insertar una transparencia sobre la imagen-->
                     <div class="transparenciaNegrita"></div>
                 </div>
 
@@ -151,16 +151,15 @@
                 </div>
             </section>
 
-            <section>
-                <h3 class="tituloPlatillos item" data-aos="fade-down">Algunos de nuestros platillos</h3>
+            <section class="sectionPlatillos">
+                <h3 class="sectionPlatillos__h3 item" data-aos="fade-down">Algunos de nuestros platillos</h3>
 
-                <div class="seccionPlatos">
-
-                    <img class="imagenPlatos item" data-aos="fade-right"
+                <div class="sectionPlatillos__platos">
+                    <img class="sectionPlatillos__img item" data-aos="fade-right"
                         src="./images/images-index/ensalada-vegetariana.jpeg" alt="Ensalada del Oeste">
-                    <div class="textoPlatos textoEnsalada item" data-aos="fade-right">
+                    <div class="sectionPlatillos__txt sectionPlatillos__txt--ensalada item" data-aos="fade-right">
                         <div class="centrar">
-                            <h4>Ensalada del Oeste</h4>
+                            <h4 class="sectionPlatillos__txt__h4">Ensalada del Oeste</h4>
                             <p>
                                 Las ensaladas son siempre platos frescos, livianos, apetitosos que deben atraer el
                                 interes de los comensales. En ninguna otra preparación de alimentos hay tantos gustos
@@ -171,9 +170,9 @@
                         </div>
                     </div>
 
-                    <div class="textoPlatos textoSopa item" data-aos="fade-left">
+                    <div class="sectionPlatillos__txt sectionPlatillos__txt--sopa item" data-aos="fade-left">
                         <div class="centrar">
-                            <h4>Sopa Chowder</h4>
+                            <h4 class="sectionPlatillos__txt__h4">Sopa Chowder</h4>
                             <p>
                                 Es una sopa espesa en la que se dejan los alimentos en trozos bastantes grandes.
                                 Fácilmente puede ser el plato único, ya que es de un alto valor calórico y muy nutritivo
@@ -182,14 +181,14 @@
                             </p>
                         </div>
                     </div>
-                    <img class="imagenPlatos item" data-aos="fade-left" src="./images/images-index/sopa.jpeg"
+                    <img class="sectionPlatillos__img item" data-aos="fade-left" src="./images/images-index/sopa.jpeg"
                         alt="Sopa Especial">
 
-                    <img class="imagenPlatos item" data-aos="fade-up" src="./images/images-index/especial-chef.jpg"
+                    <img class="sectionPlatillos__img item" data-aos="fade-up" src="./images/images-index/especial-chef.jpg"
                         alt="Especial del chef">
-                    <div class="textoPlatos textoChef item" data-aos="fade-up">
+                    <div class="sectionPlatillos__txt sectionPlatillos__txt--chef item" data-aos="fade-up">
                         <div class="centrar">
-                            <h4>Especial del Chef</h4>
+                            <h4 class="sectionPlatillos__txt__h4">Especial del Chef</h4>
                             <p>
                                 Muchos restaurantes tienen su propia versión de esta receta, en nuestro caso contamos
                                 con un clásico uruguayo, el Chupín de pescado. Se prepara recién sacado del mar y se
@@ -234,14 +233,7 @@
         </ul>
     </footer>
 
-    <!-- Java Script para efecto de animaciones que al hacer scroll se activan -->
-    <!-- <script script  src = " https://unpkg.com/aos@next/dist/aos.js " > </script>
-    <script script > 
-        AOS.init ( 
-            { duration: 1200,}); 
-    </script>  -->
-
-    <!-- Java Script para efecto de animaciones que al hacer scroll se activan -->
+    <!-- Libreria para efecto de animaciones que al hacer scroll se activan -->
     <script src="./js/aos.js"></script>
     <script>
         AOS.init({

@@ -12,15 +12,10 @@
     .header__navPrincipal {
         height: 100%;
         width: 100%;
-        /* display: flex;
-        justify-content: space-between; */
         @include flexbox(row, space-between, normal);
 
         .header__navPrincipal__logoPrincipal {
             /*LOGO-------------------------------------*/
-            /* .text--transparent {
-                fill: transparent;
-            } */
             .anim-shape {
                 -webkit-transform-origin: 0x 15rem;
                 -ms-transform-origin: 0x 15rem;
@@ -123,7 +118,7 @@
                 color: $blanco;
                 font-family: $font6;
                 font-weight: 600;
-                font-size: 2.4rem;
+                font-size: 2rem;
             }
 
             a:hover {
