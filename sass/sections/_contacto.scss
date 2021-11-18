@@ -1,20 +1,11 @@
 /*PAGINA CONTACTO---------------------------------------------------------------------------------*/
 
-.contenedorImgPrincipal {
-    @include widthHeight(100%, 100%);
+.contenedorImgContacto {
+    @include wH(100%, 100%);
 
-    .contenedorImgPrincipal__imgPrincipal {
-        /* width: 100%;
-        height: 100%;
-        object-fit: cover; */
+    .contenedorImgContacto__imgContacto {
         @extend %images;
-    }
-
-    .contenedorImgPrincipal__imgPrincipal--contacto {
-        /* width: 100%; */
         height: 20rem;
     }
 }
 /*FIN PAGINA CONTACTO----------------------------------------------------*/
-
-/*FIN MAIN----------------------------------------------------------------------------------------------------------------------------------------------------*/

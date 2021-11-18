@@ -5,10 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0 maximu-scale=3.0">
-    <meta name="keywords"
-        content="restaurante, nosotros, come, relajate, bebe, platillos, platos, chef, chowder, ensalada">
-    <meta name="description"
-        content="Bienvenida al restaurante con fotos, breve descripcion del restaurante y algunos platillos">
+    <meta name="keywords" content="restaurante, nosotros, come, relajate, bebe, platillos, platos, chef, chowder, ensalada">
+    <meta name="description" content="Bienvenida al restaurante con fotos, breve descripcion del restaurante y algunos platillos">
 
     <!--Agregro Font Awesome para utilizar iconos-->
     <script src="https://kit.fontawesome.com/09861335cf.js" crossorigin="anonymous"></script>
@@ -20,34 +18,27 @@
         href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Krub:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Oswald:wght@400;500;600;700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Rubik:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
         rel="stylesheet">
 
-    <!--Agrego normalize. Pongo un preload para que cargue mas rapido-->
+    <!--Normalize. Pongo un preload para que cargue mas rapido-->
     <link rel="preload" href="./css/normalize.css" as="style">
     <link rel="stylesheet" href="./css/normalize.css">
 
-    <!--Agrego mis estilos. Pongo un preload para que cargue mas rapido-->
+    <!--Mis estilos.-->
     <link rel="preload" href="./css/main.css" as="style">
     <link rel="stylesheet" href="./css/main.css">
 
-    <!--Añado hoja de estilos para animaciones de texto -->
+    <!--Hoja de estilos para animaciones de texto -->
     <link rel="preload" href="./css/animate.css" as="style">
     <link rel="stylesheet" href="./css/animate.css">
 
-    <!--Añado hoja de estilo para la animacion del boton del menu hamburguesa-->
+    <!--Hoja de estilo para la animacion del boton del menu hamburguesa-->
     <link rel="preload" href="./css/hamburgers.css" as="style">
     <link rel="stylesheet" href="./css/hamburgers.css" />
 
-    <!-- Hoja de estilo para efecto de animaciones que al hacer scroll se activan -->
+    <!--Hoja de estilo para efecto de animaciones que al hacer scroll se activan -->
     <link rel="preload" href="./css/aos.css" as="style" />
     <link rel="stylesheet" href="./css/aos.css" />
 
     <title>FoodHack | Hackeamos los sabores, y tus sentidos</title>
-
-    <!--<style>
-            *{
-                border: 1px solid red !important;
-            }
-        </style> -->
-
 </head>
 
 <body class="error404">
@@ -55,44 +46,43 @@
     <header class="header">
 
         <!--Menu de navegacion principal-->
-        <nav class="header__navPrincipal">
+        <nav class="header__nav">
 
-            <a href="index.html" class="header__navPrincipal__logoPrincipal">
-                <svg viewBox="-12 -17 170 50">
+            <a href="index.html" class="header__nav__logo">
+                <svg class="header__nav_logo__svg" viewBox="-12 -6.5 170 50" >
 
                     <clippath id="cp-text">
-                        <text text-anchor="middle" x="50%" y="50%" class="text--line">
+                        <text text-anchor="middle" x="50%" y="50%" class="header__logo__txt">
                             Hack Food
                         </text>
                     </clippath>
 
-                    <!-- sombra -->
-                    <g clip-path="url(#cp-text)" class="shadow">
-                        <rect width="100%" height="100%" class="anim-shape anim-shape--shadow"></rect>
+                    <g clip-path="url(#cp-text)" class="txtColor">
+                        <rect width="100%" height="100%" class="header__logo__animForma"></rect>
+                        <rect width="80%" height="100%" class="header__logo__animForma"></rect>
+                        <rect width="60%" height="100%" class="header__logo__animForma"></rect>
+                        <rect width="40%" height="100%" class="header__logo__animForma"></rect>
+                        <rect width="20%" height="100%" class="header__logo__animForma"></rect>
                     </g>
 
-
-                    <g clip-path="url(#cp-text)" class="colortext">
-                        <rect width="100%" height="100%" class="anim-shape"></rect>
-                        <rect width="80%" height="100%" class="anim-shape"></rect>
-                        <rect width="60%" height="100%" class="anim-shape"></rect>
-                        <rect width="40%" height="100%" class="anim-shape"></rect>
-                        <rect width="20%" height="100%" class="anim-shape"></rect>
+                    <g clip-path="url(#cp-text)" class="header__logo__sombra">
+                        <rect width="100%" height="100%" class="header__logo__animForma header__logo__animForma--sombra"></rect>
                     </g>
-
-                    <!-- <use xlink:href="#s-text" class="text--transparent"></use> -->
                 </svg>
-            </a>
+            </a> <!-- Fin de Logo -->
 
-            <!--Boton hamburguesa-->
-            <button class="hamburger hamburger--spring-r header__navPrincipal__iconoHamburguesa" type="button"
-                id="header__navPrincipal__iconoHamburguesa">
+            <!--Icono de menu hamburguesa-->
+            <button class="hamburger hamburger--spring-r header__nav__iconoHamb" type="button"
+                id="header__nav__iconoHamb">
                 <span class="hamburger-box">
                     <span class="hamburger-inner"></span>
                 </span>
             </button>
 
-            <ul class="header__navPrincipal__enlaces ocultarEnlaces" id="header__navPrincipal__enlaces">
+            <ul class="header__nav__enlaces ocultarEnlaces" id="header__nav__enlaces">
+                <li>
+                    <a href="index.html">Inicio</a>
+                </li>
                 <li>
                     <a href="nuestro-equipo.html">Nuestro Equipo</a>
                 </li>

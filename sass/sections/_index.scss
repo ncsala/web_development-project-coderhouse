@@ -1,8 +1,6 @@
-
-
 /*PAGINA PRINCIPAL INDEX--------------------------------------------------------------------------------------------------------------------------------------------------*/
 .contenedorImgIndex {
-    @include widthHeight(100%, 100%);
+    @include wH(100%, 100vh);
     position: relative;
     z-index: 1;
 
@@ -151,7 +149,7 @@
         }
         
         .sectionPlatillos__img {
-            @include widthHeight(100%, 100%);
+            @include wH(100%, 100%);
         }
 
         @media (min-width: 769px) {
@@ -172,14 +170,13 @@
                 grid-row: 1;
                 grid-column: -3 / -2;
             }
-
         }
     }
 
     @media (min-width: 769px) {
         .sectionPlatillos__platos {
             margin: 0 auto;
-            @include widthHeight(95%, 100%);
+            @include wH(95%, 100%);
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: repeat(2, 1fr);

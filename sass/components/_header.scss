@@ -1,75 +1,83 @@
 
 /*HEADER---------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 .header {
-    width: 100%;
-    height: 6.5rem;
+    @include wH(100%, 6.5rem);
     background-color: $negro;
     position: sticky;
     top: 0;
     z-index: 100;
-    opacity: 0.9;
 
-    .header__navPrincipal {
-        height: 100%;
-        width: 100%;
+    .header__nav {
+        @include wH(100%, 100%);
         @include flexbox(row, space-between, normal);
+        
+        
+        .header__nav__logo {
 
-        .header__navPrincipal__logoPrincipal {
-            /*LOGO-------------------------------------*/
-            .anim-shape {
+            .header__nav_logo__svg {
+                @include wH(100%, 7rem);
+            }
+    
+            @media (min-width: 769px) {
+                .header__nav_logo__svg {
+                    height: 8rem;
+                }
+            }
+
+            .header__logo__animForma {
                 -webkit-transform-origin: 0x 15rem;
                 -ms-transform-origin: 0x 15rem;
                 transform-origin: 0x 15rem;
-                -webkit-animation: moving-panel 3s ease-in alternate;
-                animation: moving-panel 3s ease-in alternate;
+                -webkit-animation: moviendoPanel 3s ease-in alternate;
+                animation: moviendoPanel 3s ease-in alternate;
                 -webkit-transform: scale(1, 1) translate(2rem, 0);
                 transform: scale(1, 1) translate(2rem, 0);
             }
 
-            .colortext .anim-shape:nth-child(1) {
+            .txtColor .header__logo__animForma:nth-child(1) {
                 fill: $negro;
             }
 
-            .colortext .anim-shape:nth-child(2) {
+            .txtColor .header__logo__animForma:nth-child(2) {
                 fill: #32a1ac;
             }
 
-            .colortext .anim-shape:nth-child(3) {
+            .txtColor .header__logo__animForma:nth-child(3) {
                 fill: #9dd6c6;
             }
 
-            .colortext .anim-shape:nth-child(4) {
+            .txtColor .header__logo__animForma:nth-child(4) {
                 fill: $secundario;
             }
 
-            .colortext .anim-shape:nth-child(5) {
+            .txtColor .header__logo__animForma:nth-child(5) {
                 fill: $rojo;
             }
 
-            .shadow {
-                -webkit-transform: translate(4px, 4px);
-                -ms-transform: translate(4px, 4px);
-                transform: translate(4px, 4px);
+            .header__logo__sombra {
+                -webkit-transform: translate(.4rem,.4rem );
+                -ms-transform: translate(.4rem, .4rem);
+                transform: translate(.4rem, .4rem);
             }
 
-            .anim-shape--shadow {
+            .header__logo__animForma--sombra {
                 fill: $otroGris;
                 fill-opacity: 0.2;
             }
 
-            @-webkit-keyframes moving-panel {
+            @-webkit-keyframes moviendoPanel {
                 0% {
                     -webkit-transform: scale(0, 1) translate(0, 0);
                     -ms-transform: scale(0, 1) translate(0, 0);
                     transform: scale(0, 1) translate(0, 0);
                 }
                 100% {
-                    -webkit-transform: scale(1, 1) translate(20px, 0);
-                    transform: scale(1, 1) translate(20px, 0px);
+                    -webkit-transform: scale(1, 1) translate(2rem, 0);
+                    transform: scale(1, 1) translate(2rem, 0rem);
                 }
             }
 
-            @keyframes moving-panel {
+            @keyframes moviendoPanel {
                 0% {
                     -webkit-transform: scale(0, 1) translate(0, 0);
                     -ms-transform: scale(0, 1) translate(0, 0);
@@ -81,18 +89,7 @@
                 }
             }
 
-            svg {
-                width: 100%;
-                height: 5rem;
-            }
-
-            @media (min-width: 769px) {
-                svg {
-                    height: 6rem;
-                }
-            }
-
-            text {
+            .header__logo__txt {
                 font-size: 2.5rem;
                 font-family: $font6;
                 font-weight: 700;
@@ -100,20 +97,19 @@
             }
         } /*fin de logo-----------------------------------------------------*/
 
-        .header__navPrincipal__iconoHamburguesa {
+        .header__nav__iconoHamb {
             z-index: 110;
         }
 
-        .header__navPrincipal__enlaces {
+        .header__nav__enlaces {
             position: fixed;
-            height: 100vh;
-            width: 100%;
+            @include wH(100%, 100vh);
             @include flexbox(column, space-around, center);
             list-style: none;
             transition: all 0.5s ease-out; /*transicion cuando se despliega menu hamburguesa*/
             background-color: $negro;
 
-            a {
+            .header__nav__enlaces__a {
                 text-decoration: none;
                 color: $blanco;
                 font-family: $font6;
@@ -121,7 +117,7 @@
                 font-size: 2rem;
             }
 
-            a:hover {
+            .header__nav__enlaces__a:hover {
                 cursor: pointer;
                 color: $rojo;
             }
@@ -129,32 +125,31 @@
 
         /*Navegacion principal para pantalla grande--------*/
         @media (min-width: 769px) {
-            .header__navPrincipal__iconoHamburguesa {
+            .header__nav__iconoHamb {
                 display: none;
                 color: $rojo;
             }
 
-            .header__navPrincipal__enlaces {
+            .header__nav__enlaces {
                 position: initial;
-                height: 100%;
-                width: 100%;
+                @include wH(100%, 100%);
                 flex-direction: row;
                 background-color: transparent;
                 transition: all 0.1s ease-out;
                 opacity: 0.9;
                 
-                a {
+                .header__nav__enlaces__a {
                     --clippy1: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
                     --clippy2: polygon(0 0, 0 0, 0 100%, 0% 100%);
                 }
 
-                a:hover {
+                .header__nav__enlaces__a:hover {
                     cursor: pointer;
                     color: $blanco;
                 }
 
                 /*animacion linea hacia la izquierda*/
-                a::before {
+                .header__nav__enlaces__a::before {
                     content: "";
                     display: block;
                     background: $rojo;
@@ -166,7 +161,7 @@
                 }
 
                 /*animacion linea hacia la derecha*/
-                a::after {
+                .header__nav__enlaces__a::after {
                     content: "";
                     display: block;
                     background: $rojo;
@@ -178,12 +173,12 @@
                 }
 
                 /*muestra las lineas horizontales en los enlaces*/
-                a:hover:before {
+                .header__nav__enlaces__a:hover:before {
                     --clippy1: polygon(0 0, 100% 0, 100% 100%, 0 100%);
                     color: $rojo;
                 }
 
-                a:hover:after {
+                .header__nav__enlaces__a:hover:after {
                     --clippy2: polygon(0 0, 100% 0, 100% 100%, 0 100%);
                     color: $rojo;
                 }
@@ -201,10 +196,10 @@
     }
 
     /*para que muestre el despliegue del menu con forma circular*/
-    .circuloEnlace {
+  /*   .circuloEnlace {
         -webkit-clip-path: circle(150% at 100% 0%);
         clip-path: circle(150% at 100% 0%);
-    }
+    } */
 }
 /*--------------------------------------------------------------*/
 

@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*Defino paleta de colores a usar*/
 /*Defino fuentes a usar*/
-.contenedorImgIndex .contenedorImgIndex__imgPrincipal, .fotosEquipo .fotosItem img, .contenedorImgPrincipalUnite .contenedorImgPrincipalUnite__imgPrincipal, .contenedorImgPrincipal .contenedorImgPrincipal__imgPrincipal {
+.contenedorImgIndex .contenedorImgIndex__imgPrincipal, .fotosEquipo .fotosEquipo__item .fotosEquipo__item__img, .contenedorImgPrincipalUnite .contenedorImgPrincipalUnite__imgPrincipal, .contenedorImgContacto .contenedorImgContacto__imgContacto {
   width: 100%;
   height: 100%;
   object-fit: cover; }
@@ -62,55 +62,58 @@
   background-color: #000000;
   position: sticky;
   top: 0;
-  z-index: 100;
-  opacity: 0.9; }
-  .header .header__navPrincipal {
-    height: 100%;
+  z-index: 100; }
+  .header .header__nav {
     width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: normal;
     /*fin de logo-----------------------------------------------------*/
     /*Navegacion principal para pantalla grande--------*/ }
-    .header .header__navPrincipal .header__navPrincipal__logoPrincipal {
-      /*LOGO-------------------------------------*/ }
-      .header .header__navPrincipal .header__navPrincipal__logoPrincipal .anim-shape {
-        -webkit-transform-origin: 0x 15rem;
-        -ms-transform-origin: 0x 15rem;
-        transform-origin: 0x 15rem;
-        -webkit-animation: moving-panel 3s ease-in alternate;
-        animation: moving-panel 3s ease-in alternate;
-        -webkit-transform: scale(1, 1) translate(2rem, 0);
-        transform: scale(1, 1) translate(2rem, 0); }
-      .header .header__navPrincipal .header__navPrincipal__logoPrincipal .colortext .anim-shape:nth-child(1) {
-        fill: #000000; }
-      .header .header__navPrincipal .header__navPrincipal__logoPrincipal .colortext .anim-shape:nth-child(2) {
-        fill: #32a1ac; }
-      .header .header__navPrincipal .header__navPrincipal__logoPrincipal .colortext .anim-shape:nth-child(3) {
-        fill: #9dd6c6; }
-      .header .header__navPrincipal .header__navPrincipal__logoPrincipal .colortext .anim-shape:nth-child(4) {
-        fill: #f8c25c; }
-      .header .header__navPrincipal .header__navPrincipal__logoPrincipal .colortext .anim-shape:nth-child(5) {
-        fill: #d83863; }
-      .header .header__navPrincipal .header__navPrincipal__logoPrincipal .shadow {
-        -webkit-transform: translate(4px, 4px);
-        -ms-transform: translate(4px, 4px);
-        transform: translate(4px, 4px); }
-      .header .header__navPrincipal .header__navPrincipal__logoPrincipal .anim-shape--shadow {
-        fill: #757575;
-        fill-opacity: 0.2; }
+    .header .header__nav .header__nav__logo .header__nav_logo__svg {
+      width: 100%;
+      height: 7rem; }
+    @media (min-width: 769px) {
+      .header .header__nav .header__nav__logo .header__nav_logo__svg {
+        height: 8rem; } }
+    .header .header__nav .header__nav__logo .header__logo__animForma {
+      -webkit-transform-origin: 0x 15rem;
+      -ms-transform-origin: 0x 15rem;
+      transform-origin: 0x 15rem;
+      -webkit-animation: moviendoPanel 3s ease-in alternate;
+      animation: moviendoPanel 3s ease-in alternate;
+      -webkit-transform: scale(1, 1) translate(2rem, 0);
+      transform: scale(1, 1) translate(2rem, 0); }
+    .header .header__nav .header__nav__logo .txtColor .header__logo__animForma:nth-child(1) {
+      fill: #000000; }
+    .header .header__nav .header__nav__logo .txtColor .header__logo__animForma:nth-child(2) {
+      fill: #32a1ac; }
+    .header .header__nav .header__nav__logo .txtColor .header__logo__animForma:nth-child(3) {
+      fill: #9dd6c6; }
+    .header .header__nav .header__nav__logo .txtColor .header__logo__animForma:nth-child(4) {
+      fill: #f8c25c; }
+    .header .header__nav .header__nav__logo .txtColor .header__logo__animForma:nth-child(5) {
+      fill: #d83863; }
+    .header .header__nav .header__nav__logo .header__logo__sombra {
+      -webkit-transform: translate(0.4rem, 0.4rem);
+      -ms-transform: translate(0.4rem, 0.4rem);
+      transform: translate(0.4rem, 0.4rem); }
+    .header .header__nav .header__nav__logo .header__logo__animForma--sombra {
+      fill: #757575;
+      fill-opacity: 0.2; }
 
-@-webkit-keyframes moving-panel {
+@-webkit-keyframes moviendoPanel {
   0% {
     -webkit-transform: scale(0, 1) translate(0, 0);
     -ms-transform: scale(0, 1) translate(0, 0);
     transform: scale(0, 1) translate(0, 0); }
   100% {
-    -webkit-transform: scale(1, 1) translate(20px, 0);
-    transform: scale(1, 1) translate(20px, 0px); } }
+    -webkit-transform: scale(1, 1) translate(2rem, 0);
+    transform: scale(1, 1) translate(2rem, 0rem); } }
 
-@keyframes moving-panel {
+@keyframes moviendoPanel {
   0% {
     -webkit-transform: scale(0, 1) translate(0, 0);
     -ms-transform: scale(0, 1) translate(0, 0);
@@ -118,23 +121,17 @@
   100% {
     -webkit-transform: scale(1, 1) translate(2rem, 0);
     transform: scale(1, 1) translate(2rem, 0); } }
-      .header .header__navPrincipal .header__navPrincipal__logoPrincipal svg {
-        width: 100%;
-        height: 5rem; }
-      @media (min-width: 769px) {
-        .header .header__navPrincipal .header__navPrincipal__logoPrincipal svg {
-          height: 6rem; } }
-      .header .header__navPrincipal .header__navPrincipal__logoPrincipal text {
-        font-size: 2.5rem;
-        font-family: "Krub", sans-serif;
-        font-weight: 700;
-        font-style: italic; }
-    .header .header__navPrincipal .header__navPrincipal__iconoHamburguesa {
+    .header .header__nav .header__nav__logo .header__logo__txt {
+      font-size: 2.5rem;
+      font-family: "Krub", sans-serif;
+      font-weight: 700;
+      font-style: italic; }
+    .header .header__nav .header__nav__iconoHamb {
       z-index: 110; }
-    .header .header__navPrincipal .header__navPrincipal__enlaces {
+    .header .header__nav .header__nav__enlaces {
       position: fixed;
-      height: 100vh;
       width: 100%;
+      height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: space-around;
@@ -143,23 +140,23 @@
       transition: all 0.5s ease-out;
       /*transicion cuando se despliega menu hamburguesa*/
       background-color: #000000; }
-      .header .header__navPrincipal .header__navPrincipal__enlaces a {
+      .header .header__nav .header__nav__enlaces .header__nav__enlaces__a {
         text-decoration: none;
         color: #f8f3e3;
         font-family: "Krub", sans-serif;
         font-weight: 600;
         font-size: 2rem; }
-      .header .header__navPrincipal .header__navPrincipal__enlaces a:hover {
+      .header .header__nav .header__nav__enlaces .header__nav__enlaces__a:hover {
         cursor: pointer;
         color: #d83863; }
     @media (min-width: 769px) {
-      .header .header__navPrincipal .header__navPrincipal__iconoHamburguesa {
+      .header .header__nav .header__nav__iconoHamb {
         display: none;
         color: #d83863; }
-      .header .header__navPrincipal .header__navPrincipal__enlaces {
+      .header .header__nav .header__nav__enlaces {
         position: initial;
-        height: 100%;
         width: 100%;
+        height: 100%;
         flex-direction: row;
         background-color: transparent;
         transition: all 0.1s ease-out;
@@ -167,13 +164,13 @@
         /*animacion linea hacia la izquierda*/
         /*animacion linea hacia la derecha*/
         /*muestra las lineas horizontales en los enlaces*/ }
-        .header .header__navPrincipal .header__navPrincipal__enlaces a {
+        .header .header__nav .header__nav__enlaces .header__nav__enlaces__a {
           --clippy1: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
           --clippy2: polygon(0 0, 0 0, 0 100%, 0% 100%); }
-        .header .header__navPrincipal .header__navPrincipal__enlaces a:hover {
+        .header .header__nav .header__nav__enlaces .header__nav__enlaces__a:hover {
           cursor: pointer;
           color: #f8f3e3; }
-        .header .header__navPrincipal .header__navPrincipal__enlaces a::before {
+        .header .header__nav .header__nav__enlaces .header__nav__enlaces__a::before {
           content: "";
           display: block;
           background: #d83863;
@@ -182,7 +179,7 @@
           height: 0.3rem;
           clip-path: var(--clippy1);
           transition: clip-path 0.4s; }
-        .header .header__navPrincipal .header__navPrincipal__enlaces a::after {
+        .header .header__nav .header__nav__enlaces .header__nav__enlaces__a::after {
           content: "";
           display: block;
           background: #d83863;
@@ -191,10 +188,10 @@
           height: 0.3rem;
           clip-path: var(--clippy2);
           transition: clip-path 0.4s; }
-        .header .header__navPrincipal .header__navPrincipal__enlaces a:hover:before {
+        .header .header__nav .header__nav__enlaces .header__nav__enlaces__a:hover:before {
           --clippy1: polygon(0 0, 100% 0, 100% 100%, 0 100%);
           color: #d83863; }
-        .header .header__navPrincipal .header__navPrincipal__enlaces a:hover:after {
+        .header .header__nav .header__nav__enlaces .header__nav__enlaces__a:hover:after {
           --clippy2: polygon(0 0, 100% 0, 100% 100%, 0 100%);
           color: #d83863; } }
 
@@ -205,9 +202,10 @@
     -webkit-clip-path: circle(0% at 100% 0%);
     clip-path: circle(0% at 100% 0%); }
   /*para que muestre el despliegue del menu con forma circular*/
-  .circuloEnlace {
-    -webkit-clip-path: circle(150% at 100% 0%);
-    clip-path: circle(150% at 100% 0%); } }
+  /*   .circuloEnlace {
+        -webkit-clip-path: circle(150% at 100% 0%);
+        clip-path: circle(150% at 100% 0%);
+    } */ }
 
 /*--------------------------------------------------------------*/
 /*Para agrandar un poquito el header en pantalla grande*/
@@ -388,7 +386,6 @@
 
 /*GENERAL----------------------------------------------------------------------------------------------------------------------------*/
 /*Configuro para utilizar REM en lugar de PX, 1 rem = 10 px------*/
-/*Tambien para manejar mejor el Box Model*/
 html {
   font-size: 62.5%;
   box-sizing: border-box;
@@ -429,7 +426,7 @@ h1 {
 /*PAGINA PRINCIPAL INDEX--------------------------------------------------------------------------------------------------------------------------------------------------*/
 .contenedorImgIndex {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   position: relative;
   z-index: 1;
   /*Para insertar color negro transparente encima de la imagen   */
@@ -575,22 +572,19 @@ h1 {
   grid-auto-rows: auto;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   gap: 1.5rem; }
-  .fotosEquipo .fotosItem {
+  .fotosEquipo .fotosEquipo__item {
     position: relative;
     width: 100%;
     height: 30rem;
     overflow: hidden; }
-    .fotosEquipo .fotosItem img {
+    .fotosEquipo .fotosEquipo__item .fotosEquipo__item__img {
       /* background-color: #f8d086; */
       background-color: #8bc791cb;
       /* background-color: #8bc79188; uso dos? */
       /* background-color: #66757e79; */
       /* background-color: #dae083; */
-      /* width: 100%;
-            height: 100%;
-            object-fit: cover; */
       cursor: pointer; }
-    .fotosEquipo .fotosItem .equipoHover {
+    .fotosEquipo .fotosEquipo__item .fotosEquipo__item__hover {
       background: #06273aab;
       /* background: #00000069;  */
       /* background: #dc143c8c; */
@@ -602,9 +596,6 @@ h1 {
       height: 100%;
       color: #f8f3e3;
       text-align: center;
-      /* display: flex;
-            flex-direction: column;
-            justify-content: center; */
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -612,14 +603,14 @@ h1 {
       transform: translateX(100%);
       cursor: pointer;
       transition: transform 0.3s ease-in-out; }
-    .fotosEquipo .fotosItem h2 {
+    .fotosEquipo .fotosEquipo__item .fotosEquipo__item__h2 {
       margin-bottom: 0.4rem; }
-    .fotosEquipo .fotosItem p {
+    .fotosEquipo .fotosEquipo__item .fotosEquipo__item__p {
       margin: 0.4rem;
       font-family: "Krub", sans-serif;
       font-weight: 500;
       font-size: 1.4rem; }
-  .fotosEquipo .fotosItem:hover .equipoHover {
+  .fotosEquipo .fotosEquipo__item:hover .fotosEquipo__item__hover {
     transform: translateX(0%); }
 
 /*FIN PAGINA NUESTRO EQUIPO---------------------------------------------*/
@@ -731,14 +722,9 @@ h1 {
 
 /*FIN PAGINA UBICACION----------------------------------------------*/
 /* PAGINA UNITE QUEREMOS CONOCERTE--------------------------------------------*/
-/*quito pq uso clases generales para imagen */
 .contenedorImgPrincipalUnite {
   width: 100%;
   height: 100%; }
-  .contenedorImgPrincipalUnite .contenedorImgPrincipalUnite__imgPrincipal {
-    /* width: 100%;
-        height: 100%;
-        object-fit: cover; */ }
   @media (min-width: 769px) {
     .contenedorImgPrincipalUnite .contenedorImgPrincipal__imgPrincipal--unite {
       height: 75rem; } }
@@ -783,7 +769,6 @@ h1 {
 
 @media (min-width: 769px) {
   .queremosConocerte {
-    /* display: flex; */
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -796,16 +781,10 @@ h1 {
 
 /*FIN PAGINA QUEREMOS CONOCERTE---------------------------------------------------------------*/
 /*PAGINA CONTACTO---------------------------------------------------------------------------------*/
-.contenedorImgPrincipal {
+.contenedorImgContacto {
   width: 100%;
   height: 100%; }
-  .contenedorImgPrincipal .contenedorImgPrincipal__imgPrincipal {
-    /* width: 100%;
-        height: 100%;
-        object-fit: cover; */ }
-  .contenedorImgPrincipal .contenedorImgPrincipal__imgPrincipal--contacto {
-    /* width: 100%; */
+  .contenedorImgContacto .contenedorImgContacto__imgContacto {
     height: 20rem; }
 
 /*FIN PAGINA CONTACTO----------------------------------------------------*/
-/*FIN MAIN----------------------------------------------------------------------------------------------------------------------------------------------------*/
