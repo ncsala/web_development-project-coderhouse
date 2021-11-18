@@ -11,7 +11,6 @@
         @include wH(100%, 100%);
         @include flexbox(row, space-between, normal);
         
-        
         .header__nav__logo {
 
             .header__nav_logo__svg {
@@ -104,7 +103,7 @@
         .header__nav__enlaces {
             position: fixed;
             @include wH(100%, 100vh);
-            @include flexbox(column, space-around, center);
+            @include flexbox(column, center, center);
             list-style: none;
             transition: all 0.5s ease-out; /*transicion cuando se despliega menu hamburguesa*/
             background-color: $negro;
@@ -127,13 +126,12 @@
         @media (min-width: 769px) {
             .header__nav__iconoHamb {
                 display: none;
-                color: $rojo;
             }
 
             .header__nav__enlaces {
                 position: initial;
                 @include wH(100%, 100%);
-                flex-direction: row;
+                @include flexbox(row, space-around, center);
                 background-color: transparent;
                 transition: all 0.1s ease-out;
                 opacity: 0.9;
