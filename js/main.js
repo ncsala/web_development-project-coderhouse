@@ -52,20 +52,6 @@ typewriter
     .pauseFor(3000)
     .deleteChars(10)
     .start();
-
-/* let app2 = document.getElementById('typewriter');
-
-let typewriter2 = new Typewriter(app2, {
-    loop: true,
-    delay: 75,
-});
-
-typewriter2
-    .pauseFor(1000)
-    .typeString('La Úlima Capital del Mundo')
-    .pauseFor(200)
-    .deleteChars(10)
-    .start(); */
 //----------------------------------------------------/ 
 
 

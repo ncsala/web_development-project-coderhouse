@@ -102,6 +102,8 @@
 
         .header__nav__enlaces {
             position: fixed;
+            top:0;
+            right: 0;
             @include wH(100%, 100vh);
             @include flexbox(column, center, center);
             list-style: none;
@@ -198,7 +200,7 @@
     }
 }
 
-/*para desplegar y ocultar los enlaces del menu hamburguesa*/
+/*para desplegar y ocultar los enlaces del menu hamburguesa en forma circular*/
 @media screen and (max-width: 769px) {
     /*para ocultar el menu*/
     .ocultarEnlaces {
@@ -206,10 +208,10 @@
         clip-path: circle(0% at 100% 0%);
     }
 
-    /*para que muestre el despliegue del menu con forma circular*/
+    /*para mostrar el menu de forma circular*/
     .circuloEnlace {
         -webkit-clip-path: circle(150% at 100% 0%);
-        clip-path: circle(150% at 100% 0%);
+        clip-path: circle(300% at 100% 0%);
     }
 }
 /*--------------------------------------------------------------*/

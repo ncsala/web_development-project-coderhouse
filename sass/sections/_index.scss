@@ -109,7 +109,6 @@
     }
 }
 
-
 .sectionPlatillos {
 
     .sectionPlatillos__h3 {
@@ -150,10 +149,11 @@
         
         .sectionPlatillos__img {
             @include wH(100%, 100%);
+            // object-position: 5rem;    
         }
 
         @media (min-width: 769px) {
-            .sectionPlatillos__txt {
+            .sectionPlatillos__txt {    
                 @include flexbox(column, center, center);
             }
 
