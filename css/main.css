@@ -21,7 +21,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  background-color: #000000; }
+  background-color: #242121; }
   .footer .footer__p {
     text-align: center;
     font-family: "Krub", sans-serif;
@@ -59,7 +59,7 @@
 .header {
   width: 100%;
   height: 6.5rem;
-  background-color: #000000;
+  background-color: #242121;
   position: sticky;
   top: 0;
   z-index: 100; }
@@ -139,7 +139,7 @@
       list-style: none;
       transition: all 0.5s ease-out;
       /*transicion cuando se despliega menu hamburguesa*/
-      background-color: #000000; }
+      background-color: #242121; }
       .header .header__nav .header__nav__enlaces .header__nav__enlaces__a {
         text-decoration: none;
         color: #f8f3e3;
@@ -162,7 +162,6 @@
         align-items: center;
         background-color: transparent;
         transition: all 0.1s ease-out;
-        opacity: 0.9;
         /*animacion linea hacia la izquierda*/
         /*animacion linea hacia la derecha*/
         /*muestra las lineas horizontales en los enlaces*/ }
@@ -172,7 +171,7 @@
         .header .header__nav .header__nav__enlaces .header__nav__enlaces__a:hover {
           cursor: pointer;
           color: #f8f3e3; }
-        .header .header__nav .header__nav__enlaces .header__nav__enlaces__a::before {
+        .header .header__nav .header__nav__enlaces .header__nav__enlaces__a--pse::before {
           content: "";
           display: block;
           background: #d83863;
@@ -181,7 +180,7 @@
           height: 0.3rem;
           clip-path: var(--clippy1);
           transition: clip-path 0.4s; }
-        .header .header__nav .header__nav__enlaces .header__nav__enlaces__a::after {
+        .header .header__nav .header__nav__enlaces .header__nav__enlaces__a--pse::after {
           content: "";
           display: block;
           background: #d83863;
@@ -190,12 +189,22 @@
           height: 0.3rem;
           clip-path: var(--clippy2);
           transition: clip-path 0.4s; }
-        .header .header__nav .header__nav__enlaces .header__nav__enlaces__a:hover:before {
+        .header .header__nav .header__nav__enlaces .header__nav__enlaces__a--pse:hover:before {
           --clippy1: polygon(0 0, 100% 0, 100% 100%, 0 100%);
           color: #d83863; }
-        .header .header__nav .header__nav__enlaces .header__nav__enlaces__a:hover:after {
+        .header .header__nav .header__nav__enlaces .header__nav__enlaces__a--pse:hover:after {
           --clippy2: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-          color: #d83863; } }
+          color: #d83863; }
+        .header .header__nav .header__nav__enlaces .header__nav__enlaces__a--active {
+          border-top: #d83863 0.3rem solid;
+          width: 100%;
+          height: 0.3rem;
+          margin-bottom: 0.4rem; }
+        .header .header__nav .header__nav__enlaces .header__nav__enlaces__a--active {
+          border-bottom: #d83863 0.3rem solid;
+          width: 100%;
+          height: 0.3rem;
+          margin-top: 0.4rem; } }
 
 /*para desplegar y ocultar los enlaces del menu hamburguesa*/
 @media screen and (max-width: 769px) {
@@ -204,10 +213,9 @@
     -webkit-clip-path: circle(0% at 100% 0%);
     clip-path: circle(0% at 100% 0%); }
   /*para que muestre el despliegue del menu con forma circular*/
-  /*   .circuloEnlace {
-        -webkit-clip-path: circle(150% at 100% 0%);
-        clip-path: circle(150% at 100% 0%);
-    } */ }
+  .circuloEnlace {
+    -webkit-clip-path: circle(150% at 100% 0%);
+    clip-path: circle(150% at 100% 0%); } }
 
 /*--------------------------------------------------------------*/
 /*Para agrandar un poquito el header en pantalla grande*/

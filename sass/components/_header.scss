@@ -2,7 +2,7 @@
 /*HEADER---------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 .header {
     @include wH(100%, 6.5rem);
-    background-color: $negro;
+    background-color: $primario;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -106,7 +106,7 @@
             @include flexbox(column, center, center);
             list-style: none;
             transition: all 0.5s ease-out; /*transicion cuando se despliega menu hamburguesa*/
-            background-color: $negro;
+            background-color: $primario;
 
             .header__nav__enlaces__a {
                 text-decoration: none;
@@ -134,20 +134,19 @@
                 @include flexbox(row, space-around, center);
                 background-color: transparent;
                 transition: all 0.1s ease-out;
-                opacity: 0.9;
                 
                 .header__nav__enlaces__a {
                     --clippy1: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
                     --clippy2: polygon(0 0, 0 0, 0 100%, 0% 100%);
                 }
-
+                
                 .header__nav__enlaces__a:hover {
                     cursor: pointer;
                     color: $blanco;
                 }
-
+                
                 /*animacion linea hacia la izquierda*/
-                .header__nav__enlaces__a::before {
+                .header__nav__enlaces__a--pse::before {
                     content: "";
                     display: block;
                     background: $rojo;
@@ -157,9 +156,9 @@
                     clip-path: var(--clippy1);
                     transition: clip-path 0.4s;
                 }
-
+                
                 /*animacion linea hacia la derecha*/
-                .header__nav__enlaces__a::after {
+                .header__nav__enlaces__a--pse::after {
                     content: "";
                     display: block;
                     background: $rojo;
@@ -169,16 +168,30 @@
                     clip-path: var(--clippy2);
                     transition: clip-path 0.4s;
                 }
-
+                
                 /*muestra las lineas horizontales en los enlaces*/
-                .header__nav__enlaces__a:hover:before {
+                .header__nav__enlaces__a--pse:hover:before {
                     --clippy1: polygon(0 0, 100% 0, 100% 100%, 0 100%);
                     color: $rojo;
                 }
-
-                .header__nav__enlaces__a:hover:after {
+                .header__nav__enlaces__a--pse:hover:after {
                     --clippy2: polygon(0 0, 100% 0, 100% 100%, 0 100%);
                     color: $rojo;
+                }
+
+                
+                .header__nav__enlaces__a--active {
+                    border-top: $rojo 0.3rem solid;
+                    width: 100%;
+                    height: 0.3rem;
+                    margin-bottom: 0.4rem;
+                }
+                
+                .header__nav__enlaces__a--active{
+                    border-bottom: $rojo 0.3rem solid;     
+                    width: 100%;
+                    height: 0.3rem;
+                    margin-top: 0.4rem;
                 }
             }
         }
@@ -194,10 +207,10 @@
     }
 
     /*para que muestre el despliegue del menu con forma circular*/
-  /*   .circuloEnlace {
+    .circuloEnlace {
         -webkit-clip-path: circle(150% at 100% 0%);
         clip-path: circle(150% at 100% 0%);
-    } */
+    }
 }
 /*--------------------------------------------------------------*/
 

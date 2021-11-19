@@ -11,7 +11,7 @@ hamburger.addEventListener("click", function()
 //----------------------------------------------------------- /
 
 //--------------------Para Desplegar enlaces de menu hamburguesa-------------------///
-let boton = document.getElementById("header__nav__iconoHamb");
+let boton = document.getElementById("header__nav__iconoHamb");  
 let enlaces = document.getElementById("header__nav__enlaces");
 let contador = 0;
 

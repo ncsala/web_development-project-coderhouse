@@ -10,7 +10,7 @@
     align-items:center;*/
     @include flexbox(column, center, center);
     width: 100%;
-    background-color: $negro;
+    background-color: $primario;
 
     .footer__p {
         text-align: center;
