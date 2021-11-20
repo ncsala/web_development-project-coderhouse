@@ -7,8 +7,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0 maximu-scale=3.0">
-    <meta name="keywords" content="restaurante, nosotros, come, relajate, bebe, platillos, platos, chef, chowder, ensalada">
-    <meta name="description" content="Bienvenida al restaurante con fotos, breve descripcion del restaurante y algunos platillos">
+    <meta name="keywords"
+        content="restaurante, nosotros, come, relajate, bebe, platillos, platos, chef, chowder, ensalada">
+    <meta name="description"
+        content="Bienvenida al restaurante con fotos, breve descripcion del restaurante y algunos platillos">
 
     <!--Agregro Font Awesome para utilizar iconos-->
     <script src="https://kit.fontawesome.com/09861335cf.js" crossorigin="anonymous"></script>
@@ -52,7 +54,7 @@
         <nav class="header__nav">
 
             <a href="index.html" class="header__nav__logo">
-                <svg class="header__nav_logo__svg" viewBox="-12 -6.5 170 50" >
+                <svg class="header__nav_logo__svg" viewBox="-12 -6.5 170 50">
 
                     <clippath id="cp-text">
                         <text text-anchor="middle" x="50%" y="50%" class="header__logo__txt">
@@ -69,7 +71,8 @@
                     </g>
 
                     <g clip-path="url(#cp-text)" class="header__logo__sombra">
-                        <rect width="100%" height="100%" class="header__logo__animForma header__logo__animForma--sombra"></rect>
+                        <rect width="100%" height="100%"
+                            class="header__logo__animForma header__logo__animForma--sombra"></rect>
                     </g>
                 </svg>
             </a> <!-- Fin de Logo -->
@@ -82,15 +85,17 @@
                 </span>
             </button>
 
-            <ul class="header__nav__enlaces" id="header__nav__enlaces">
+            <ul class="header__nav__enlaces ocultarEnlaces" id="header__nav__enlaces">
                 <li>
                     <a class="header__nav__enlaces__a header__nav__enlaces__a--active" href="index.html">Inicio</a>
                 </li>
                 <li>
-                    <a class="header__nav__enlaces__a header__nav__enlaces__a--pse" href="nuestro-equipo.html">Nuestro Equipo</a>
+                    <a class="header__nav__enlaces__a header__nav__enlaces__a--pse" href="nuestro-equipo.html">Nuestro
+                        Equipo</a>
                 </li>
                 <li>
-                    <a class="header__nav__enlaces__a header__nav__enlaces__a--pse" href="ubicaciones.html">Ubicaciones</a>
+                    <a class="header__nav__enlaces__a header__nav__enlaces__a--pse"
+                        href="ubicaciones.html">Ubicaciones</a>
                 </li>
                 <li>
                     <a class="header__nav__enlaces__a header__nav__enlaces__a--pse" href="unite.html">Unite</a>
@@ -110,20 +115,61 @@
         <section>
 
             <section>
-                <div class="contenedorImgIndex">
-                    <div class="contenedorImgIndex__titulos">
-                        <h1 class="contenedorImgIndex__titulos__h1 contenedorImgIndex__titulos__h2--moviendoH1">
-                            Tu Lugar Favorito</h1>
-                            <h2
-                            class="contenedorImgIndex__titulos__h2 contenedorImgIndex__titulos__h2--moviendoH2 ">
-                            Bebe, come y relájate</h2>
+                <div class="slider">
+                    <div class="slider__slides">
+                        <!--radio botones inicio-->
+                        <input class="slider__slides__inputRadio" type="radio" name="radio-btn" id="slider__slides__inputRadio1">
+                        <input class="slider__slides__inputRadio" type="radio" name="radio-btn" id="slider__slides__inputRadio2">
+                        <input class="slider__slides__inputRadio" type="radio" name="radio-btn" id="slider__slides__inputRadio3">
+                        <input class="slider__slides__inputRadio" type="radio" name="radio-btn" id="slider__slides__inputRadio4">
+                        <!--radio botones fin-->
+                        
+                        <!--slide imagenes inicio-->
+                        <div class="slider__slides__slide slider__slides__slide--first">
+                            <!--Para insertar una transparencia sobre la imagen-->
+                            <div class="transparenciaNegrita"></div>
+                            <div class="slider__slides__titulos">
+                                <h1 class="slider__titulos__h1 slider__titulos__h2--moviendoH1">
+                                    Tu Lugar Favorito</h1>
+                                <h2
+                                class="slider__titulos__h2 slider__titulos__h2--moviendoH2 ">
+                                Bebe, come y relájate</h2>
+                            </div>
+                            <img class="slider__slide__img" src="./images/images-index/imagenSlider1.jpg" alt="">
                         </div>
-                        <img src="./images/images-index/imagenPrincipalIndex.jpg" class="contenedorImgIndex__imgPrincipal"
-                        alt="Imagen principal, imagen del local">
-                    <!--Para insertar una transparencia sobre la imagen-->
-                    <div class="transparenciaNegrita"></div>
-                </div>
+                        <div class="slider__slides__slide">
+                            <img class="slider__slide__img" src="./images/images-index/imagenSlider2.jpg" alt="">
+                        </div>
+                        <div class="slider__slides__slide">
+                            <img class="slider__slide__img" src="./images/images-index/imagenSlider6.jpg" alt="">
+                        </div>
+                        <div class="slider__slides__slide">
+                            <img class="slider__slide__img" src="./images/images-index/imagenSlider7.jpg" alt="">
+                        </div>
+                        <!--slide imagenes fin-->
 
+                        <!--navegacion automatica inicio-->
+                        <div class="slider__navegacionAuto">
+                            <div class="slider__navegacionAuto__btn slider__navegacionAuto__btn--1"></div>
+                            <div class="slider__navegacionAuto__btn slider__navegacionAuto__btn--2"></div>
+                            <div class="slider__navegacionAuto__btn slider__navegacionAuto__btn--3"></div>
+                            <div class="slider__navegacionAuto__btn slider__navegacionAuto__btn--4"></div>
+                        </div>
+                        <!--navegacion automatica fin-->
+                    </div>
+                    <!--navegacio manual inicio-->
+                    <div class="slider__navegacionManual">
+                        <label for="slider__slides__inputRadio1" class="slider__navegacionManual__btn"></label>
+                        <label for="slider__slides__inputRadio2" class="slider__navegacionManual__btn"></label>
+                        <label for="slider__slides__inputRadio3" class="slider__navegacionManual__btn"></label>
+                        <label for="slider__slides__inputRadio4" class="slider__navegacionManual__btn"></label>
+                    </div>
+                    <!--navegacion manual fin-->
+                </div>
+            </section>
+
+            <section>
+                <!-- <h3 class="sectionPlatillos__h3 item" data-aos="fade-down">Sobre nosotros</h3> -->
                 <div class="contenedorTextoPrincipal item" data-aos="fade-right">
                     <p class="contenedorTextoPrincipal__p item" data-aos="fade-up"> Con 20 de experiencia y un servicio
                         galardonado, Foodhack© es
@@ -141,7 +187,7 @@
                         damos la bienvenida todo el día, cualquier día! Amamos el arte de hackear los sabores.
                     </p>
                 </div>
-            </section>
+            </section> <!--texto principal fin-->
 
             <section class="sectionPlatillos">
                 <h3 class="sectionPlatillos__h3 item" data-aos="fade-down">Algunos de nuestros platillos</h3>
@@ -176,8 +222,8 @@
                     <img class="sectionPlatillos__img item" data-aos="fade-left" src="./images/images-index/sopa.jpeg"
                         alt="Sopa Especial">
 
-                    <img class="sectionPlatillos__img item" data-aos="fade-up" src="./images/images-index/especial-chef.jpg"
-                        alt="Especial del chef">
+                    <img class="sectionPlatillos__img item" data-aos="fade-up"
+                        src="./images/images-index/especial-chef.jpg" alt="Especial del chef">
                     <div class="sectionPlatillos__txt sectionPlatillos__txt--chef item" data-aos="fade-up">
                         <div class="centrar">
                             <h4 class="sectionPlatillos__txt__h4">Especial del Chef</h4>
@@ -191,7 +237,7 @@
 
                     </div>
                 </div>
-            </section>
+            </section> <!--seccion platillos fin-->
 
         </section>
 
@@ -231,6 +277,18 @@
         AOS.init({
             duration: 1000,
         });
+    </script>
+
+    <script>
+        var counter = 1;
+        setInterval(function () {
+            document.getElementById('slider__slides__inputRadio' + counter).checked = true;
+            counter++;
+            if (counter > 4) 
+            {
+                counter = 1;
+            }
+        }, 8000);
     </script>
 
     <!--Mi archivo js-->

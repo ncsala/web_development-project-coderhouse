@@ -200,18 +200,18 @@
     }
 }
 
-/*para desplegar y ocultar los enlaces del menu hamburguesa en forma circular*/
 @media screen and (max-width: 769px) {
+    /*para desplegar y ocultar los enlaces del menu hamburguesa en forma circular*/
     /*para ocultar el menu*/
     .ocultarEnlaces {
         -webkit-clip-path: circle(0% at 100% 0%);
         clip-path: circle(0% at 100% 0%);
     }
-
+    
     /*para mostrar el menu de forma circular*/
     .circuloEnlace {
         -webkit-clip-path: circle(150% at 100% 0%);
-        clip-path: circle(300% at 100% 0%);
+        clip-path: circle(150% at 100% 0%);
     }
 }
 /*--------------------------------------------------------------*/
