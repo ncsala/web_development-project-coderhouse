@@ -1,93 +1,172 @@
-
-
 /*PAGINA PRINCIPAL INDEX--------------------------------------------------------------------------------------------------------------------------------------------------*/
-.contenedorImgPrincipal {
-    @include widthHeight(100%, 100%);
+.slider {
     position: relative;
-    z-index: 1;
-
-    /*Para insertar color negro transparente encima de la imagen   */
-    /* .transparenciaNegrita {
-        position:absolute;
-        width: 100%;
-        height: 100%;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        margin: 0;
-        background-color: $negrotransparentado;
-    }
-    */
-
-    .contenedorImgPrincipal__imgPrincipal {
-        /* width: 100%;
-        height: 100%;
-        object-fit: cover; */
-        @extend %images;
-    }
-
-    .contenedorImgPrincipal__titulos {
-        /*  overflow: hidden; */
-        white-space: nowrap;
-        display: initial;
-        position: absolute;
-        top: 30%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        margin: 0;
-
-        .contenedorImgPrincipal__titulos__h1 {
+    @include wH(100vv, 100vh);
+    border-bottom-left-radius: 2.5rem;
+    border-bottom-right-radius: 2.5rem;
+    overflow: hidden;
+    
+    .slider__slides {
+        @include wH(500%, 100vh);
+        display: flex;
+        
+        .transparenciaNegrita {
+            position:absolute;
             width: 100%;
+            height: 100%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             margin: 0;
-            font-family: $font6;
-            font-size: 2.4rem;
-            font-weight: 700;
-            color: $blanco;
+            background-color: $negrotransparentado;
         }
 
-        .contenedorImgPrincipal__titulos__h2 {
+        .slider__slides__titulos {
+            white-space: nowrap;
+            display: initial;
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             margin: 0;
-            font-family: $font6;
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: $blanco;
-        }
-
-        .contenedorImgPrincipal__titulos__h2--moviendoH1 {
-            display: inline-block;
-            margin: 0 0.5rem;
-            animation: bounceInLeft;
-            animation-duration: 2.5s;
-        }
-
-        .contenedorImgPrincipal__titulos__h2--moviendoH2 {
-            margin: 0 0.5rem;
-            animation: bounceInUp;
-            animation-duration: 2.5s;
-        }
-
-        /*Titulos- para pantalla grande ---------------*/
-        @media (min-width: 769px) {
-            .contenedorImgPrincipal__titulos__h1 {
-                font-size: 5rem;
+        
+            .slider__titulos__h1 {
+                margin: 0;
+                font-family: $font1;
+                font-size: 3.4rem;
+                font-weight: 700;
+                color: $blanco;
             }
-
-            .contenedorImgPrincipal__titulos__h2 {
+        
+            .slider__titulos__h2 {
+                margin: 0;
+                font-family: $font1;
                 font-size: 2.8rem;
+                font-weight: 700;
+                color: $blanco;
+            }
+        
+            .slider__titulos__h2--moviendoH1 {
+                display: inline-block;
+                margin: 0 0.5rem;
+                animation: bounceInLeft;
+                animation-duration: 2.5s;
+            }
+        
+            .slider__titulos__h2--moviendoH2 {
+                margin: 0 0.5rem;
+                animation: bounceInUp;
+                animation-duration: 2.5s;
+            }
+        
+            @media (min-width: 769px) {
+                .slider__titulos__h1 {
+                    font-size: 5rem;
+                }
+        
+                .slider__titulos__h2 {
+                    font-size: 2.8rem;
+                }
             }
         }
-        /*------------------------------------------------------*/
+        
+        .slider__slides__slide {
+            width: 20%;
+            transition: 2s;
+
+            .slider__slide__img {
+                @include wH(100%, 100%);
+                object-fit: cover;
+            }
+        }
+    }
+    
+    .slider__slides__inputRadio {
+        display: none;
+    }
+
+    #slider__slides__inputRadio1:checked ~ .slider__slides__slide--first {
+        margin-left: 0;
+    }
+
+    #slider__slides__inputRadio2:checked ~ .slider__slides__slide--first {
+        margin-left: -20%;
+    }
+
+    #slider__slides__inputRadio3:checked ~ .slider__slides__slide--first {
+        margin-left: -40%;
+    }
+    
+    #slider__slides__inputRadio4:checked ~ .slider__slides__slide--first {
+        margin-left: -60%;
+    }
+    
+    .slider__navegacionManual {
+        position: absolute;
+        @include flexbox(row, center, center);
+        left: 50%;
+        top:85%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+
+        .slider__navegacionManual__btn {
+            border: 0.2rem solid $secundario;
+            padding: 0.8rem;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: 1s;
+        }
+
+        .slider__navegacionManual__btn:not(:last-child) {
+            margin-right: 4rem;
+        }
+
+        .slider__navegacionManual__btn:hover {
+            background: $secundario;
+        }
+    }
+
+    .slider__navegacionAuto {
+        position: absolute;
+        @include flexbox(row, center, center);
+        width: 100%;
+        left: 50%;
+        top:85%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+
+        .slider__navegacionAuto__btn {
+            border: 0.2rem solid $secundario;
+            padding: 0.8rem;
+            border-radius: 50%;
+            transition: 1s;
+        }
+    
+        .slider__navegacionAuto__btn:not(:last-child) {
+            margin-right: 4rem;
+        }
+    }
+    
+    #slider__slides__inputRadio1:checked ~ .slider__navegacionAuto .slider__navegacionAuto__btn--1 {
+        background: $secundario;
+    }
+
+    #slider__slides__inputRadio2:checked ~ .slider__navegacionAuto .slider__navegacionAuto__btn--2 {
+        background: $secundario;
+    }
+
+    #slider__slides__inputRadio3:checked ~ .slider__navegacionAuto .slider__navegacionAuto__btn--3 {
+        background: $secundario;
+    }
+
+    #slider__slides__inputRadio4:checked ~ .slider__navegacionAuto .slider__navegacionAuto__btn--4 {
+        background: $secundario;
     }
 }
 
-/*ocultar en celular?*/
-/* .titulosPrincipales  {
-    display: none;
-} */
-
 .contenedorTextoPrincipal {
     @include flexbox(row, center, center);
-    
+
     .contenedorTextoPrincipal__p {
         margin: 3%;
         padding: 4% 3%;
@@ -95,14 +174,13 @@
         border-bottom-right-radius: 2rem;
         border-top: $primario 0.7rem solid;
         border-bottom: $primario 0.7rem solid;
-        font-family: $font6, Charter, Georgia, serif;
+        font-family: $font1, Charter, Georgia, serif;
         font-weight: 500;
         font-size: 1.5rem;
         text-align: left;
-        line-height: 2.8rem;
+        line-height: 3rem;
     }
 
-    /*Texto  principal- para pantalla grande ---------------*/
     @media (min-width: 769px) {
         .contenedorTextoPrincipal__p {
             width: 90%;
@@ -116,92 +194,88 @@
             border-bottom: $primario 0.7rem solid;
         }
     }
-    /*------------------------------------------------------*/
 }
-/*Texto  principal- para pantalla grande ---------------*/
+
 @media (min-width: 769px) {
     .contenedorTextoPrincipal {
         width: 100%;
     }
 }
-/*------------------------------------------------------*/
 
-.tituloPlatillos {
-    text-align: center;
-    font-family: $font6;
-    margin-bottom: 2rem;
-    font-size: 3.4rem;
-    font-weight: 600;
-    color: $azulOscuro;
-}
-
-.seccionPlatos {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: fr 1fr 1fr 1fr 1fr 1fr;
-    overflow: hidden; /*cuando la imagen se sale del contenedor, oculta esa parte*/
-    
-    .textoPlatos {
-        font-size: 1.5rem;
-        color: $blanco;
-        font-family: $font6;
-        background-color: $primario;
-    }
-
-    .textoPlatos .centrar {
-        margin: 5% 18%;
-    }
-
-    .textoPlatos h4 {
-        font-size: 2.2rem;
-        color: $rojo;
-        font-family: $font6;
-    }
-
-    .textoSopa {
-        grid-row: 4;
+.sectionPlatillos {
+    .sectionPlatillos__h3 {
+        text-align: center;
+        font-family: $font1;
+        margin-bottom: 2rem;
+        font-size: 3.4rem;
+        font-weight: 600;
+        color: $azulOscuro;
     }
     
-    .imagenPlatos {
-        width: 100%;
-        height: 100%;
-    }
-
-    /*Platos para pantalla grande----------------------------------*/
-    @media (min-width: 769px) {
-        .textoPlatos {
-            @include flexbox(column, center, center);
-        }
-
-        .textoEnsalada {
-            grid-row: 2 / 3;
-        }
-
-        .textoSopa {
-            grid-column: 3 / 4;
-            grid-row: 2;
-        }
-
-        .textoChef {
-            grid-row: 1;
-            grid-column: -3 / -2;
-        }
-    }
-    /*--------------------------------------------*/
-}
-
-/*Platos para pantalla grande----------------------------------*/
-@media (min-width: 769px) {
-    .seccionPlatos {
-        margin: 0 auto;
-        width: 95%;
-        height: 100%;
+    .sectionPlatillos__platos {
+        border-radius: 2.5rem;
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        overflow: hidden; /*cuando la imagen se sale del contenedor, oculata esa parte*/
+        grid-template-columns: 100%;
+        grid-template-rows: fr 1fr 1fr 1fr 1fr 1fr;
+        overflow: hidden;
+
+        .sectionPlatillos__txt {
+            font-size: 1.5rem;
+            color: $blanco;
+            font-family: $font1;
+            background-color: $primario;
+
+            .sectionPlatillos__txt__h4 {
+                font-size: 2.2rem;
+                color: $rojo;
+                font-family: $font1;
+            }
+        }
+
+        .sectionPlatillos__txt--sopa {
+            grid-row: 4;
+        }
+
+        .sectionPlatillos__txt .centrar {
+            margin: 5% 18%;
+        }
+
+        .sectionPlatillos__img {
+            @include wH(100%, 100%);
+            // object-position: 5rem;
+        }
+
+        @media (min-width: 769px) {
+            .sectionPlatillos__txt {
+                @include flexbox(column, center, center);
+            }
+
+            .sectionPlatillos__txt--ensalada {
+                grid-row: 2 / 3;
+            }
+
+            .sectionPlatillos__txt--sopa {
+                grid-column: 3 / 4;
+                grid-row: 2;
+            }
+
+            .sectionPlatillos__txt--chef {
+                grid-row: 1;
+                grid-column: -3 / -2;
+            }
+        }
+    }
+
+    @media (min-width: 769px) {
+        .sectionPlatillos__platos {
+            margin: 0 auto;
+            @include wH(95%, 100%);
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            overflow: hidden;
+        }
     }
 }
-/*--------------------------------------------*/
-
 /*FIN PAGINA PRINCIPAL INDEX--------------------------------------------------------------------------------------------------------------------------------------------*/
+

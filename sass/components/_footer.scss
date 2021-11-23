@@ -4,13 +4,9 @@
     padding: 1rem;
     color: $blanco;
     font-size: 3rem;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center; 
-    align-items:center;*/
     @include flexbox(column, center, center);
     width: 100%;
-    background-color: $negro;
+    background-color: $primario;
 
     .footer__p {
         text-align: center;
@@ -22,8 +18,6 @@
     }    
 
     .footer__socialLinks {
-        /* display: flex;
-        justify-content: space-between; */
         @include flexbox(row, space-between, center);
         width: 15rem;
         list-style: none;

@@ -1,13 +1,8 @@
 /* PAGINA UNITE QUEREMOS CONOCERTE--------------------------------------------*/
-
-/*quito pq uso clases generales para imagen */
 .contenedorImgPrincipalUnite {
-    @include widthHeight(100%, 100%);
+    @include wH(100%, 100%);
 
     .contenedorImgPrincipalUnite__imgPrincipal {
-        /* width: 100%;
-        height: 100%;
-        object-fit: cover; */
         @extend %images;
     }
 
@@ -52,7 +47,7 @@
         margin-bottom: 0.5rem;
         margin-top: 1.5rem;
         padding: 1.5rem 4rem;
-        color: map-get($colorsMaps, negro);
+        color: $negro;
         background-color: $secundario;
         display: inline-block;
         transition: all 0.5s;
@@ -65,7 +60,6 @@
 
 @media (min-width: 769px) {
     .queremosConocerte {
-        /* display: flex; */
         @include flexbox(row, center, center);
         margin: 0 auto;
         width: 95%;
@@ -76,5 +70,4 @@
         width: 85%;
     }
 }
-
 /*FIN PAGINA QUEREMOS CONOCERTE---------------------------------------------------------------*/

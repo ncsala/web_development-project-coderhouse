@@ -8,26 +8,22 @@
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     gap: 1.5rem;   
     
-    .fotosItem {
+    .fotosEquipo__item {
         position: relative;
-        width: 100%;
-        height: 30rem;
+        @include wH(100%, 30rem);
         overflow: hidden;
         
-        img {
+        .fotosEquipo__item__img {
             /* background-color: #f8d086; */
             background-color: #8bc791cb;
             /* background-color: #8bc79188; uso dos? */
             /* background-color: #66757e79; */
             /* background-color: #dae083; */
-            /* width: 100%;
-            height: 100%;
-            object-fit: cover; */
             @extend %images;
             cursor: pointer;
         }
 
-        .equipoHover {
+        .fotosEquipo__item__hover {
             background: #06273aab;
             /* background: #00000069;  */
             /* background: #dc143c8c; */
@@ -35,24 +31,20 @@
             position: absolute;
             top: 0;
             left: 0;
-            width: 100%;
-            height: 100%;
+            @include wH(100%, 100%);
             color: $blanco;
             text-align: center;
-            /* display: flex;
-            flex-direction: column;
-            justify-content: center; */
             @include flexbox(column, center, center);
             transform: translateX(100%);
             cursor: pointer;
             transition: transform 0.3s ease-in-out;
         }
 
-        h2 {
+        .fotosEquipo__item__h2 {
             margin-bottom: 0.4rem;
         }
 
-        p {
+        .fotosEquipo__item__p {
             margin: 0.4rem;
             font-family: $font6;
             font-weight: 500;
@@ -60,10 +52,8 @@
         }
     }
 
-    .fotosItem:hover .equipoHover {
+    .fotosEquipo__item:hover .fotosEquipo__item__hover {
         transform: translateX(0%);
     }
 }
-
-
 /*FIN PAGINA NUESTRO EQUIPO---------------------------------------------*/

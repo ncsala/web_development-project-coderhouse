@@ -1,193 +1,23 @@
 @charset "UTF-8";
 /*Defino paleta de colores a usar*/
 /*Defino fuentes a usar*/
-.contenedorImgPrincipal .contenedorImgPrincipal__imgPrincipal, .fotosEquipo .fotosItem img, .contenedorImgPrincipalUnite .contenedorImgPrincipalUnite__imgPrincipal {
+.fotosEquipo .fotosEquipo__item .fotosEquipo__item__img, .contenedorImgPrincipalUnite .contenedorImgPrincipalUnite__imgPrincipal, .contenedorImgContacto .contenedorImgContacto__imgContacto {
   width: 100%;
   height: 100%;
   object-fit: cover; }
 
-/*HEADER---------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-.header {
-  width: 100%;
-  height: 6.5rem;
-  background-color: #000000;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  opacity: 0.9; }
-  .header .header__navPrincipal {
-    height: 100%;
-    width: 100%;
-    /* display: flex;
-        justify-content: space-between; */
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: normal;
-    /*fin de logo-----------------------------------------------------*/
-    /*Navegacion principal para pantalla grande--------*/ }
-    .header .header__navPrincipal .header__navPrincipal__logoPrincipal {
-      /*LOGO-------------------------------------*/
-      /* .text--transparent {
-                fill: transparent;
-            } */ }
-      .header .header__navPrincipal .header__navPrincipal__logoPrincipal .anim-shape {
-        -webkit-transform-origin: 0x 15rem;
-        -ms-transform-origin: 0x 15rem;
-        transform-origin: 0x 15rem;
-        -webkit-animation: moving-panel 3s ease-in alternate;
-        animation: moving-panel 3s ease-in alternate;
-        -webkit-transform: scale(1, 1) translate(2rem, 0);
-        transform: scale(1, 1) translate(2rem, 0); }
-      .header .header__navPrincipal .header__navPrincipal__logoPrincipal .colortext .anim-shape:nth-child(1) {
-        fill: #000000; }
-      .header .header__navPrincipal .header__navPrincipal__logoPrincipal .colortext .anim-shape:nth-child(2) {
-        fill: #32a1ac; }
-      .header .header__navPrincipal .header__navPrincipal__logoPrincipal .colortext .anim-shape:nth-child(3) {
-        fill: #9dd6c6; }
-      .header .header__navPrincipal .header__navPrincipal__logoPrincipal .colortext .anim-shape:nth-child(4) {
-        fill: #f8c25c; }
-      .header .header__navPrincipal .header__navPrincipal__logoPrincipal .colortext .anim-shape:nth-child(5) {
-        fill: #d83863; }
-      .header .header__navPrincipal .header__navPrincipal__logoPrincipal .shadow {
-        -webkit-transform: translate(4px, 4px);
-        -ms-transform: translate(4px, 4px);
-        transform: translate(4px, 4px); }
-      .header .header__navPrincipal .header__navPrincipal__logoPrincipal .anim-shape--shadow {
-        fill: #757575;
-        fill-opacity: 0.2; }
-
-@-webkit-keyframes moving-panel {
-  0% {
-    -webkit-transform: scale(0, 1) translate(0, 0);
-    -ms-transform: scale(0, 1) translate(0, 0);
-    transform: scale(0, 1) translate(0, 0); }
-  100% {
-    -webkit-transform: scale(1, 1) translate(20px, 0);
-    transform: scale(1, 1) translate(20px, 0px); } }
-
-@keyframes moving-panel {
-  0% {
-    -webkit-transform: scale(0, 1) translate(0, 0);
-    -ms-transform: scale(0, 1) translate(0, 0);
-    transform: scale(0, 1) translate(0, 0); }
-  100% {
-    -webkit-transform: scale(1, 1) translate(2rem, 0);
-    transform: scale(1, 1) translate(2rem, 0); } }
-      .header .header__navPrincipal .header__navPrincipal__logoPrincipal svg {
-        width: 100%;
-        height: 5rem; }
-      @media (min-width: 769px) {
-        .header .header__navPrincipal .header__navPrincipal__logoPrincipal svg {
-          height: 6rem; } }
-      .header .header__navPrincipal .header__navPrincipal__logoPrincipal text {
-        font-size: 2.5rem;
-        font-family: "Krub", sans-serif;
-        font-weight: 700;
-        font-style: italic; }
-    .header .header__navPrincipal .header__navPrincipal__iconoHamburguesa {
-      z-index: 110; }
-    .header .header__navPrincipal .header__navPrincipal__enlaces {
-      position: fixed;
-      height: 100vh;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      align-items: center;
-      list-style: none;
-      transition: all 0.5s ease-out;
-      /*transicion cuando se despliega menu hamburguesa*/
-      background-color: #000000; }
-      .header .header__navPrincipal .header__navPrincipal__enlaces a {
-        text-decoration: none;
-        color: #f8f3e3;
-        font-family: "Krub", sans-serif;
-        font-weight: 600;
-        font-size: 2.4rem; }
-      .header .header__navPrincipal .header__navPrincipal__enlaces a:hover {
-        cursor: pointer;
-        color: #d83863; }
-    @media (min-width: 769px) {
-      .header .header__navPrincipal .header__navPrincipal__iconoHamburguesa {
-        display: none;
-        color: #d83863; }
-      .header .header__navPrincipal .header__navPrincipal__enlaces {
-        position: initial;
-        height: 100%;
-        width: 100%;
-        flex-direction: row;
-        background-color: transparent;
-        transition: all 0.1s ease-out;
-        opacity: 0.9;
-        /*animacion linea hacia la izquierda*/
-        /*animacion linea hacia la derecha*/
-        /*muestra las lineas horizontales en los enlaces*/ }
-        .header .header__navPrincipal .header__navPrincipal__enlaces a {
-          --clippy1: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
-          --clippy2: polygon(0 0, 0 0, 0 100%, 0% 100%); }
-        .header .header__navPrincipal .header__navPrincipal__enlaces a:hover {
-          cursor: pointer;
-          color: #f8f3e3; }
-        .header .header__navPrincipal .header__navPrincipal__enlaces a::before {
-          content: "";
-          display: block;
-          background: #d83863;
-          width: 100%;
-          margin-bottom: 0.4rem;
-          height: 0.3rem;
-          clip-path: var(--clippy1);
-          transition: clip-path 0.4s; }
-        .header .header__navPrincipal .header__navPrincipal__enlaces a::after {
-          content: "";
-          display: block;
-          background: #d83863;
-          width: 100%;
-          margin-top: 0.4rem;
-          height: 0.3rem;
-          clip-path: var(--clippy2);
-          transition: clip-path 0.4s; }
-        .header .header__navPrincipal .header__navPrincipal__enlaces a:hover:before {
-          --clippy1: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-          color: #d83863; }
-        .header .header__navPrincipal .header__navPrincipal__enlaces a:hover:after {
-          --clippy2: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-          color: #d83863; } }
-
-/*para desplegar y ocultar los enlaces del menu hamburguesa*/
-@media screen and (max-width: 769px) {
-  /*para ocultar el menu*/
-  .ocultarEnlaces {
-    -webkit-clip-path: circle(0% at 100% 0%);
-    clip-path: circle(0% at 100% 0%); }
-  /*para que muestre el despliegue del menu con forma circular*/
-  .circuloEnlace {
-    -webkit-clip-path: circle(150% at 100% 0%);
-    clip-path: circle(150% at 100% 0%); } }
-
-/*--------------------------------------------------------------*/
-/*Para agrandar un poquito el header en pantalla grande*/
-@media (min-width: 769px) {
-  .header {
-    height: 8rem; } }
-
-/*FIN HEADER---------------------------------------------------------------------------------------------------------------------------------------------------------*/
 /*FOOTER-----------------------------------------------------------------------------------------------------------------------------------------------------*/
 .footer {
   margin-top: 8rem;
   padding: 1rem;
   color: #f8f3e3;
   font-size: 3rem;
-  /* display: flex;
-    flex-direction: column;
-    justify-content: center; 
-    align-items:center;*/
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
-  background-color: #000000; }
+  background-color: #242121; }
   .footer .footer__p {
     text-align: center;
     font-family: "Krub", sans-serif;
@@ -196,8 +26,6 @@
     color: #f8f3e3;
     margin-bottom: 0.7rem; }
   .footer .footer__socialLinks {
-    /* display: flex;
-        justify-content: space-between; */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -221,6 +49,169 @@
     height: 17.5rem; } }
 
 /*FIN FOOTER--------------------------------------------------------------------------------------------*/
+/*HEADER---------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.header {
+  width: 100%;
+  height: 6.5rem;
+  background-color: #242121;
+  position: sticky;
+  top: 0;
+  z-index: 100; }
+  .header .header__nav {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: normal;
+    /*fin de logo-----------------------------------------------------*/
+    /*Navegacion principal para pantalla grande--------*/ }
+    .header .header__nav .header__nav__logo .header__nav_logo__svg {
+      width: 100%;
+      height: 7rem; }
+    @media (min-width: 769px) {
+      .header .header__nav .header__nav__logo .header__nav_logo__svg {
+        height: 8rem; } }
+    .header .header__nav .header__nav__logo .header__logo__animForma {
+      -webkit-transform-origin: 0x 15rem;
+      -ms-transform-origin: 0x 15rem;
+      transform-origin: 0x 15rem;
+      -webkit-animation: moviendoPanel 3s ease-in alternate;
+      animation: moviendoPanel 3s ease-in alternate;
+      -webkit-transform: scale(1, 1) translate(2rem, 0);
+      transform: scale(1, 1) translate(2rem, 0); }
+    .header .header__nav .header__nav__logo .txtColor .header__logo__animForma:nth-child(1) {
+      fill: #000000; }
+    .header .header__nav .header__nav__logo .txtColor .header__logo__animForma:nth-child(2) {
+      fill: #32a1ac; }
+    .header .header__nav .header__nav__logo .txtColor .header__logo__animForma:nth-child(3) {
+      fill: #9dd6c6; }
+    .header .header__nav .header__nav__logo .txtColor .header__logo__animForma:nth-child(4) {
+      fill: #f8c25c; }
+    .header .header__nav .header__nav__logo .txtColor .header__logo__animForma:nth-child(5) {
+      fill: #d83863; }
+    .header .header__nav .header__nav__logo .header__logo__sombra {
+      -webkit-transform: translate(0.4rem, 0.4rem);
+      -ms-transform: translate(0.4rem, 0.4rem);
+      transform: translate(0.4rem, 0.4rem); }
+    .header .header__nav .header__nav__logo .header__logo__animForma--sombra {
+      fill: #757575;
+      fill-opacity: 0.2; }
+
+@-webkit-keyframes moviendoPanel {
+  0% {
+    -webkit-transform: scale(0, 1) translate(0, 0);
+    -ms-transform: scale(0, 1) translate(0, 0);
+    transform: scale(0, 1) translate(0, 0); }
+  100% {
+    -webkit-transform: scale(1, 1) translate(2rem, 0);
+    transform: scale(1, 1) translate(2rem, 0rem); } }
+
+@keyframes moviendoPanel {
+  0% {
+    -webkit-transform: scale(0, 1) translate(0, 0);
+    -ms-transform: scale(0, 1) translate(0, 0);
+    transform: scale(0, 1) translate(0, 0); }
+  100% {
+    -webkit-transform: scale(1, 1) translate(2rem, 0);
+    transform: scale(1, 1) translate(2rem, 0); } }
+    .header .header__nav .header__nav__logo .header__logo__txt {
+      font-size: 2.5rem;
+      font-family: "Krub", sans-serif;
+      font-weight: 700;
+      font-style: italic; }
+    .header .header__nav .header__nav__iconoHamb {
+      z-index: 110; }
+    .header .header__nav .header__nav__enlaces {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      list-style: none;
+      transition: all 0.5s ease-out;
+      /*transicion cuando se despliega menu hamburguesa*/
+      background-color: #242121; }
+      .header .header__nav .header__nav__enlaces .header__nav__enlaces__a {
+        text-decoration: none;
+        color: #f8f3e3;
+        font-family: "Krub", sans-serif;
+        font-weight: 600;
+        font-size: 2rem; }
+      .header .header__nav .header__nav__enlaces .header__nav__enlaces__a:hover {
+        cursor: pointer;
+        color: #d83863; }
+      .header .header__nav .header__nav__enlaces .header__nav__enlaces__a--active {
+        color: #d83863; }
+    @media (min-width: 769px) {
+      .header .header__nav .header__nav__iconoHamb {
+        display: none; }
+      .header .header__nav .header__nav__enlaces {
+        position: initial;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        background-color: transparent;
+        transition: all 0.1s ease-out;
+        /*animacion linea hacia la izquierda*/
+        /*animacion linea hacia la derecha*/
+        /*muestra las lineas horizontales en los enlaces*/ }
+        .header .header__nav .header__nav__enlaces .header__nav__enlaces__a {
+          --clippy1: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+          --clippy2: polygon(0 0, 0 0, 0 100%, 0% 100%); }
+        .header .header__nav .header__nav__enlaces .header__nav__enlaces__a:hover {
+          cursor: pointer;
+          color: #d83863; }
+        .header .header__nav .header__nav__enlaces .header__nav__enlaces__a--pse::before {
+          content: "";
+          display: block;
+          background: #d83863;
+          width: 100%;
+          margin-bottom: 0.4rem;
+          height: 0.3rem;
+          clip-path: var(--clippy1);
+          transition: clip-path 0.4s; }
+        .header .header__nav .header__nav__enlaces .header__nav__enlaces__a--pse::after {
+          content: "";
+          display: block;
+          background: #d83863;
+          width: 100%;
+          margin-top: 0.4rem;
+          height: 0.3rem;
+          clip-path: var(--clippy2);
+          transition: clip-path 0.4s; }
+        .header .header__nav .header__nav__enlaces .header__nav__enlaces__a--pse:hover:before {
+          --clippy1: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+          color: #d83863; }
+        .header .header__nav .header__nav__enlaces .header__nav__enlaces__a--pse:hover:after {
+          --clippy2: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+          color: #d83863; } }
+
+@media screen and (max-width: 769px) {
+  /*para desplegar y ocultar los enlaces del menu hamburguesa en forma circular*/
+  /*para ocultar el menu*/
+  .ocultarEnlaces {
+    -webkit-clip-path: circle(0% at 100% 0%);
+    clip-path: circle(0% at 100% 0%); }
+  /*para mostrar el menu de forma circular*/
+  .circuloEnlace {
+    -webkit-clip-path: circle(150% at 100% 0%);
+    clip-path: circle(150% at 100% 0%); } }
+
+/*--------------------------------------------------------------*/
+/*Para agrandar un poquito el header en pantalla grande*/
+@media (min-width: 769px) {
+  .header {
+    height: 8rem; } }
+
+/*FIN HEADER---------------------------------------------------------------------------------------------------------------------------------------------------------*/
 /*Boton formulario----------------------------------------------------*/
 .boton {
   position: relative;
@@ -380,20 +371,8 @@
         width: 70%;
         height: 70%; } }
 
-.cajaImagen {
-  /*     max-width: 40rem;
-    max-height: 45rem;
-    min-width: 100%;
-    min-height: 100%; */ }
-  .cajaImagen img {
-    /* width: 100%;
-        height: 100%;
-        object-fit: cover;  */
-    /* object-position: center center; */ }
-
 /*GENERAL----------------------------------------------------------------------------------------------------------------------------*/
 /*Configuro para utilizar REM en lugar de PX, 1 rem = 10 px------*/
-/*Tambien para manejar mejor el Box Model*/
 html {
   font-size: 62.5%;
   box-sizing: border-box;
@@ -432,77 +411,129 @@ h1 {
 
 /*FIN GENERAL----------------------------------------------------------------------------------------------------------------------------*/
 /*PAGINA PRINCIPAL INDEX--------------------------------------------------------------------------------------------------------------------------------------------------*/
-.contenedorImgPrincipal {
-  width: 100%;
-  height: 100%;
+.slider {
   position: relative;
-  z-index: 1;
-  /*Para insertar color negro transparente encima de la imagen   */
-  /* .transparenciaNegrita {
-        position:absolute;
+  width: 100vv;
+  height: 100vh;
+  border-bottom-left-radius: 2.5rem;
+  border-bottom-right-radius: 2.5rem;
+  overflow: hidden; }
+  .slider .slider__slides {
+    width: 500%;
+    height: 100vh;
+    display: flex; }
+    .slider .slider__slides .transparenciaNegrita {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      margin: 0;
+      background-color: #00000050; }
+    .slider .slider__slides .slider__slides__titulos {
+      white-space: nowrap;
+      display: initial;
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      margin: 0; }
+      .slider .slider__slides .slider__slides__titulos .slider__titulos__h1 {
+        margin: 0;
+        font-family: "PT Sans", sans-serif;
+        font-size: 3.4rem;
+        font-weight: 700;
+        color: #f8f3e3; }
+      .slider .slider__slides .slider__slides__titulos .slider__titulos__h2 {
+        margin: 0;
+        font-family: "PT Sans", sans-serif;
+        font-size: 2.8rem;
+        font-weight: 700;
+        color: #f8f3e3; }
+      .slider .slider__slides .slider__slides__titulos .slider__titulos__h2--moviendoH1 {
+        display: inline-block;
+        margin: 0 0.5rem;
+        animation: bounceInLeft;
+        animation-duration: 2.5s; }
+      .slider .slider__slides .slider__slides__titulos .slider__titulos__h2--moviendoH2 {
+        margin: 0 0.5rem;
+        animation: bounceInUp;
+        animation-duration: 2.5s; }
+      @media (min-width: 769px) {
+        .slider .slider__slides .slider__slides__titulos .slider__titulos__h1 {
+          font-size: 5rem; }
+        .slider .slider__slides .slider__slides__titulos .slider__titulos__h2 {
+          font-size: 2.8rem; } }
+    .slider .slider__slides .slider__slides__slide {
+      width: 20%;
+      transition: 2s; }
+      .slider .slider__slides .slider__slides__slide .slider__slide__img {
         width: 100%;
         height: 100%;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        margin: 0;
-        background-color: $negrotransparentado;
-    }
-    */ }
-  .contenedorImgPrincipal .contenedorImgPrincipal__imgPrincipal {
-    /* width: 100%;
-        height: 100%;
-        object-fit: cover; */ }
-  .contenedorImgPrincipal .contenedorImgPrincipal__titulos {
-    /*  overflow: hidden; */
-    white-space: nowrap;
-    display: initial;
+        object-fit: cover; }
+  .slider .slider__slides__inputRadio {
+    display: none; }
+  .slider #slider__slides__inputRadio1:checked ~ .slider__slides__slide--first {
+    margin-left: 0; }
+  .slider #slider__slides__inputRadio2:checked ~ .slider__slides__slide--first {
+    margin-left: -20%; }
+  .slider #slider__slides__inputRadio3:checked ~ .slider__slides__slide--first {
+    margin-left: -40%; }
+  .slider #slider__slides__inputRadio4:checked ~ .slider__slides__slide--first {
+    margin-left: -60%; }
+  .slider .slider__navegacionManual {
     position: absolute;
-    top: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     left: 50%;
+    top: 85%;
     transform: translate(-50%, -50%);
-    margin: 0;
-    /*Titulos- para pantalla grande ---------------*/
-    /*------------------------------------------------------*/ }
-    .contenedorImgPrincipal .contenedorImgPrincipal__titulos .contenedorImgPrincipal__titulos__h1 {
-      width: 100%;
-      margin: 0;
-      font-family: "Krub", sans-serif;
-      font-size: 2.4rem;
-      font-weight: 700;
-      color: #f8f3e3; }
-    .contenedorImgPrincipal .contenedorImgPrincipal__titulos .contenedorImgPrincipal__titulos__h2 {
-      margin: 0;
-      font-family: "Krub", sans-serif;
-      font-size: 1.8rem;
-      font-weight: 700;
-      color: #f8f3e3; }
-    .contenedorImgPrincipal .contenedorImgPrincipal__titulos .contenedorImgPrincipal__titulos__h2--moviendoH1 {
-      display: inline-block;
-      margin: 0 0.5rem;
-      animation: bounceInLeft;
-      animation-duration: 2.5s; }
-    .contenedorImgPrincipal .contenedorImgPrincipal__titulos .contenedorImgPrincipal__titulos__h2--moviendoH2 {
-      margin: 0 0.5rem;
-      animation: bounceInUp;
-      animation-duration: 2.5s; }
-    @media (min-width: 769px) {
-      .contenedorImgPrincipal .contenedorImgPrincipal__titulos .contenedorImgPrincipal__titulos__h1 {
-        font-size: 5rem; }
-      .contenedorImgPrincipal .contenedorImgPrincipal__titulos .contenedorImgPrincipal__titulos__h2 {
-        font-size: 2.8rem; } }
+    text-align: center; }
+    .slider .slider__navegacionManual .slider__navegacionManual__btn {
+      border: 0.2rem solid #f8c25c;
+      padding: 0.8rem;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: 1s; }
+    .slider .slider__navegacionManual .slider__navegacionManual__btn:not(:last-child) {
+      margin-right: 4rem; }
+    .slider .slider__navegacionManual .slider__navegacionManual__btn:hover {
+      background: #f8c25c; }
+  .slider .slider__navegacionAuto {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    left: 50%;
+    top: 85%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
+    .slider .slider__navegacionAuto .slider__navegacionAuto__btn {
+      border: 0.2rem solid #f8c25c;
+      padding: 0.8rem;
+      border-radius: 50%;
+      transition: 1s; }
+    .slider .slider__navegacionAuto .slider__navegacionAuto__btn:not(:last-child) {
+      margin-right: 4rem; }
+  .slider #slider__slides__inputRadio1:checked ~ .slider__navegacionAuto .slider__navegacionAuto__btn--1 {
+    background: #f8c25c; }
+  .slider #slider__slides__inputRadio2:checked ~ .slider__navegacionAuto .slider__navegacionAuto__btn--2 {
+    background: #f8c25c; }
+  .slider #slider__slides__inputRadio3:checked ~ .slider__navegacionAuto .slider__navegacionAuto__btn--3 {
+    background: #f8c25c; }
+  .slider #slider__slides__inputRadio4:checked ~ .slider__navegacionAuto .slider__navegacionAuto__btn--4 {
+    background: #f8c25c; }
 
-/*ocultar en celular?*/
-/* .titulosPrincipales  {
-    display: none;
-} */
 .contenedorTextoPrincipal {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
-  /*Texto  principal- para pantalla grande ---------------*/
-  /*------------------------------------------------------*/ }
+  align-items: center; }
   .contenedorTextoPrincipal .contenedorTextoPrincipal__p {
     margin: 3%;
     padding: 4% 3%;
@@ -510,11 +541,11 @@ h1 {
     border-bottom-right-radius: 2rem;
     border-top: #242121 0.7rem solid;
     border-bottom: #242121 0.7rem solid;
-    font-family: "Krub", sans-serif, Charter, Georgia, serif;
+    font-family: "PT Sans", sans-serif, Charter, Georgia, serif;
     font-weight: 500;
     font-size: 1.5rem;
     text-align: left;
-    line-height: 2.8rem; }
+    line-height: 3rem; }
   @media (min-width: 769px) {
     .contenedorTextoPrincipal .contenedorTextoPrincipal__p {
       width: 90%;
@@ -527,72 +558,65 @@ h1 {
       border-top: #242121 0.7rem solid;
       border-bottom: #242121 0.7rem solid; } }
 
-/*Texto  principal- para pantalla grande ---------------*/
 @media (min-width: 769px) {
   .contenedorTextoPrincipal {
     width: 100%; } }
 
-/*------------------------------------------------------*/
-.tituloPlatillos {
+.sectionPlatillos .sectionPlatillos__h3 {
   text-align: center;
-  font-family: "Krub", sans-serif;
+  font-family: "PT Sans", sans-serif;
   margin-bottom: 2rem;
   font-size: 3.4rem;
   font-weight: 600;
   color: #06273a; }
 
-.seccionPlatos {
+.sectionPlatillos .sectionPlatillos__platos {
+  border-radius: 2.5rem;
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: fr 1fr 1fr 1fr 1fr 1fr;
-  overflow: hidden;
-  /*cuando la imagen se sale del contenedor, oculta esa parte*/
-  /*Platos para pantalla grande----------------------------------*/
-  /*--------------------------------------------*/ }
-  .seccionPlatos .textoPlatos {
+  overflow: hidden; }
+  .sectionPlatillos .sectionPlatillos__platos .sectionPlatillos__txt {
     font-size: 1.5rem;
     color: #f8f3e3;
-    font-family: "Krub", sans-serif;
+    font-family: "PT Sans", sans-serif;
     background-color: #242121; }
-  .seccionPlatos .textoPlatos .centrar {
-    margin: 5% 18%; }
-  .seccionPlatos .textoPlatos h4 {
-    font-size: 2.2rem;
-    color: #d83863;
-    font-family: "Krub", sans-serif; }
-  .seccionPlatos .textoSopa {
+    .sectionPlatillos .sectionPlatillos__platos .sectionPlatillos__txt .sectionPlatillos__txt__h4 {
+      font-size: 2.2rem;
+      color: #d83863;
+      font-family: "PT Sans", sans-serif; }
+  .sectionPlatillos .sectionPlatillos__platos .sectionPlatillos__txt--sopa {
     grid-row: 4; }
-  .seccionPlatos .imagenPlatos {
+  .sectionPlatillos .sectionPlatillos__platos .sectionPlatillos__txt .centrar {
+    margin: 5% 18%; }
+  .sectionPlatillos .sectionPlatillos__platos .sectionPlatillos__img {
     width: 100%;
     height: 100%; }
   @media (min-width: 769px) {
-    .seccionPlatos .textoPlatos {
+    .sectionPlatillos .sectionPlatillos__platos .sectionPlatillos__txt {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center; }
-    .seccionPlatos .textoEnsalada {
+    .sectionPlatillos .sectionPlatillos__platos .sectionPlatillos__txt--ensalada {
       grid-row: 2 / 3; }
-    .seccionPlatos .textoSopa {
+    .sectionPlatillos .sectionPlatillos__platos .sectionPlatillos__txt--sopa {
       grid-column: 3 / 4;
       grid-row: 2; }
-    .seccionPlatos .textoChef {
+    .sectionPlatillos .sectionPlatillos__platos .sectionPlatillos__txt--chef {
       grid-row: 1;
       grid-column: -3 / -2; } }
 
-/*Platos para pantalla grande----------------------------------*/
 @media (min-width: 769px) {
-  .seccionPlatos {
+  .sectionPlatillos .sectionPlatillos__platos {
     margin: 0 auto;
     width: 95%;
     height: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    overflow: hidden;
-    /*cuando la imagen se sale del contenedor, oculata esa parte*/ } }
+    overflow: hidden; } }
 
-/*--------------------------------------------*/
 /*FIN PAGINA PRINCIPAL INDEX--------------------------------------------------------------------------------------------------------------------------------------------*/
 /*PAGINA NUESTRO EQUIPO--------------------------------------------*/
 .fotosEquipo {
@@ -602,22 +626,19 @@ h1 {
   grid-auto-rows: auto;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   gap: 1.5rem; }
-  .fotosEquipo .fotosItem {
+  .fotosEquipo .fotosEquipo__item {
     position: relative;
     width: 100%;
     height: 30rem;
     overflow: hidden; }
-    .fotosEquipo .fotosItem img {
+    .fotosEquipo .fotosEquipo__item .fotosEquipo__item__img {
       /* background-color: #f8d086; */
       background-color: #8bc791cb;
       /* background-color: #8bc79188; uso dos? */
       /* background-color: #66757e79; */
       /* background-color: #dae083; */
-      /* width: 100%;
-            height: 100%;
-            object-fit: cover; */
       cursor: pointer; }
-    .fotosEquipo .fotosItem .equipoHover {
+    .fotosEquipo .fotosEquipo__item .fotosEquipo__item__hover {
       background: #06273aab;
       /* background: #00000069;  */
       /* background: #dc143c8c; */
@@ -629,9 +650,6 @@ h1 {
       height: 100%;
       color: #f8f3e3;
       text-align: center;
-      /* display: flex;
-            flex-direction: column;
-            justify-content: center; */
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -639,14 +657,14 @@ h1 {
       transform: translateX(100%);
       cursor: pointer;
       transition: transform 0.3s ease-in-out; }
-    .fotosEquipo .fotosItem h2 {
+    .fotosEquipo .fotosEquipo__item .fotosEquipo__item__h2 {
       margin-bottom: 0.4rem; }
-    .fotosEquipo .fotosItem p {
+    .fotosEquipo .fotosEquipo__item .fotosEquipo__item__p {
       margin: 0.4rem;
       font-family: "Krub", sans-serif;
       font-weight: 500;
       font-size: 1.4rem; }
-  .fotosEquipo .fotosItem:hover .equipoHover {
+  .fotosEquipo .fotosEquipo__item:hover .fotosEquipo__item__hover {
     transform: translateX(0%); }
 
 /*FIN PAGINA NUESTRO EQUIPO---------------------------------------------*/
@@ -758,14 +776,9 @@ h1 {
 
 /*FIN PAGINA UBICACION----------------------------------------------*/
 /* PAGINA UNITE QUEREMOS CONOCERTE--------------------------------------------*/
-/*quito pq uso clases generales para imagen */
 .contenedorImgPrincipalUnite {
   width: 100%;
   height: 100%; }
-  .contenedorImgPrincipalUnite .contenedorImgPrincipalUnite__imgPrincipal {
-    /* width: 100%;
-        height: 100%;
-        object-fit: cover; */ }
   @media (min-width: 769px) {
     .contenedorImgPrincipalUnite .contenedorImgPrincipal__imgPrincipal--unite {
       height: 75rem; } }
@@ -810,7 +823,6 @@ h1 {
 
 @media (min-width: 769px) {
   .queremosConocerte {
-    /* display: flex; */
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -823,16 +835,10 @@ h1 {
 
 /*FIN PAGINA QUEREMOS CONOCERTE---------------------------------------------------------------*/
 /*PAGINA CONTACTO---------------------------------------------------------------------------------*/
-.contenedorImgPrincipal {
+.contenedorImgContacto {
   width: 100%;
   height: 100%; }
-  .contenedorImgPrincipal .contenedorImgPrincipal__imgPrincipal {
-    /* width: 100%;
-        height: 100%;
-        object-fit: cover; */ }
-  .contenedorImgPrincipal .contenedorImgPrincipal__imgPrincipal--contacto {
-    /* width: 100%; */
+  .contenedorImgContacto .contenedorImgContacto__imgContacto {
     height: 20rem; }
 
 /*FIN PAGINA CONTACTO----------------------------------------------------*/
-/*FIN MAIN----------------------------------------------------------------------------------------------------------------------------------------------------*/

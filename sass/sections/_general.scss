@@ -1,7 +1,6 @@
 
 /*GENERAL----------------------------------------------------------------------------------------------------------------------------*/
 /*Configuro para utilizar REM en lugar de PX, 1 rem = 10 px------*/
-/*Tambien para manejar mejor el Box Model*/
 html {
     font-size: 62.5%;
     box-sizing: border-box; /*para manejar mejor el box model*/
@@ -39,6 +38,6 @@ h1 {
     margin-bottom: 2rem;
     font-size: 3.5rem;
     text-align: center;
-    color: map-get($colorsMaps, negro);
+    color: $negro;
 }
 /*FIN GENERAL----------------------------------------------------------------------------------------------------------------------------*/

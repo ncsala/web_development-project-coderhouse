@@ -5,7 +5,7 @@
     align-items: $align;
 }
 
-@mixin widthHeight($width, $height) {
+@mixin wH($width, $height) {
     width: $width;
     height: $height;
 }

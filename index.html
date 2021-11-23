@@ -1,53 +1,43 @@
 <!DOCTYPE html>
 
-
 <html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximu-scale=3.0">
-    <meta name="keywords" content="restaurante, nosotros, come, relajate, bebe, platillos, platos, chef, chowder, ensalada">
-    <meta name="description" content="Bienvenida al restaurante con fotos, breve descripcion del restaurante y algunos platillos">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=3.0">
+    <meta name="keywords"
+        content="restaurante, nosotros, come, relajate, bebe, platillos, platos, chef, chowder, ensalada">
+    <meta name="description"
+        content="Bienvenida al restaurante con fotos, breve descripcion del restaurante y algunos platillos">
 
-    <!--Agregro Font Awesome para utilizar iconos-->
+    <!--Se grega Font Awesome para utilizar iconos-->
     <script src="https://kit.fontawesome.com/09861335cf.js" crossorigin="anonymous"></script>
 
-    <!--Agrego fuentes de google-->
+    <!--se agrega fuentes de google-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Krub:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Oswald:wght@400;500;600;700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Rubik:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
         rel="stylesheet">
 
-    <!--Agrego normalize. Pongo un preload para que cargue mas rapido-->
-    <link rel="preload" href="./css/normalize.css" as="style">
-    <link rel="stylesheet" href="./css/normalize.css">
-
-    <!--Agrego mis estilos. Pongo un preload para que cargue mas rapido-->
+    <!--Mis estilos.-->
     <link rel="preload" href="./css/main.css" as="style">
     <link rel="stylesheet" href="./css/main.css">
 
-    <!--Añado hoja de estilos para animaciones de texto -->
+    <!--Hoja de estilos para animaciones de texto en titulos -->
     <link rel="preload" href="./css/animate.css" as="style">
     <link rel="stylesheet" href="./css/animate.css">
 
-    <!--Añado hoja de estilo para la animacion del boton del menu hamburguesa-->
+    <!--Hoja de estilo para la animacion del icono del menu hamburguesa-->
     <link rel="preload" href="./css/hamburgers.css" as="style">
     <link rel="stylesheet" href="./css/hamburgers.css" />
 
-    <!-- Hoja de estilo para efecto de animaciones que al hacer scroll se activan -->
+    <!--Hoja de estilo para efecto de animaciones que al hacer scroll se activan -->
     <link rel="preload" href="./css/aos.css" as="style" />
     <link rel="stylesheet" href="./css/aos.css" />
 
     <title>FoodHack | Hackeamos los sabores, y tus sentidos</title>
-
-    <!--<style>
-        *{
-            border: 1px solid red !important;
-        }
-    </style> -->
-
 </head>
 
 
@@ -56,55 +46,57 @@
     <header class="header">
 
         <!--Menu de navegacion principal-->
-        <nav class="header__navPrincipal">
+        <nav class="header__nav">
 
-            <a href="index.html" class="header__navPrincipal__logoPrincipal">
-                <svg viewBox="-12 -17 170 50">
+            <a href="index.html" class="header__nav__logo">
+                <svg class="header__nav_logo__svg" viewBox="-12 -6.5 170 50">
 
                     <clippath id="cp-text">
-                        <text text-anchor="middle" x="50%" y="50%" class="text--line">
+                        <text text-anchor="middle" x="50%" y="50%" class="header__logo__txt">
                             Hack Food
                         </text>
                     </clippath>
 
-                    <!-- sombra -->
-                    <g clip-path="url(#cp-text)" class="shadow">
-                        <rect width="100%" height="100%" class="anim-shape anim-shape--shadow"></rect>
+                    <g clip-path="url(#cp-text)" class="txtColor">
+                        <rect width="100%" height="100%" class="header__logo__animForma"></rect>
+                        <rect width="80%" height="100%" class="header__logo__animForma"></rect>
+                        <rect width="60%" height="100%" class="header__logo__animForma"></rect>
+                        <rect width="40%" height="100%" class="header__logo__animForma"></rect>
+                        <rect width="20%" height="100%" class="header__logo__animForma"></rect>
                     </g>
 
-
-                    <g clip-path="url(#cp-text)" class="colortext">
-                        <rect width="100%" height="100%" class="anim-shape"></rect>
-                        <rect width="80%" height="100%" class="anim-shape"></rect>
-                        <rect width="60%" height="100%" class="anim-shape"></rect>
-                        <rect width="40%" height="100%" class="anim-shape"></rect>
-                        <rect width="20%" height="100%" class="anim-shape"></rect>
+                    <g clip-path="url(#cp-text)" class="header__logo__sombra">
+                        <rect width="100%" height="100%"
+                            class="header__logo__animForma header__logo__animForma--sombra"></rect>
                     </g>
-
-                    <!-- <use xlink:href="#s-text" class="text--transparent"></use> -->
                 </svg>
-            </a>
+            </a> <!-- Fin de Logo -->
 
-            <!--Boton hamburguesa-->
-            <button class="hamburger hamburger--spring-r header__navPrincipal__iconoHamburguesa" type="button"
-                id="header__navPrincipal__iconoHamburguesa">
+            <!--Icono de menu hamburguesa-->
+            <button class="header__nav__iconoHamb hamburger hamburger--spring-r" type="button"
+                id="header__nav__iconoHamb">
                 <span class="hamburger-box">
                     <span class="hamburger-inner"></span>
                 </span>
             </button>
 
-            <ul class="header__navPrincipal__enlaces ocultarEnlaces" id="header__navPrincipal__enlaces">
+            <ul class="header__nav__enlaces ocultarEnlaces" id="header__nav__enlaces">
                 <li>
-                    <a href="nuestro-equipo.html">Nuestro Equipo</a>
+                    <a class="header__nav__enlaces__a header__nav__enlaces__a--active" href="index.html">Inicio</a>
                 </li>
                 <li>
-                    <a href="ubicaciones.html">Ubicaciones</a>
+                    <a class="header__nav__enlaces__a header__nav__enlaces__a--pse" href="nuestro-equipo.html">Nuestro
+                        Equipo</a>
                 </li>
                 <li>
-                    <a href="unite.html">Unite</a>
+                    <a class="header__nav__enlaces__a header__nav__enlaces__a--pse"
+                        href="ubicaciones.html">Ubicaciones</a>
                 </li>
                 <li>
-                    <a href="contacto.html">Contacto</a>
+                    <a class="header__nav__enlaces__a header__nav__enlaces__a--pse" href="unite.html">Unite</a>
+                </li>
+                <li>
+                    <a class="header__nav__enlaces__a header__nav__enlaces__a--pse" href="contacto.html">Contacto</a>
                 </li>
             </ul>
 
@@ -118,20 +110,61 @@
         <section>
 
             <section>
-                <div class="contenedorImgPrincipal">
-                    <!--Para insertar una transparencia sobre la imagen-->
-                    <div class="contenedorImgPrincipal__titulos">
-                        <h1 class="contenedorImgPrincipal__titulos__h1 contenedorImgPrincipal__titulos__h2--moviendoH1">
-                            Tu Lugar Favorito</h1>
-                        <h2
-                            class="contenedorImgPrincipal__titulos__h2 contenedorImgPrincipal__titulos__h2--moviendoH2 ">
-                            Bebe, come y relájate</h2>
-                    </div>
-                    <img src="./images/images-index/imagenPrincipalIndex.jpg" class="contenedorImgPrincipal__imgPrincipal"
-                        alt="Imagen principal, imagen del local">
-                    <div class="transparenciaNegrita"></div>
-                </div>
+                <div class="slider">
+                    <div class="slider__slides">
+                        <!--radio botones inicio-->
+                        <input class="slider__slides__inputRadio" type="radio" name="radio-btn" id="slider__slides__inputRadio1">
+                        <input class="slider__slides__inputRadio" type="radio" name="radio-btn" id="slider__slides__inputRadio2">
+                        <input class="slider__slides__inputRadio" type="radio" name="radio-btn" id="slider__slides__inputRadio3">
+                        <input class="slider__slides__inputRadio" type="radio" name="radio-btn" id="slider__slides__inputRadio4">
+                        <!--radio botones fin-->
+                        
+                        <!--slide imagenes inicio-->
+                        <div class="slider__slides__slide slider__slides__slide--first">
+                            <!--Para insertar una transparencia sobre la imagen-->
+                            <div class="transparenciaNegrita"></div>
+                            <div class="slider__slides__titulos">
+                                <h1 class="slider__titulos__h1 slider__titulos__h2--moviendoH1">
+                                    Tu Lugar Favorito</h1>
+                                <h2
+                                class="slider__titulos__h2 slider__titulos__h2--moviendoH2 ">
+                                Bebe, come y relájate</h2>
+                            </div>
+                            <img class="slider__slide__img" src="./images/images-index/imagenSlider1.jpg" alt="">
+                        </div>
+                        <div class="slider__slides__slide">
+                            <img class="slider__slide__img" src="./images/images-index/imagenSlider2.jpg" alt="">
+                        </div>
+                        <div class="slider__slides__slide">
+                            <img class="slider__slide__img" src="./images/images-index/imagenSlider6.jpg" alt="">
+                        </div>
+                        <div class="slider__slides__slide">
+                            <img class="slider__slide__img" src="./images/images-index/imagenSlider7.jpg" alt="">
+                        </div>
+                        <!--slide imagenes fin-->
 
+                        <!--navegacion automatica inicio-->
+                        <div class="slider__navegacionAuto">
+                            <div class="slider__navegacionAuto__btn slider__navegacionAuto__btn--1"></div>
+                            <div class="slider__navegacionAuto__btn slider__navegacionAuto__btn--2"></div>
+                            <div class="slider__navegacionAuto__btn slider__navegacionAuto__btn--3"></div>
+                            <div class="slider__navegacionAuto__btn slider__navegacionAuto__btn--4"></div>
+                        </div>
+                        <!--navegacion automatica fin-->
+                    </div>
+                    <!--navegacio manual inicio-->
+                    <div class="slider__navegacionManual">
+                        <label for="slider__slides__inputRadio1" class="slider__navegacionManual__btn"></label>
+                        <label for="slider__slides__inputRadio2" class="slider__navegacionManual__btn"></label>
+                        <label for="slider__slides__inputRadio3" class="slider__navegacionManual__btn"></label>
+                        <label for="slider__slides__inputRadio4" class="slider__navegacionManual__btn"></label>
+                    </div>
+                    <!--navegacion manual fin-->
+                </div>
+            </section>
+
+            <section>
+                <!-- <h3 class="sectionPlatillos__h3 item" data-aos="fade-down">Sobre nosotros</h3> -->
                 <div class="contenedorTextoPrincipal item" data-aos="fade-right">
                     <p class="contenedorTextoPrincipal__p item" data-aos="fade-up"> Con 20 de experiencia y un servicio
                         galardonado, Foodhack© es
@@ -149,18 +182,17 @@
                         damos la bienvenida todo el día, cualquier día! Amamos el arte de hackear los sabores.
                     </p>
                 </div>
-            </section>
+            </section> <!--texto principal fin-->
 
-            <section>
-                <h3 class="tituloPlatillos item" data-aos="fade-down">Algunos de nuestros platillos</h3>
+            <section class="sectionPlatillos">
+                <h3 class="sectionPlatillos__h3 item" data-aos="fade-down">Algunos de nuestros platillos</h3>
 
-                <div class="seccionPlatos">
-
-                    <img class="imagenPlatos item" data-aos="fade-right"
+                <div class="sectionPlatillos__platos">
+                    <img class="sectionPlatillos__img item" data-aos="fade-right"
                         src="./images/images-index/ensalada-vegetariana.jpeg" alt="Ensalada del Oeste">
-                    <div class="textoPlatos textoEnsalada item" data-aos="fade-right">
+                    <div class="sectionPlatillos__txt sectionPlatillos__txt--ensalada item" data-aos="fade-right">
                         <div class="centrar">
-                            <h4>Ensalada del Oeste</h4>
+                            <h4 class="sectionPlatillos__txt__h4">Ensalada del Oeste</h4>
                             <p>
                                 Las ensaladas son siempre platos frescos, livianos, apetitosos que deben atraer el
                                 interes de los comensales. En ninguna otra preparación de alimentos hay tantos gustos
@@ -171,9 +203,9 @@
                         </div>
                     </div>
 
-                    <div class="textoPlatos textoSopa item" data-aos="fade-left">
+                    <div class="sectionPlatillos__txt sectionPlatillos__txt--sopa item" data-aos="fade-left">
                         <div class="centrar">
-                            <h4>Sopa Chowder</h4>
+                            <h4 class="sectionPlatillos__txt__h4">Sopa Chowder</h4>
                             <p>
                                 Es una sopa espesa en la que se dejan los alimentos en trozos bastantes grandes.
                                 Fácilmente puede ser el plato único, ya que es de un alto valor calórico y muy nutritivo
@@ -182,14 +214,14 @@
                             </p>
                         </div>
                     </div>
-                    <img class="imagenPlatos item" data-aos="fade-left" src="./images/images-index/sopa.jpeg"
+                    <img class="sectionPlatillos__img item" data-aos="fade-left" src="./images/images-index/sopa.jpeg"
                         alt="Sopa Especial">
 
-                    <img class="imagenPlatos item" data-aos="fade-up" src="./images/images-index/especial-chef.jpg"
-                        alt="Especial del chef">
-                    <div class="textoPlatos textoChef item" data-aos="fade-up">
+                    <img class="sectionPlatillos__img item" data-aos="fade-up"
+                        src="./images/images-index/especial-chef.jpg" alt="Especial del chef">
+                    <div class="sectionPlatillos__txt sectionPlatillos__txt--chef item" data-aos="fade-up">
                         <div class="centrar">
-                            <h4>Especial del Chef</h4>
+                            <h4 class="sectionPlatillos__txt__h4">Especial del Chef</h4>
                             <p>
                                 Muchos restaurantes tienen su propia versión de esta receta, en nuestro caso contamos
                                 con un clásico uruguayo, el Chupín de pescado. Se prepara recién sacado del mar y se
@@ -200,7 +232,7 @@
 
                     </div>
                 </div>
-            </section>
+            </section> <!--seccion platillos fin-->
 
         </section>
 
@@ -234,19 +266,25 @@
         </ul>
     </footer>
 
-    <!-- Java Script para efecto de animaciones que al hacer scroll se activan -->
-    <!-- <script script  src = " https://unpkg.com/aos@next/dist/aos.js " > </script>
-    <script script > 
-        AOS.init ( 
-            { duration: 1200,}); 
-    </script>  -->
-
-    <!-- Java Script para efecto de animaciones que al hacer scroll se activan -->
+    <!-- Libreria para efecto de animaciones que al hacer scroll se activan -->
     <script src="./js/aos.js"></script>
     <script>
         AOS.init({
             duration: 1000,
         });
+    </script>
+
+    <!-- js para sliders-->
+    <script>
+        var counter = 1;
+        setInterval(function () {
+            document.getElementById('slider__slides__inputRadio' + counter).checked = true;
+            counter++;
+            if (counter > 4) 
+            {
+                counter = 1;
+            }
+        }, 8000);
     </script>
 
     <!--Mi archivo js-->

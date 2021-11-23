@@ -5,107 +5,96 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximu-scale=3.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=3.0">
     <meta name="keywords" content="equipo, personal, mozo, gerente, chef, empleados">
     <meta name="description" content="Presentación del equipo de trabajo del restaurante">
 
-    <!--Agregro Font Awesome para utilizar iconos-->
+    <!--Se grega Font Awesome para utilizar iconos-->
     <script src="https://kit.fontawesome.com/09861335cf.js" crossorigin="anonymous"></script>
 
-    <!--Agrego fuentes de google-->
+    <!--se agrega fuentes de google-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Krub:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Oswald:wght@400;500;600;700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Rubik:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
         rel="stylesheet">
 
-    <!--Agrego normalize. Pongo un preload para que cargue mas rapido-->
-    <link rel="preload" href="./css/normalize.css" as="style">
-    <link rel="stylesheet" href="./css/normalize.css">
-
-    <!--Agrego mis estilos. Pongo un preload para que cargue mas rapido-->
+    <!--Mis estilos.-->
     <link rel="preload" href="./css/main.css" as="style">
     <link rel="stylesheet" href="./css/main.css">
 
-    <!--Añado hoja de estilos para animaciones de texto -->
+    <!--Hoja de estilos para animaciones de texto en titulos -->
     <link rel="preload" href="./css/animate.css" as="style">
     <link rel="stylesheet" href="./css/animate.css">
 
-    <!--Añado hoja de estilo para la animacion del boton del menu hamburguesa-->
+    <!--Hoja de estilo para la animacion del icono del menu hamburguesa-->
     <link rel="preload" href="./css/hamburgers.css" as="style">
     <link rel="stylesheet" href="./css/hamburgers.css" />
 
-    <!-- Hoja de estilo para efecto de animaciones que al hacer scroll se activan -->
+    <!--Hoja de estilo para efecto de animaciones que al hacer scroll se activan -->
     <link rel="preload" href="./css/aos.css" as="style" />
     <link rel="stylesheet" href="./css/aos.css" />
 
     <title>FoodHack | Hackeamos los sabores, y tus sentidos</title>
-
-    <!--<style>
-        *{
-            border: 1px solid red !important;
-        }
-    </style> -->
-    
 </head>
 
 <body>
 
     <header class="header">
 
-        <!--Menu de navegacion principal-->
-        <nav class="header__navPrincipal">
+        <nav class="header__nav">
 
-            <a href="index.html" class="header__navPrincipal__logoPrincipal">
-                    <svg viewBox="-12 -17 170 50">
+            <a href="index.html" class="header__nav__logo">
+                <svg class="header__nav_logo__svg" viewBox="-12 -6.5 170 50" >
 
-                        <clippath id="cp-text">
-                            <text text-anchor="middle" x="50%" y="50%" class="text--line">
-                                Hack Food
-                            </text>
-                        </clippath>
+                    <clippath id="cp-text">
+                        <text text-anchor="middle" x="50%" y="50%" class="header__logo__txt">
+                            Hack Food
+                        </text>
+                    </clippath>
 
-                        <!-- sombra -->
-                        <g clip-path="url(#cp-text)" class="shadow">
-                            <rect width="100%" height="100%" class="anim-shape anim-shape--shadow"></rect>
-                        </g>
+                    <g clip-path="url(#cp-text)" class="txtColor">
+                        <rect width="100%" height="100%" class="header__logo__animForma"></rect>
+                        <rect width="80%" height="100%" class="header__logo__animForma"></rect>
+                        <rect width="60%" height="100%" class="header__logo__animForma"></rect>
+                        <rect width="40%" height="100%" class="header__logo__animForma"></rect>
+                        <rect width="20%" height="100%" class="header__logo__animForma"></rect>
+                    </g>
 
+                    <g clip-path="url(#cp-text)" class="header__logo__sombra">
+                        <rect width="100%" height="100%" class="header__logo__animForma header__logo__animForma--sombra"></rect>
+                    </g>
+                </svg>
+            </a> <!-- Fin de Logo -->
 
-                        <g clip-path="url(#cp-text)" class="colortext">
-                            <rect width="100%" height="100%" class="anim-shape"></rect>
-                            <rect width="80%" height="100%" class="anim-shape"></rect>
-                            <rect width="60%" height="100%" class="anim-shape"></rect>
-                            <rect width="40%" height="100%" class="anim-shape"></rect>
-                            <rect width="20%" height="100%" class="anim-shape"></rect>
-                        </g>
-
-                        <!-- <use xlink:href="#s-text" class="text--transparent"></use> -->
-                    </svg>
-            </a>
-
-            <!--Boton hamburguesa-->
-            <button class="hamburger hamburger--spring-r header__navPrincipal__iconoHamburguesa" type="button" id="header__navPrincipal__iconoHamburguesa">
+            <!--Icono de menu hamburguesa-->
+            <button class="header__nav__iconoHamb hamburger hamburger--spring-r" type="button"
+                id="header__nav__iconoHamb">
                 <span class="hamburger-box">
                     <span class="hamburger-inner"></span>
                 </span>
             </button>
 
-            <ul class="header__navPrincipal__enlaces ocultarEnlaces" id="header__navPrincipal__enlaces">
+            <ul class="header__nav__enlaces ocultarEnlaces" id="header__nav__enlaces">
                 <li>
-                    <a href="nuestro-equipo.html">Nuestro Equipo</a>
+                    <a class="header__nav__enlaces__a header__nav__enlaces__a--pse" href="index.html">Inicio</a>
                 </li>
                 <li>
-                    <a href="ubicaciones.html">Ubicaciones</a>
+                    <a class="header__nav__enlaces__a header__nav__enlaces__a--active" href="nuestro-equipo.html">Nuestro Equipo</a>
                 </li>
                 <li>
-                    <a href="unite.html">Unite</a>
+                    <a class="header__nav__enlaces__a header__nav__enlaces__a--pse" href="ubicaciones.html">Ubicaciones</a>
                 </li>
                 <li>
-                    <a href="contacto.html">Contacto</a>
+                    <a class="header__nav__enlaces__a header__nav__enlaces__a--pse" href="unite.html">Unite</a>
+                </li>
+                <li>
+                    <a class="header__nav__enlaces__a header__nav__enlaces__a--pse" href="contacto.html">Contacto</a>
                 </li>
             </ul>
 
         </nav>
+
 
     </header>
 
@@ -119,72 +108,144 @@
 
                 <div class="fotosEquipo">
                     
-                    <div class="fotosItem">
-                        <img src="images/nuestro-equipo/subli/CurroSanchez_detail.png" alt="" />
-                        <div class="equipoHover"> 
-                            <h2> Fernando </h2>
+                    <div class="fotosEquipo__item">
+                        <img class="fotosEquipo__item__img" src="./images/nuestro-equipo/png/fernando.png" alt="Imagen de staff, fundador, Fernando" />
+                        <div class="fotosEquipo__item__hover"> 
+                            <h2 class=fotosEquipo__item__h2> Fernando </h2>
                             <h3> Fundador </h3>
-                            <p> Fundador de Hack Food. En sus inicios comenzó en un taller ubicado en Montevideo. Su carrera esta marcada por su pasión por la gastronomía de vanguardia.</p>
+                            <p class="fotosEquipo__item__p"> Fundador de Hack Food. En sus inicios comenzó en un taller ubicado en Montevideo. Su carrera esta marcada por su pasión por la gastronomía de vanguardia.</p>
                         </div>
                     </div>
-                    <div class="fotosItem">
-                        <img src="images/nuestro-equipo/subli/png/JaniceWong_detail_overlay.png" alt="" />
-                        <div class="equipoHover"> 
-                            <h2> Camila </h2>
+                    <div class="fotosEquipo__item">
+                        <img class="fotosEquipo__item__img" src="./images/nuestro-equipo/png/camila.png" alt="Imagen de staff,  directora, Camila" />
+                        <div class="fotosEquipo__item__hover"> 
+                            <h2 class=fotosEquipo__item__h2> Camila </h2>
                             <h3> Directora </h3>
-                            <p> Nuestra directora tiene amplia experiencia, con 15 años de trayectoria en la creación, desarrollo y ejecución de grandes eventos y espectáculos especiales.</p>
+                            <p class="fotosEquipo__item__p"> Nuestra directora tiene amplia experiencia, con 15 años de trayectoria en la creación, desarrollo y ejecución de grandes eventos y espectáculos especiales.</p>
                         </div>
                     </div>
-                    <div class="fotosItem">
-                        <img src="images/nuestro-equipo/subli/png/ElenaArzak_detail.png" alt="" />
-                        <div class="equipoHover"> 
-                            <h2> Agustina </h2>
+                    <div class="fotosEquipo__item">
+                        <img class="fotosEquipo__item__img" src="./images/nuestro-equipo/png/agustina.png" alt="Imagen de staff, chef principal, Agustina" />
+                        <div class="fotosEquipo__item__hover"> 
+                            <h2 class=fotosEquipo__item__h2> Agustina </h2>
                             <h3> Chef </h3>
-                            <p> Nuestra galardonada chef, la principal responsable de nuestros sabores únicos. En sus tiempos libres le gusta tocar el piano. </p>
+                            <p class="fotosEquipo__item__p"> Nuestra galardonada chef, la principal responsable de nuestros sabores únicos. En sus tiempos libres le gusta tocar el piano. </p>
                         </div>
                     </div>
-                    <div class="fotosItem">
-                        <img src="images/nuestro-equipo/subli/png/Eduardo_detail_overlay.png" alt="" />
-                        <div class="equipoHover"> 
-                            <h2> Nicolás </h2>
+                    <div class="fotosEquipo__item">
+                        <img class="fotosEquipo__item__img" src="./images/nuestro-equipo/png/nicolas.png" alt="Imagen de staff, chef, Nicolas" />
+                        <div class="fotosEquipo__item__hover"> 
+                            <h2 class=fotosEquipo__item__h2> Nicolás </h2>
                             <h3> Chef </h3>
-                            <p> Es un cocinero uruguayo, entusiasta de la ciencia, ama la pizza y elabora el pan más rico. </p>
+                            <p class="fotosEquipo__item__p"> Es un cocinero uruguayo, entusiasta de la ciencia, ama la pizza y elabora el pan más rico. </p>
                         </div>
                     </div>
-                    <div class="fotosItem">
-                        <img src="images/nuestro-equipo/subli/png/JorgeBlas_detail_overlay.png" alt="" />
-                        <div class="equipoHover"> 
-                            <h2> Sebastián </h2>
+                    <div class="fotosEquipo__item">
+                        <img class="fotosEquipo__item__img" src="./images/nuestro-equipo/png/sebastian.png" alt="Imagen de staff, bartender, Sebastían" />
+                        <div class="fotosEquipo__item__hover"> 
+                            <h2 class=fotosEquipo__item__h2> Sebastián </h2>
                             <h3> Bartender </h3>
-                            <p>La responsabilidad de los cocteles más lujosos y exóticos que nunca has probado estan en sus manos.</p>
+                            <p class="fotosEquipo__item__p">La responsabilidad de los cocteles más lujosos y exóticos que nunca has probado estan en sus manos.</p>
                         </div>
                     </div>
-                    <div class="fotosItem">
-                        <img src="images/nuestro-equipo/subli/png/JosePinero_detail_overlay.png" alt="" />
-                        <div class="equipoHover"> 
-                            <h2> Martín </h2>
+                    <div class="fotosEquipo__item">
+                        <img class="fotosEquipo__item__img" src="./images/nuestro-equipo/png/martin.png" alt="Imagen de staff, repostero, Martin." />
+                        <div class="fotosEquipo__item__hover"> 
+                            <h2 class=fotosEquipo__item__h2> Martín </h2>
                             <h3> Repostero </h3>
-                            <p> La interminable pasión de Martín por el arte culinario lo ha impulsado hacía delante para poner a prueba los límites de la fabricación de postres. No te quedes sin probarlos. </p>
+                            <p class="fotosEquipo__item__p"> La interminable pasión de Martín por el arte culinario lo ha impulsado hacía delante para poner a prueba los límites de la fabricación de postres. No te quedes sin probarlos. </p>
                         </div>
                     </div>
-                    <div class="fotosItem">
-                        <img src="images/nuestro-equipo/subli/png/LucasVidal_detail.png" alt="" />
-                        <div class="equipoHover"> 
-                            <h2> Daniel </h2>
+                    <div class="fotosEquipo__item">
+                        <img class="fotosEquipo__item__img" src="./images/nuestro-equipo/png/daniel.png" alt="Imagen de staff, mozo, Daniel" />
+                        <div class="fotosEquipo__item__hover"> 
+                            <h2 class=fotosEquipo__item__h2> Daniel </h2>
                             <h3> Mozo </h3>
-                            <p> Daniel asistió al Instituto Suizo de Gestión y Hospitalidad en Lucerna. Su atención profesional esta a un nivel superlativo. </p>
+                            <p class="fotosEquipo__item__p"> Daniel asistió al Instituto Suizo de Gestión y Hospitalidad en Lucerna. Su atención profesional esta a un nivel superlativo. </p>
                         </div>
                     </div>
-                    <div class="fotosItem">
-                        <img src="images/nuestro-equipo/subli/png/PiaLeon_detail.png" alt="" />
-                        <div class="equipoHover"> 
-                            <h2> Verónica </h2>
+                    <div class="fotosEquipo__item">
+                        <img class="fotosEquipo__item__img" src="./images/nuestro-equipo/png/veronica.png" alt="Imagen de staff, moza, Verónica" />
+                        <div class="fotosEquipo__item__hover"> 
+                            <h2 class=fotosEquipo__item__h2> Verónica </h2>
                             <h3> Moza </h3>
-                            <p> Al igual que su hermano, Verónica también asistió al Instituto Suizo de Gestión y Hospitalidad en Lucerna. Su presencia asegura atención de lujo. </p>
+                            <p class="fotosEquipo__item__p"> Al igual que su hermano, Verónica también asistió al Instituto Suizo de Gestión y Hospitalidad en Lucerna. Su presencia asegura atención de lujo. </p>
                         </div>
                     </div>
                     
                 </div>
+
+
+
+                
+               <!--  <div class="fotosEquipo">
+                    
+                    <div class="fotosEquipo__item">
+                        <img class="fotosEquipo__item__img" src="./images/nuestro-equipo/CurroSanchez_colour.jpg" alt="Imagen de staff, fundador, Fernando" />
+                        <div class="fotosEquipo__item__hover"> 
+                            <h2 class=fotosEquipo__item__h2> Fernando </h2>
+                            <h3> Fundador </h3>
+                            <p class="fotosEquipo__item__p"> Fundador de Hack Food. En sus inicios comenzó en un taller ubicado en Montevideo. Su carrera esta marcada por su pasión por la gastronomía de vanguardia.</p>
+                        </div>
+                    </div>
+                    <div class="fotosEquipo__item">
+                        <img class="fotosEquipo__item__img" src="./images/nuestro-equipo/ElenaArzak_colour.jpg" alt="Imagen de staff,  directora, Camila" />
+                        <div class="fotosEquipo__item__hover"> 
+                            <h2 class=fotosEquipo__item__h2> Camila </h2>
+                            <h3> Directora </h3>
+                            <p class="fotosEquipo__item__p"> Nuestra directora tiene amplia experiencia, con 15 años de trayectoria en la creación, desarrollo y ejecución de grandes eventos y espectáculos especiales.</p>
+                        </div>
+                    </div>
+                    <div class="fotosEquipo__item">
+                        <img class="fotosEquipo__item__img" src="./images/nuestro-equipo/JaniceWong_colour.jpg" alt="Imagen de staff, chef principal, Agustina" />
+                        <div class="fotosEquipo__item__hover"> 
+                            <h2 class=fotosEquipo__item__h2> Agustina </h2>
+                            <h3> Chef </h3>
+                            <p class="fotosEquipo__item__p"> Nuestra galardonada chef, la principal responsable de nuestros sabores únicos. En sus tiempos libres le gusta tocar el piano. </p>
+                        </div>
+                    </div>
+                    <div class="fotosEquipo__item">
+                        <img class="fotosEquipo__item__img" src="./images/nuestro-equipo/JorgeBlass_colour.jpg" alt="Imagen de staff, chef, Nicolas" />
+                        <div class="fotosEquipo__item__hover"> 
+                            <h2 class=fotosEquipo__item__h2> Nicolás </h2>
+                            <h3> Chef </h3>
+                            <p class="fotosEquipo__item__p"> Es un cocinero uruguayo, entusiasta de la ciencia, ama la pizza y elabora el pan más rico. </p>
+                        </div>
+                    </div>
+                    <div class="fotosEquipo__item">
+                        <img class="fotosEquipo__item__img" src="./images/nuestro-equipo/JosePinero_colour.jpg" alt="Imagen de staff, bartender, Sebastían" />
+                        <div class="fotosEquipo__item__hover"> 
+                            <h2 class=fotosEquipo__item__h2> Sebastián </h2>
+                            <h3> Bartender </h3>
+                            <p class="fotosEquipo__item__p">La responsabilidad de los cocteles más lujosos y exóticos que nunca has probado estan en sus manos.</p>
+                        </div>
+                    </div>
+                    <div class="fotosEquipo__item">
+                        <img class="fotosEquipo__item__img" src="./images/nuestro-equipo/LucasVidal_colour.jpg" alt="Imagen de staff, repostero, Martin." />
+                        <div class="fotosEquipo__item__hover"> 
+                            <h2 class=fotosEquipo__item__h2> Martín </h2>
+                            <h3> Repostero </h3>
+                            <p class="fotosEquipo__item__p"> La interminable pasión de Martín por el arte culinario lo ha impulsado hacía delante para poner a prueba los límites de la fabricación de postres. No te quedes sin probarlos. </p>
+                        </div>
+                    </div>
+                    <div class="fotosEquipo__item">
+                        <img class="fotosEquipo__item__img" src="./images/nuestro-equipo/PiaLeon_colour.jpg" alt="Imagen de staff, mozo, Daniel" />
+                        <div class="fotosEquipo__item__hover"> 
+                            <h2 class=fotosEquipo__item__h2> Daniel </h2>
+                            <h3> Mozo </h3>
+                            <p class="fotosEquipo__item__p"> Daniel asistió al Instituto Suizo de Gestión y Hospitalidad en Lucerna. Su atención profesional esta a un nivel superlativo. </p>
+                        </div>
+                    </div>
+                    <div class="fotosEquipo__item">
+                        <img class="fotosEquipo__item__img" src="./images/nuestro-equipo/png/veronica.png" alt="Imagen de staff, moza, Verónica" />
+                        <div class="fotosEquipo__item__hover"> 
+                            <h2 class=fotosEquipo__item__h2> Verónica </h2>
+                            <h3> Moza </h3>
+                            <p class="fotosEquipo__item__p"> Al igual que su hermano, Verónica también asistió al Instituto Suizo de Gestión y Hospitalidad en Lucerna. Su presencia asegura atención de lujo. </p>
+                        </div>
+                    </div>
+                    
+                </div> -->
                 
             </section>
 
@@ -219,7 +280,7 @@
         </ul>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="./js/main.js"></script>
 
 
 </body>
