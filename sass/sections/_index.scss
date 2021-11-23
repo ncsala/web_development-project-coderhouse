@@ -106,7 +106,6 @@
         @include flexbox(row, center, center);
         left: 50%;
         top:85%;
-        // top: 78.91rem;
         transform: translate(-50%, -50%);
         text-align: center;
 
@@ -133,11 +132,8 @@
         width: 100%;
         left: 50%;
         top:85%;
-        // top: 78.91rem;
         transform: translate(-50%, -50%);
         text-align: center;
-        // margin-top: 41%;
-        // margin-top: 77.85rem;
 
         .slider__navegacionAuto__btn {
             border: 0.2rem solid $secundario;
