@@ -1,6 +1,7 @@
-@charset "UTF-8";
 /*Defino paleta de colores a usar*/
 /*Defino fuentes a usar*/
+/* Se agregan fuentes de google */
+@import url("https://fonts.googleapis.com/css2?family=Krub:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 .fotosEquipo .fotosEquipo__item .fotosEquipo__item__img, .contenedorImgPrincipalUnite .contenedorImgPrincipalUnite__imgPrincipal, .contenedorImgContacto .contenedorImgContacto__imgContacto {
   width: 100%;
   height: 100%;
@@ -218,7 +219,7 @@
   padding: 1rem 3rem;
   margin-top: 2rem;
   background-color: #d83863;
-  font-family: "Krub", sans-serif;
+  font-family: "PT Sans", sans-serif;
   font-size: 2rem;
   text-transform: uppercase;
   font-weight: 700;
@@ -263,22 +264,17 @@
 .formulario {
   background-color: #242121;
   width: min(100rem, 100%);
-  /*utilizar el valor mas pequeño VERSION*/
-  /* width: min(100rem, 100%); */
-  /*utilizar el valor mas pequeño*/
   margin: 0 auto;
-  /*Se centra asi cuando: el padre no tiene display flex y es elemento de bloque*/
   padding: 2rem;
   border-radius: 1rem; }
   .formulario fieldset {
     border: none;
-    /* margin-right: 1.5rem; */
     /*el textarea*/
     /*para poner el formulario en tres columnas cuando es mas grande que 769 pixeles*/ }
     .formulario fieldset legend {
       text-align: center;
       font-size: 1.8rem;
-      font-family: "Krub", sans-serif;
+      font-family: "PT Sans", sans-serif;
       font-weight: 700;
       color: #f8c25c;
       text-transform: uppercase;
@@ -288,13 +284,12 @@
     .formulario fieldset .campo {
       margin-bottom: 1rem; }
       .formulario fieldset .campo label {
-        font-family: "Krub", sans-serif;
+        font-family: "PT Sans", sans-serif;
         font-weight: 400;
         color: #f8f3e3;
         font-weight: 700;
         margin-bottom: 0.5rem;
-        display: block;
-        /* los labels toman todo el espacio disponible*/ }
+        display: block; }
       .formulario fieldset .campo textarea {
         height: 90%;
         resize: none; }
@@ -302,7 +297,7 @@
         background-color: #f8c25c; }
       .formulario fieldset .campo .inputTexto {
         border-color: #242121;
-        font-family: "Krub", sans-serif;
+        font-family: "PT Sans", sans-serif;
         font-weight: 400;
         width: 100%;
         border: none;
@@ -356,8 +351,6 @@
         font-weight: 400;
         font-size: 2.5rem; }
         .error404 main section p a {
-          --bs-font-sans-serif: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-          --bs-font-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
           font-family: "Krub", sans-serif;
           font-weight: 500;
           font-size: 3rem;
@@ -661,7 +654,7 @@ h1 {
       margin-bottom: 0.4rem; }
     .fotosEquipo .fotosEquipo__item .fotosEquipo__item__p {
       margin: 0.4rem;
-      font-family: "Krub", sans-serif;
+      font-family: "PT Sans", sans-serif;
       font-weight: 500;
       font-size: 1.4rem; }
   .fotosEquipo .fotosEquipo__item:hover .fotosEquipo__item__hover {
@@ -671,17 +664,10 @@ h1 {
 /*PAGINA UBICACIONES--------------------------------------------*/
 .bodyUbicacion {
   background-image: url(../images/ubicaciones/AB5I6799_NikkiTo.jpg);
-  /* Para dejar la imagen de fondo centrada, vertical y
-    horizontalmente */
   background-position: center center;
-  /* Para que la imagen de fondo no se repita */
   background-repeat: no-repeat;
-  /* La imagen se fija en la ventana de visualización para que la altura de la imagen no supere a la del contenido */
   background-attachment: fixed;
-  /* La imagen de fondo se reescala automáticamente con el cambio del ancho de ventana del navegador */
   background-size: cover;
-  /* Se muestra un color de fondo mientras se está cargando la imagen
-    de fondo o si hay problemas para cargarla */
   background-color: #f8f3e3; }
 
 .sectionUbicacion__h1,
@@ -699,7 +685,7 @@ h1 {
 #sectionUbicacion__typewriter {
   margin-top: 0.5rem;
   margin-bottom: 4rem;
-  font-family: "Krub", sans-serif;
+  font-family: "PT Sans", sans-serif;
   color: #f8c25c;
   font-size: 2.8rem;
   font-weight: 600; }
@@ -718,12 +704,8 @@ h1 {
   border: #106ba0 solid;
   margin-bottom: 8rem;
   border-radius: 1rem;
-  /* border: $rojo solid 0.2rem; */
   opacity: 0.9; }
   .sectionSucursal .sectionSucursal__contenedor {
-    /* display: flex;
-        justify-content: center;
-        align-items: center; */
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -735,14 +717,14 @@ h1 {
     .sectionSucursal .sectionSucursal__contenedor .sectionSucursal__listado_h3 {
       font-size: 2.3rem;
       font-weight: 500;
-      font-family: "Krub", sans-serif;
+      font-family: "PT Sans", sans-serif;
       color: #d83863;
       margin-bottom: 2rem;
       margin-top: 2rem; }
     .sectionSucursal .sectionSucursal__contenedor .sectionSucursal__listado__ul {
       padding: 0;
       margin: 1rem;
-      font-family: "Krub", sans-serif;
+      font-family: "PT Sans", sans-serif;
       font-size: 2.2rem;
       margin-top: 1.5rem;
       list-style: none; }
@@ -750,7 +732,7 @@ h1 {
         margin-top: 4rem;
         font-size: 2.3rem;
         font-weight: 500;
-        font-family: "Krub", sans-serif;
+        font-family: "PT Sans", sans-serif;
         color: #f8c25c; }
       .sectionSucursal .sectionSucursal__contenedor .sectionSucursal__listado__ul .sectionSucursal__listado__ul__ul {
         list-style: none; }
@@ -759,8 +741,8 @@ h1 {
   @media (min-width: 769px) {
     .sectionSucursal .sectionSucursal__contenedor {
       width: 50%;
-      border-radius: 0.5rem;
-      height: 55rem; }
+      height: 55rem;
+      border-radius: 0.5rem; }
     .sectionSucursal .sectionSucursal__contenedor__mapa {
       width: 50%;
       height: 55rem;
@@ -785,7 +767,7 @@ h1 {
 
 .textoFormularioUnite p {
   width: 95%;
-  font-family: "Krub", sans-serif;
+  font-family: "PT Sans", sans-serif;
   font-weight: 500;
   font-size: 2.1rem;
   margin: 2rem auto 3rem auto; }
@@ -805,7 +787,7 @@ h1 {
     position: absolute;
     z-index: -1; }
   .formulario--unite #labelAdjuntarCV {
-    font-family: "Krub", sans-serif;
+    font-family: "PT Sans", sans-serif;
     color: #f8f3e3;
     font-weight: 700;
     font-size: 1.4rem;

@@ -2,20 +2,18 @@
 /*formulario---------------------------------------------------------------*/
 .formulario {
     background-color: $primario;
-    width: unquote("min(100rem, 100%)"); /*utilizar el valor mas pequeño VERSION*/
-    /* width: min(100rem, 100%); */ /*utilizar el valor mas pequeño*/
-    margin: 0 auto; /*Se centra asi cuando: el padre no tiene display flex y es elemento de bloque*/
+    width: unquote("min(100rem, 100%)"); 
+    margin: 0 auto; 
     padding: 2rem;
     border-radius: 1rem;
 
     fieldset {
         border: none;
-        /* margin-right: 1.5rem; */
 
         legend {
             text-align: center;
             font-size: 1.8rem;
-            font-family: $font6;
+            font-family: $font1;
             font-weight: 700;
             color: $secundario;
             text-transform: uppercase;
@@ -31,12 +29,12 @@
             margin-bottom: 1rem;
 
             label {
-                font-family: $font6;
+                font-family: $font1;
                 font-weight: 400;
                 color: $blanco;
                 font-weight: 700;
                 margin-bottom: 0.5rem;
-                display: block; /* los labels toman todo el espacio disponible*/
+                display: block; 
             }
 
             textarea {
@@ -50,7 +48,7 @@
 
             .inputTexto {
                 border-color: $primario;
-                font-family: $font6;
+                font-family: $font1;
                 font-weight: 400;
                 width: 100%;
                 border: none;

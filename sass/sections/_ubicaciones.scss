@@ -1,19 +1,11 @@
 
 /*PAGINA UBICACIONES--------------------------------------------*/
-
 .bodyUbicacion {
     background-image: url(../images/ubicaciones/AB5I6799_NikkiTo.jpg);
-    /* Para dejar la imagen de fondo centrada, vertical y
-    horizontalmente */
     background-position: center center;
-    /* Para que la imagen de fondo no se repita */
     background-repeat: no-repeat;
-    /* La imagen se fija en la ventana de visualización para que la altura de la imagen no supere a la del contenido */
     background-attachment: fixed;
-    /* La imagen de fondo se reescala automáticamente con el cambio del ancho de ventana del navegador */
     background-size: cover;
-    /* Se muestra un color de fondo mientras se está cargando la imagen
-    de fondo o si hay problemas para cargarla */
     background-color: $blanco;
 }
 
@@ -35,7 +27,7 @@
 #sectionUbicacion__typewriter {
     margin-top: 0.5rem;
     margin-bottom: 4rem;
-    font-family: $font6;
+    font-family: $font1;
     color: $secundario;
     font-size: 2.8rem;
     font-weight: 600;
@@ -59,13 +51,9 @@
     border: #106ba0 solid;
     margin-bottom: 8rem;
     border-radius: 1rem;
-    /* border: $rojo solid 0.2rem; */
     opacity: 0.9;
 
     .sectionSucursal__contenedor {
-        /* display: flex;
-        justify-content: center;
-        align-items: center; */
         @include flexbox(row, center, center);
         background-color: $primario;
         border-radius: 0.5rem;
@@ -76,7 +64,7 @@
         {
             font-size: 2.3rem;
             font-weight: 500;
-            font-family: $font6;
+            font-family: $font1;
             color: $rojo;
             margin-bottom: 2rem;
             margin-top: 2rem;
@@ -85,7 +73,7 @@
         .sectionSucursal__listado__ul {
             padding: 0;
             margin: 1rem;
-            font-family: $font6;
+            font-family: $font1;
             font-size: 2.2rem;
             margin-top: 1.5rem;
             list-style: none;
@@ -94,7 +82,7 @@
                 margin-top: 4rem;
                 font-size: 2.3rem;
                 font-weight: 500;
-                font-family: $font6;
+                font-family: $font1;
                 color: $secundario;
             }
             
@@ -110,19 +98,16 @@
 
     @media (min-width: 769px) {
         .sectionSucursal__contenedor {
-            width: 50%;
+            @include wH(50%, 55rem);
             border-radius: 0.5rem;
-            height: 55rem;
         }
     
         .sectionSucursal__contenedor__mapa {
-            width: 50%;
-            height: 55rem;
+            @include wH(50%, 55rem);
             border-radius: 0.5rem;
         }
     }
 }
-
 
 @media (min-width: 769px) {
     .sectionSucursal {

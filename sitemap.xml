@@ -1,27 +1,40 @@
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
 <url>
-<loc>https://ncsala.github.io/project-web_development-coderhouse-html_css_js/ubicaciones.html</loc>
-<lastmod>2021-10-18T01:09:55+00:00</lastmod>
-<priority>1.00</priority>
+    <loc>https://ncsala.github.io/web_development-project-coderhouse/</loc>
+    <lastmod>2021-11-23T21:26:28+00:00</lastmod>
+    <priority>1.00</priority>
 </url>
 <url>
-<loc>https://ncsala.github.io/project-web_development-coderhouse-html_css_js/index.html</loc>
-<lastmod>2021-10-18T01:09:55+00:00</lastmod>
-<priority>0.80</priority>
+    <loc>https://ncsala.github.io/web_development-project-coderhouse/index.html</loc>
+    <lastmod>2021-11-23T21:26:28+00:00</lastmod>
+    <priority>0.80</priority>
 </url>
 <url>
-<loc>https://ncsala.github.io/project-web_development-coderhouse-html_css_js/nuestro-equipo.html</loc>
-<lastmod>2021-10-18T01:09:55+00:00</lastmod>
-<priority>0.80</priority>
+    <loc>https://ncsala.github.io/web_development-project-coderhouse/nuestro-equipo.html</loc>
+    <lastmod>2021-11-23T21:26:28+00:00</lastmod>
+    <priority>0.80</priority>
 </url>
 <url>
-<loc>https://ncsala.github.io/project-web_development-coderhouse-html_css_js/unite.html</loc>
-<lastmod>2021-10-18T01:09:55+00:00</lastmod>
-<priority>0.80</priority>
+    <loc>https://ncsala.github.io/web_development-project-coderhouse/ubicaciones.html</loc>
+    <lastmod>2021-11-23T21:26:28+00:00</lastmod>
+    <priority>0.80</priority>
 </url>
 <url>
-<loc>https://ncsala.github.io/project-web_development-coderhouse-html_css_js/contacto.html</loc>
-<lastmod>2021-10-18T01:09:55+00:00</lastmod>
-<priority>0.80</priority>
+    <loc>https://ncsala.github.io/web_development-project-coderhouse/unite.html</loc>
+    <lastmod>2021-11-23T21:26:28+00:00</lastmod>
+    <priority>0.80</priority>
 </url>
+<url>
+    <loc>https://ncsala.github.io/web_development-project-coderhouse/contacto.html</loc>
+    <lastmod>2021-11-23T21:26:27+00:00</lastmod>
+    <priority>0.80</priority>
+</url>
+
 </urlset>
