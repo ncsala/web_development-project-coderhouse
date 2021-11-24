@@ -4,14 +4,14 @@
     padding: 1rem 3rem;
     margin-top: 2rem;
     background-color: $rojo;
-    font-family: $font1;
+    font-family: $font6;
     font-size: 2rem;
     text-transform: uppercase;
     font-weight: 700;
     border-radius: 0.5rem;
     color: $blanco;
     background-color: transparent;
-    border: 2px solid #20e2d7;
+    border: 2px solid $botones;
     z-index: 0;
     cursor: pointer;
     overflow: hidden;
@@ -19,7 +19,7 @@
 
 .boton:hover {
     animation: sombra_pulso 1000ms 1;
-    background-color: #20e2d7;
+    background-color: $botones;
     color: #434343;
 }
 
@@ -42,7 +42,7 @@
 /*animacion de boton---------------------------------*/
 @keyframes sombra_pulso {
     0% {
-        box-shadow: 0 0 0 0 #20E2D780; 
+        box-shadow: 0 0 0 0 $botonesSombraPulso; 
     }
     100% {
         box-shadow: 0 0 0.8rem 1.6rem #20E2D700;

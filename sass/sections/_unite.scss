@@ -4,10 +4,11 @@
 
     .contenedorImgPrincipalUnite__imgPrincipal {
         @extend %images;
+        border-radius: 1.5rem;
     }
-
+    
     @media (min-width: 769px) {
-        .contenedorImgPrincipal__imgPrincipal--unite {
+        .contenedorImgPrincipalUnite__imgPrincipal {
             height: 75rem;
         }
     }
