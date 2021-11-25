@@ -7,10 +7,10 @@
     padding: 2rem;
     border-radius: 1rem;
 
-    fieldset {
+    .formulario__fieldset {
         border: none;
 
-        legend {
+        .formulario__legend {
             text-align: center;
             font-size: 1.8rem;
             font-family: $font1;
@@ -19,16 +19,11 @@
             text-transform: uppercase;
             margin-bottom: 2rem;
         }
-
-        /*el textarea*/
-        .campo:nth-child(7) {
-            grid-column: 1/4;
-        }
-
-        .campo {
+        
+        .formulario__contenedorCampos__campo {
             margin-bottom: 1rem;
-
-            label {
+            
+            .formulario__campo__label {
                 font-family: $font1;
                 font-weight: 400;
                 color: $blanco;
@@ -36,17 +31,8 @@
                 margin-bottom: 0.5rem;
                 display: block; 
             }
-
-            textarea {
-                height: 90%;
-                resize: none;
-            }
             
-            select {
-                background-color: $secundario;
-            }
-
-            .inputTexto {
+            .formulario__campo__inputTexto {
                 border-color: $primario;
                 font-family: $font1;
                 font-weight: 400;
@@ -57,17 +43,32 @@
             }
             
             //Borde de los input
-            .inputTexto:focus {
+            .formulario__campo__inputTexto:focus {
                 outline: none;
                 border: 2px solid $secundario;
                 box-shadow: 0 0 1rem $secundario;
             }
             
+            .formulario__campo__select {
+                background-color: $secundario;
+            }
         }
+
+        /*el textarea*/
+        .formulario__contenedorCampos__campo:nth-child(7) {
+            grid-column: 1/4;
+
+            .formulario__campo__inputTexto {
+                height: 90%;
+                resize: none;
+            }
+
+        }
+        
 
         /*para poner el formulario en tres columnas cuando es mas grande que 769 pixeles*/
         @media (min-width: 769px) {
-            .contenedorCampos {
+            .formulario__contenedorCampos {
                 display: grid;
                 grid-template-columns: 1fr 1fr 1fr;
                 grid-template-rows: auto auto 20rem;

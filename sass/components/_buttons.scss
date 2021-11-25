@@ -1,43 +1,45 @@
 /*Boton formulario----------------------------------------------------*/
-.boton {
-    position: relative;
-    padding: 1rem 3rem;
-    margin-top: 2rem;
-    background-color: $rojo;
-    font-family: $font6;
-    font-size: 2rem;
-    text-transform: uppercase;
-    font-weight: 700;
-    border-radius: 0.5rem;
-    color: $blanco;
-    background-color: transparent;
-    border: 2px solid $botones;
-    z-index: 0;
-    cursor: pointer;
-    overflow: hidden;
-}
-
-.boton:hover {
-    animation: sombra_pulso 1000ms 1;
-    background-color: $botones;
-    color: #434343;
-}
-
 .contenedorBotones {
-    /* display: flex; */
     @include flexbox(column, center, flex-end);
-}
 
-.widht100 {
-    width: 100%;
-}
+    .contenedorBotones__boton {
+        position: relative;
+        padding: 1rem 3rem;
+        margin-top: 2rem;
+        background-color: $rojo;
+        font-family: $font6;
+        font-size: 2rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        border-radius: 0.5rem;
+        color: $blanco;
+        background-color: transparent;
+        border: 2px solid $botones;
+        z-index: 0;
+        cursor: pointer;
+        overflow: hidden;
+    }
 
-@media (min-width: 769px) {
-    /*cuando es mas de 769 pixeles se resetea y el boton se muestra mas chico. es para verlo grande en movil*/
-    .widht100 {
-        width: auto;
+    .contenedorBotones__boton:hover {
+        animation: sombra_pulso 1000ms 1;
+        background-color: $botones;
+        color: #434343;
+    }
+    
+    .contenedorBotones__boton--widht100 {
+        width: 100%;
+    }
+
+    @media (min-width: 769px) {
+        /*cuando es mas de 769 pixeles se resetea y el boton se muestra mas chico. es para verlo grande en movil*/
+        .contenedorBotones__boton--widht100 {
+            width: auto;
+        }
     }
 }
+
+
+
 
 /*animacion de boton---------------------------------*/
 @keyframes sombra_pulso {

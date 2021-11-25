@@ -67,25 +67,26 @@
 
             <!-- Comienzo enlaces de navegación entre paginas-->
             <ul class="header__nav__enlaces ocultarEnlaces" id="header__nav__enlaces">
-                <li>
-                    <a class="header__nav__enlaces__a header__nav__enlaces__a--pse" href="index.html">Inicio</a>
+                <li class="header__nav__enlaces__li">
+                    <a class="header__nav__enlaces__a  header__nav__enlaces__a--pse" href="index.html">Inicio</a>
                 </li>
-                <li>
-                    <a class="header__nav__enlaces__a header__nav__enlaces__a--pse" href="nuestro-equipo.html">Nuestro
+                <li class="header__nav__enlaces__li">
+                    <a class="header__nav__enlaces__a  header__nav__enlaces__a--pse" href="nuestro-equipo.html">Nuestro
                         Equipo</a>
                 </li>
-                <li>
-                    <a class="header__nav__enlaces__a header__nav__enlaces__a--pse"
+                <li class="header__nav__enlaces__li">
+                    <a class="header__nav__enlaces__a  header__nav__enlaces__a--pse"
                         href="ubicaciones.html">Ubicaciones</a>
                 </li>
-                <li>
-                    <a class="header__nav__enlaces__a header__nav__enlaces__a--active" href="unite.html">Unite</a>
+                <li class="header__nav__enlaces__li">
+                    <a class="header__nav__enlaces__a  header__nav__enlaces__a--active" href="unite.html">Unite</a>
                 </li>
-                <li>
-                    <a class="header__nav__enlaces__a header__nav__enlaces__a--pse" href="contacto.html">Contacto</a>
+                <li class="header__nav__enlaces__li">
+                    <a class="header__nav__enlaces__a  header__nav__enlaces__a--pse" href="contacto.html">Contacto</a>
                 </li>
             </ul>
             <!-- Fin enlaces de navegación entre paginas-->
+
         </nav>
 
     </header>
@@ -119,32 +120,32 @@
 
                     <form class="formulario formulario--unite" action="https://formspree.io/f/mgedwvyp" method="POST" enctype="multipart/form-data">
 
-                        <fieldset>
+                        <fieldset class="formulario__fieldset">
         
-                            <legend>Cargá tu currículum</legend>
+                            <legend class="formulario__legend">Cargá tu currículum</legend>
         
                             <div>
         
-                                <div class="campo">
-                                    <label for="nombre">Nombre</label>
-                                    <input class="inputTexto" type="text" name="nombre" placeholder="Ingrese su nombre" id="nombre"
+                                <div class="formulario__contenedorCampos__campo">
+                                    <label class="formulario__campo__label" for="nombre">Nombre</label>
+                                    <input class="formulario__campo__inputTexto" type="text" name="nombre" placeholder="Ingrese su nombre" id="nombre"
                                         required>
                                 </div>
         
-                                <div class="campo">
-                                    <label for="email">E-Mail</label>
-                                    <input class="inputTexto" type="email" name="email"
+                                <div class="formulario__contenedorCampos__campo">
+                                    <label class="formulario__campo__label" for="email">E-Mail</label>
+                                    <input class="formulario__campo__inputTexto" type="email" name="email"
                                         placeholder="Ingrese su correo electrónico" id="email" required>
                                 </div>
         
                                 <div class="campoCurriculum">
-                                    <label for="adjuntarCurriculum" id="labelAdjuntarCV">Carga tu CV</label>
+                                    <label class="formulario__campo__label" for="adjuntarCurriculum" id="labelAdjuntarCV">Carga tu CV</label>
                                     <input class="adjuntarCurriculum" type="file" name="adjuntarCurriculum" accept=".doc,.docx,.pdf" id="adjuntarCurriculum" required>
                                 </div>
         
                             </div>
                             <div class="alinearDerecha contenedorBotones">
-                                <button class="boton widht100" type="submit">Enviar</button>
+                                <button class="contenedorBotones__boton contenedorBotones__boton--widht100" type="submit">Enviar</button>
                             </div>
 
                         </fieldset>
@@ -187,8 +188,7 @@
         </ul>
     </footer>
 
-
-    <script src="js/main.js"></script>
+    <script src="./js/main.js"></script>
 
 </body>
 

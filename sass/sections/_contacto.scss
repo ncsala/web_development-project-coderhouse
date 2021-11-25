@@ -3,7 +3,7 @@
 .contenedorImgContacto {
     @include wH(100%, 100%);
 
-    .contenedorImgContacto__imgContacto {
+    .contenedorImgContacto__img {
         @extend %images;
         height: 20rem;
     }

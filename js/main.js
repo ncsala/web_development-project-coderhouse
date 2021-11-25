@@ -1,14 +1,14 @@
 
-// ------------------- Activa Animacion Menu hamburguesa-------/
+// ------------------- Activa Animacion Menu hamburguesa-------//
 
-var hamburger = document.querySelector(".hamburger");
+let hamburger = document.querySelector(".hamburger");
 
 hamburger.addEventListener("click", function() 
 {
     hamburger.classList.toggle("is-active");
 });
 
-//----------------------------------------------------------- /
+//----------------------------------------------------------- //
 
 //--------------------Para Desplegar enlaces de menu hamburguesa-------------------///
 let boton = document.getElementById("header__nav__iconoHamb");  
@@ -20,7 +20,7 @@ boton.addEventListener("click",function(){
     if(contador == 0){
         enlaces.classList.remove('ocultarEnlaces');
         enlaces.className = ('header__nav__enlaces circuloEnlace'); //despliega los enlaces con una transicion en circulo
-        contador=1;// cuando esta en uno esta desplegados los enlaces del menu hamburguesa
+        contador=1;// cuando esta en uno estan desplegados los enlaces del menu hamburguesa
     }else{
         enlaces.classList.remove('circuloEnlace');
         enlaces.className = ('header__nav__enlaces ocultarEnlaces');//repliega los enlaces
@@ -38,7 +38,7 @@ window.addEventListener('resize', function(){
 })
 //-------------------------------------------------------///
 
-//-------------Typewriter------------------/ 
+//-------------Typewriter-------------------------------/ 
 let app = document.getElementById('sectionUbicacion__typewriter');
 
 let typewriter = new Typewriter(app, {
@@ -53,5 +53,4 @@ typewriter
     .deleteChars(10)
     .start();
 //----------------------------------------------------/ 
-
 

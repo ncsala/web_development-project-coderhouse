@@ -1,8 +1,9 @@
+@charset "UTF-8";
 /*Defino paleta de colores a usar*/
 /*Defino fuentes a usar*/
 /* Se agregan fuentes de google */
 @import url("https://fonts.googleapis.com/css2?family=Krub:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
-.fotosEquipo .fotosEquipo__item .fotosEquipo__item__img, .contenedorImgPrincipalUnite .contenedorImgPrincipalUnite__imgPrincipal, .contenedorImgContacto .contenedorImgContacto__imgContacto {
+.fotosEquipo .fotosEquipo__item .fotosEquipo__item__img, .contenedorImgPrincipalUnite .contenedorImgPrincipalUnite__imgPrincipal, .contenedorImgContacto .contenedorImgContacto__img {
   width: 100%;
   height: 100%;
   object-fit: cover; }
@@ -65,8 +66,12 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: normal;
+    /*Comienzo logo*/
     /*fin de logo-----------------------------------------------------*/
-    /*Navegacion principal para pantalla grande--------*/ }
+    /*enlaces páginas inicio */
+    /*enlaces páginas fin */
+    /*Navegacion principal para pantalla grande--------*/
+    /*fin navegación principal pantalla grande*/ }
     .header .header__nav .header__nav__logo .header__nav_logo__svg {
       width: 100%;
       height: 7rem; }
@@ -137,17 +142,19 @@
       transition: all 0.5s ease-out;
       /*transicion cuando se despliega menu hamburguesa*/
       background-color: #242121; }
-      .header .header__nav .header__nav__enlaces .header__nav__enlaces__a {
-        text-decoration: none;
-        color: #f8f3e3;
-        font-family: "Krub", sans-serif;
-        font-weight: 600;
-        font-size: 2rem; }
-      .header .header__nav .header__nav__enlaces .header__nav__enlaces__a:hover {
-        cursor: pointer;
-        color: #d83863; }
-      .header .header__nav .header__nav__enlaces .header__nav__enlaces__a--active {
-        color: #d83863; }
+      .header .header__nav .header__nav__enlaces .header__nav__enlaces__li {
+        margin-top: 3rem; }
+        .header .header__nav .header__nav__enlaces .header__nav__enlaces__li .header__nav__enlaces__a {
+          text-decoration: none;
+          color: #f8f3e3;
+          font-family: "Krub", sans-serif;
+          font-weight: 600;
+          font-size: 2rem; }
+        .header .header__nav .header__nav__enlaces .header__nav__enlaces__li .header__nav__enlaces__a:hover {
+          cursor: pointer;
+          color: #d83863; }
+        .header .header__nav .header__nav__enlaces .header__nav__enlaces__li .header__nav__enlaces__a--active {
+          color: #d83863; }
     @media (min-width: 769px) {
       .header .header__nav .header__nav__iconoHamb {
         display: none; }
@@ -160,40 +167,42 @@
         justify-content: space-around;
         align-items: center;
         background-color: transparent;
-        transition: all 0.1s ease-out;
-        /*animacion linea hacia la izquierda*/
-        /*animacion linea hacia la derecha*/
-        /*muestra las lineas horizontales en los enlaces*/ }
-        .header .header__nav .header__nav__enlaces .header__nav__enlaces__a {
-          --clippy1: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
-          --clippy2: polygon(0 0, 0 0, 0 100%, 0% 100%); }
-        .header .header__nav .header__nav__enlaces .header__nav__enlaces__a:hover {
-          cursor: pointer;
-          color: #d83863; }
-        .header .header__nav .header__nav__enlaces .header__nav__enlaces__a--pse::before {
-          content: "";
-          display: block;
-          background: #d83863;
-          width: 100%;
-          margin-bottom: 0.4rem;
-          height: 0.3rem;
-          clip-path: var(--clippy1);
-          transition: clip-path 0.4s; }
-        .header .header__nav .header__nav__enlaces .header__nav__enlaces__a--pse::after {
-          content: "";
-          display: block;
-          background: #d83863;
-          width: 100%;
-          margin-top: 0.4rem;
-          height: 0.3rem;
-          clip-path: var(--clippy2);
-          transition: clip-path 0.4s; }
-        .header .header__nav .header__nav__enlaces .header__nav__enlaces__a--pse:hover:before {
-          --clippy1: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-          color: #d83863; }
-        .header .header__nav .header__nav__enlaces .header__nav__enlaces__a--pse:hover:after {
-          --clippy2: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-          color: #d83863; } }
+        transition: all 0.1s ease-out; }
+        .header .header__nav .header__nav__enlaces .header__nav__enlaces__li {
+          margin-top: initial;
+          /*animacion linea hacia la izquierda*/
+          /*animacion linea hacia la derecha*/
+          /*muestra las lineas horizontales en los enlaces*/ }
+          .header .header__nav .header__nav__enlaces .header__nav__enlaces__li .header__nav__enlaces__a {
+            --clippy1: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+            --clippy2: polygon(0 0, 0 0, 0 100%, 0% 100%); }
+          .header .header__nav .header__nav__enlaces .header__nav__enlaces__li .header__nav__enlaces__a:hover {
+            cursor: pointer;
+            color: #d83863; }
+          .header .header__nav .header__nav__enlaces .header__nav__enlaces__li .header__nav__enlaces__a--pse::before {
+            content: "";
+            display: block;
+            background: #d83863;
+            width: 100%;
+            margin-bottom: 0.4rem;
+            height: 0.3rem;
+            clip-path: var(--clippy1);
+            transition: clip-path 0.4s; }
+          .header .header__nav .header__nav__enlaces .header__nav__enlaces__li .header__nav__enlaces__a--pse::after {
+            content: "";
+            display: block;
+            background: #d83863;
+            width: 100%;
+            margin-top: 0.4rem;
+            height: 0.3rem;
+            clip-path: var(--clippy2);
+            transition: clip-path 0.4s; }
+          .header .header__nav .header__nav__enlaces .header__nav__enlaces__li .header__nav__enlaces__a--pse:hover:before {
+            --clippy1: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            color: #d83863; }
+          .header .header__nav .header__nav__enlaces .header__nav__enlaces__li .header__nav__enlaces__a--pse:hover:after {
+            --clippy2: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            color: #d83863; } }
 
 @media screen and (max-width: 769px) {
   /*para desplegar y ocultar los enlaces del menu hamburguesa en forma circular*/
@@ -214,42 +223,38 @@
 
 /*FIN HEADER---------------------------------------------------------------------------------------------------------------------------------------------------------*/
 /*Boton formulario----------------------------------------------------*/
-.boton {
-  position: relative;
-  padding: 1rem 3rem;
-  margin-top: 2rem;
-  background-color: #d83863;
-  font-family: "Krub", sans-serif;
-  font-size: 2rem;
-  text-transform: uppercase;
-  font-weight: 700;
-  border-radius: 0.5rem;
-  color: #f8f3e3;
-  background-color: transparent;
-  border: 2px solid #20e2d7;
-  z-index: 0;
-  cursor: pointer;
-  overflow: hidden; }
-
-.boton:hover {
-  animation: sombra_pulso 1000ms 1;
-  background-color: #20e2d7;
-  color: #434343; }
-
 .contenedorBotones {
-  /* display: flex; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-end; }
-
-.widht100 {
-  width: 100%; }
-
-@media (min-width: 769px) {
-  /*cuando es mas de 769 pixeles se resetea y el boton se muestra mas chico. es para verlo grande en movil*/
-  .widht100 {
-    width: auto; } }
+  .contenedorBotones .contenedorBotones__boton {
+    position: relative;
+    padding: 1rem 3rem;
+    margin-top: 2rem;
+    background-color: #d83863;
+    font-family: "Krub", sans-serif;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 0.5rem;
+    color: #f8f3e3;
+    background-color: transparent;
+    border: 2px solid #20e2d7;
+    z-index: 0;
+    cursor: pointer;
+    overflow: hidden; }
+  .contenedorBotones .contenedorBotones__boton:hover {
+    animation: sombra_pulso 1000ms 1;
+    background-color: #20e2d7;
+    color: #434343; }
+  .contenedorBotones .contenedorBotones__boton--widht100 {
+    width: 100%; }
+  @media (min-width: 769px) {
+    .contenedorBotones {
+      /*cuando es mas de 769 pixeles se resetea y el boton se muestra mas chico. es para verlo grande en movil*/ }
+      .contenedorBotones .contenedorBotones__boton--widht100 {
+        width: auto; } }
 
 /*animacion de boton---------------------------------*/
 @keyframes sombra_pulso {
@@ -267,11 +272,11 @@
   margin: 0 auto;
   padding: 2rem;
   border-radius: 1rem; }
-  .formulario fieldset {
+  .formulario .formulario__fieldset {
     border: none;
     /*el textarea*/
     /*para poner el formulario en tres columnas cuando es mas grande que 769 pixeles*/ }
-    .formulario fieldset legend {
+    .formulario .formulario__fieldset .formulario__legend {
       text-align: center;
       font-size: 1.8rem;
       font-family: "PT Sans", sans-serif;
@@ -279,23 +284,16 @@
       color: #f8c25c;
       text-transform: uppercase;
       margin-bottom: 2rem; }
-    .formulario fieldset .campo:nth-child(7) {
-      grid-column: 1/4; }
-    .formulario fieldset .campo {
+    .formulario .formulario__fieldset .formulario__contenedorCampos__campo {
       margin-bottom: 1rem; }
-      .formulario fieldset .campo label {
+      .formulario .formulario__fieldset .formulario__contenedorCampos__campo .formulario__campo__label {
         font-family: "PT Sans", sans-serif;
         font-weight: 400;
         color: #f8f3e3;
         font-weight: 700;
         margin-bottom: 0.5rem;
         display: block; }
-      .formulario fieldset .campo textarea {
-        height: 90%;
-        resize: none; }
-      .formulario fieldset .campo select {
-        background-color: #f8c25c; }
-      .formulario fieldset .campo .inputTexto {
+      .formulario .formulario__fieldset .formulario__contenedorCampos__campo .formulario__campo__inputTexto {
         border-color: #242121;
         font-family: "PT Sans", sans-serif;
         font-weight: 400;
@@ -303,31 +301,40 @@
         border: none;
         padding: 1.5rem;
         border-radius: 0.5rem; }
-      .formulario fieldset .campo .inputTexto:focus {
+      .formulario .formulario__fieldset .formulario__contenedorCampos__campo .formulario__campo__inputTexto:focus {
         outline: none;
         border: 2px solid #f8c25c;
         box-shadow: 0 0 1rem #f8c25c; }
+      .formulario .formulario__fieldset .formulario__contenedorCampos__campo .formulario__campo__select {
+        background-color: #f8c25c; }
+    .formulario .formulario__fieldset .formulario__contenedorCampos__campo:nth-child(7) {
+      grid-column: 1/4; }
+      .formulario .formulario__fieldset .formulario__contenedorCampos__campo:nth-child(7) .formulario__campo__inputTexto {
+        height: 90%;
+        resize: none; }
     @media (min-width: 769px) {
-      .formulario fieldset .contenedorCampos {
+      .formulario .formulario__fieldset .formulario__contenedorCampos {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: auto auto 20rem;
         column-gap: 1rem; } }
 
 /*fin formulario------------------------------------------------------------*/
-.error404 {
+.body-error404 {
   background-image: url(../images/ubicaciones/AB5I6799_NikkiTo.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   background-color: #f8f3e3; }
-  .error404 main {
+  .body-error404 .body-error404_main {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center; }
-    .error404 main section {
+    .body-error404 .body-error404_main .body-error404_main_section {
       display: flex;
+      flex-direction: row;
       justify-content: center;
       align-items: center;
       background-color: rgba(255, 255, 255, 0.3);
@@ -338,31 +345,27 @@
       max-width: 100%;
       max-height: 100%;
       padding: 2rem 4rem; }
-      .error404 main section h1 {
+      .body-error404 .body-error404_main .body-error404_main_section .body-error404_section__h1 {
         font-family: "Krub", sans-serif;
         font-weight: 700;
         font-size: 10.5rem; }
-      .error404 main section h2 {
+      .body-error404 .body-error404_main .body-error404_main_section .body-error404_section__h2 {
         font-family: "Krub", sans-serif;
         font-weight: 700;
         font-size: 4rem; }
-      .error404 main section p {
+      .body-error404 .body-error404_main .body-error404_main_section .body-error404_section__p {
         font-family: "Krub", sans-serif;
         font-weight: 400;
         font-size: 2.5rem; }
-        .error404 main section p a {
+        .body-error404 .body-error404_main .body-error404_main_section .body-error404_section__p .body-error404_section__p__a {
           font-family: "Krub", sans-serif;
           font-weight: 500;
           font-size: 3rem;
           color: #f8f3e3;
           text-decoration: none;
           padding: 0 1rem; }
-        .error404 main section p a:hover {
+        .body-error404 .body-error404_main .body-error404_main_section .body-error404_section__p .body-error404_section__p__a:hover {
           color: #d83863; }
-    @media (min-width: 769px) {
-      .error404 main section {
-        width: 70%;
-        height: 70%; } }
 
 /*GENERAL----------------------------------------------------------------------------------------------------------------------------*/
 /*Configuro para utilizar REM en lugar de PX, 1 rem = 10 px------*/
@@ -418,7 +421,7 @@ h1 {
     .slider .slider__slides .transparenciaNegrita {
       position: absolute;
       width: 100%;
-      height: 100%;
+      height: 100vh;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
@@ -537,7 +540,7 @@ h1 {
     font-family: "PT Sans", sans-serif, Charter, Georgia, serif;
     font-weight: 500;
     font-size: 1.5rem;
-    text-align: left;
+    text-align: center;
     line-height: 3rem; }
   @media (min-width: 769px) {
     .contenedorTextoPrincipal .contenedorTextoPrincipal__p {
@@ -817,7 +820,7 @@ h1 {
 .contenedorImgContacto {
   width: 100%;
   height: 100%; }
-  .contenedorImgContacto .contenedorImgContacto__imgContacto {
+  .contenedorImgContacto .contenedorImgContacto__img {
     height: 20rem; }
 
 /*FIN PAGINA CONTACTO----------------------------------------------------*/

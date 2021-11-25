@@ -11,6 +11,7 @@
         @include wH(100%, 100%);
         @include flexbox(row, space-between, normal);
         
+        /*Comienzo logo*/
         .header__nav__logo {
 
             .header__nav_logo__svg {
@@ -100,6 +101,7 @@
             z-index: 110;
         }
 
+        /*enlaces páginas inicio */
         .header__nav__enlaces {
             position: fixed;
             top:0;
@@ -110,23 +112,28 @@
             transition: all 0.5s ease-out; /*transicion cuando se despliega menu hamburguesa*/
             background-color: $primario;
 
-            .header__nav__enlaces__a {
-                text-decoration: none;
-                color: $blanco;
-                font-family: $font6;
-                font-weight: 600;
-                font-size: 2rem;
-            }
+            .header__nav__enlaces__li {
+            margin-top: 3rem;            
 
-            .header__nav__enlaces__a:hover {
-                cursor: pointer;
-                color: $rojo;
-            }
+                .header__nav__enlaces__a {
+                    text-decoration: none;
+                    color: $blanco;
+                    font-family: $font6;
+                    font-weight: 600;
+                    font-size: 2rem;
+                }
 
-            .header__nav__enlaces__a--active {
-                color: $rojo;
+                .header__nav__enlaces__a:hover {
+                    cursor: pointer;
+                    color: $rojo;
+                }
+
+                .header__nav__enlaces__a--active {
+                    color: $rojo;
+                }
             }
-        }
+        }/*enlaces páginas fin */
+
 
         /*Navegacion principal para pantalla grande--------*/
         @media (min-width: 769px) {
@@ -140,52 +147,56 @@
                 @include flexbox(row, space-around, center);
                 background-color: transparent;
                 transition: all 0.1s ease-out;
+
+                .header__nav__enlaces__li {
+                    margin-top: initial;       
                 
-                .header__nav__enlaces__a {
-                    --clippy1: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
-                    --clippy2: polygon(0 0, 0 0, 0 100%, 0% 100%);
-                }
-                
-                .header__nav__enlaces__a:hover {
-                    cursor: pointer;
-                    color: $rojo;
-                }
-                
-                /*animacion linea hacia la izquierda*/
-                .header__nav__enlaces__a--pse::before {
-                    content: "";
-                    display: block;
-                    background: $rojo;
-                    width: 100%;
-                    margin-bottom: 0.4rem;
-                    height: 0.3rem;
-                    clip-path: var(--clippy1);
-                    transition: clip-path 0.4s;
-                }
-                
-                /*animacion linea hacia la derecha*/
-                .header__nav__enlaces__a--pse::after {
-                    content: "";
-                    display: block;
-                    background: $rojo;
-                    width: 100%;
-                    margin-top: 0.4rem;
-                    height: 0.3rem;
-                    clip-path: var(--clippy2);
-                    transition: clip-path 0.4s;
-                }
-                
-                /*muestra las lineas horizontales en los enlaces*/
-                .header__nav__enlaces__a--pse:hover:before {
-                    --clippy1: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-                    color: $rojo;
-                }
-                .header__nav__enlaces__a--pse:hover:after {
-                    --clippy2: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-                    color: $rojo;
+                    .header__nav__enlaces__a {
+                        --clippy1: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+                        --clippy2: polygon(0 0, 0 0, 0 100%, 0% 100%);
+                    }
+                    
+                    .header__nav__enlaces__a:hover {
+                        cursor: pointer;
+                        color: $rojo;
+                    }
+                    
+                    /*animacion linea hacia la izquierda*/
+                    .header__nav__enlaces__a--pse::before {
+                        content: "";
+                        display: block;
+                        background: $rojo;
+                        width: 100%;
+                        margin-bottom: 0.4rem;
+                        height: 0.3rem;
+                        clip-path: var(--clippy1);
+                        transition: clip-path 0.4s;
+                    }
+                    
+                    /*animacion linea hacia la derecha*/
+                    .header__nav__enlaces__a--pse::after {
+                        content: "";
+                        display: block;
+                        background: $rojo;
+                        width: 100%;
+                        margin-top: 0.4rem;
+                        height: 0.3rem;
+                        clip-path: var(--clippy2);
+                        transition: clip-path 0.4s;
+                    }
+                    
+                    /*muestra las lineas horizontales en los enlaces*/
+                    .header__nav__enlaces__a--pse:hover:before {
+                        --clippy1: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+                        color: $rojo;
+                    }
+                    .header__nav__enlaces__a--pse:hover:after {
+                        --clippy2: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+                        color: $rojo;
+                    }
                 }
             }
-        }
+        } /*fin navegación principal pantalla grande*/
     }
 }
 

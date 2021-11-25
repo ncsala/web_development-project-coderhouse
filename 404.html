@@ -22,7 +22,7 @@
     <title>FoodHack | Hackeamos los sabores, y tus sentidos</title>
 </head>
 
-<body class="error404">
+<body class="body-error404">
 
     <header class="header">
 
@@ -64,22 +64,22 @@
 
             <!-- Comienzo enlaces de navegación entre paginas-->
             <ul class="header__nav__enlaces ocultarEnlaces" id="header__nav__enlaces">
-                <li>
-                    <a class="header__nav__enlaces__a header__nav__enlaces__a--pse" href="index.html">Inicio</a>
+                <li class="header__nav__enlaces__li">
+                    <a class="header__nav__enlaces__a  header__nav__enlaces__a--pse" href="index.html">Inicio</a>
                 </li>
-                <li>
-                    <a class="header__nav__enlaces__a header__nav__enlaces__a--pse" href="nuestro-equipo.html">Nuestro
+                <li class="header__nav__enlaces__li">
+                    <a class="header__nav__enlaces__a  header__nav__enlaces__a--pse" href="nuestro-equipo.html">Nuestro
                         Equipo</a>
                 </li>
-                <li>
-                    <a class="header__nav__enlaces__a header__nav__enlaces__a--pse"
+                <li class="header__nav__enlaces__li">
+                    <a class="header__nav__enlaces__a  header__nav__enlaces__a--pse"
                         href="ubicaciones.html">Ubicaciones</a>
                 </li>
-                <li>
-                    <a class="header__nav__enlaces__a header__nav__enlaces__a--pse" href="unite.html">Unite</a>
+                <li class="header__nav__enlaces__li">
+                    <a class="header__nav__enlaces__a  header__nav__enlaces__a--pse" href="unite.html">Unite</a>
                 </li>
-                <li>
-                    <a class="header__nav__enlaces__a header__nav__enlaces__a--pse" href="contacto.html">Contacto</a>
+                <li class="header__nav__enlaces__li">
+                    <a class="header__nav__enlaces__a  header__nav__enlaces__a--pse" href="contacto.html">Contacto</a>
                 </li>
             </ul>
             <!-- Fin enlaces de navegación entre paginas-->
@@ -88,15 +88,17 @@
 
     </header>
 
-    <main>
+    <main class="body-error404_main">
 
-        <section>
-            <div class="e404">
-                <h1>404</h1>
-                <h2>Oops! parece que alguien se comió nuestra página</h2>
-                <p class="error">No queremos que nadie se quede sin comida, así que te sugerimos que vuelvas al <a href="index.html" class="link">
+        <section class="body-error404_main_section">
+            <div>
+                <h1 class=body-error404_section__h1>404</h1>
+                <h2 class=body-error404_section__h2>Oops! parece que alguien se comió nuestra página</h2>
+                <p class=body-error404_section__p>No queremos que nadie se quede sin comida, así que te sugerimos que vuelvas al 
+                    <a class=body-error404_section__p__a href="index.html" class="link">
                         HOME
-                </a> y pruebes encontrar allí lo que buscás.</p>
+                    </a> y pruebes encontrar allí lo que buscás.
+                </p>
             </div>
         </section>
 
@@ -129,6 +131,9 @@
             </li>
         </ul>
     </footer>
+
+    <!--Mi archivo js-->
+    <script src="./js/main.js"></script>
 
 </body>
 

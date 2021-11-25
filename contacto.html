@@ -66,22 +66,22 @@
 
             <!-- Comienzo enlaces de navegación entre paginas-->
             <ul class="header__nav__enlaces ocultarEnlaces" id="header__nav__enlaces">
-                <li>
-                    <a class="header__nav__enlaces__a header__nav__enlaces__a--pse" href="index.html">Inicio</a>
+                <li class="header__nav__enlaces__li">
+                    <a class="header__nav__enlaces__a  header__nav__enlaces__a--pse" href="index.html">Inicio</a>
                 </li>
-                <li>
-                    <a class="header__nav__enlaces__a header__nav__enlaces__a--pse" href="nuestro-equipo.html">Nuestro
+                <li class="header__nav__enlaces__li">
+                    <a class="header__nav__enlaces__a  header__nav__enlaces__a--pse" href="nuestro-equipo.html">Nuestro
                         Equipo</a>
                 </li>
-                <li>
-                    <a class="header__nav__enlaces__a header__nav__enlaces__a--pse"
+                <li class="header__nav__enlaces__li">
+                    <a class="header__nav__enlaces__a  header__nav__enlaces__a--pse"
                         href="ubicaciones.html">Ubicaciones</a>
                 </li>
-                <li>
-                    <a class="header__nav__enlaces__a header__nav__enlaces__a--pse" href="unite.html">Unite</a>
+                <li class="header__nav__enlaces__li">
+                    <a class="header__nav__enlaces__a  header__nav__enlaces__a--pse" href="unite.html">Unite</a>
                 </li>
-                <li>
-                    <a class="header__nav__enlaces__a header__nav__enlaces__a--active" href="contacto.html">Contacto</a>
+                <li class="header__nav__enlaces__li">
+                    <a class="header__nav__enlaces__a  header__nav__enlaces__a--active" href="contacto.html">Contacto</a>
                 </li>
             </ul>
             <!-- Fin enlaces de navegación entre paginas-->
@@ -90,12 +90,13 @@
 
     </header>
 
+
     <main>
 
         <section>
 
             <div class="contenedorImgContacto">
-                <img src="images/contact/imagenPricipalContacto.jpg" class="contenedorImgContacto__imgContacto"
+                <img src="images/contact/imagenPricipalContacto.jpg" class="contenedorImgContacto__img"
                     alt="Imagen Principal, Restaurante">
             </div>
 
@@ -104,58 +105,57 @@
             <!--Formulario-->
             <form class="formulario" action="https://formspree.io/f/mgedwvyp" method="POST">
 
-                <fieldset>
+                <fieldset class="formulario__fieldset">
 
-                    <legend>Contactános llenando todos los campos</legend>
+                    <legend class="formulario__legend">Contactános llenando todos los campos</legend>
 
-                    <div class="contenedorCampos">
+                    <div class="formulario__contenedorCampos">
 
-                        <div class="campo">
-                            <label for="nombre">Nombre</label>
-                            <input class="inputTexto" type="text" name="nombre" placeholder="Ingrese su nombre"
+                        <div class="formulario__contenedorCampos__campo">
+                            <label class="formulario__campo__label" for="nombre">Nombre</label>
+                            <input class="formulario__campo__inputTexto" type="text" name="nombre" placeholder="Ingrese su nombre"
                                 id="nombre" required>
                         </div>
 
-                        <div class="campo">
-                            <label for="apellido">Apellido</label>
-                            <input class="inputTexto" type="text" name="apellido" id="apellido"
+                        <div class="formulario__contenedorCampos__campo">
+                            <label class="formulario__campo__label" for="apellido">Apellido</label>
+                            <input class="formulario__campo__inputTexto" type="text" name="apellido" id="apellido"
                                 placeholder="Ingrese su apellido">
                         </div>
 
-                        <div class="campo">
-                            <label for="email">E-Mail</label>
-                            <input class="inputTexto" type="email" name="email"
+                        <div class="formulario__contenedorCampos__campo">
+                            <label class="formulario__campo__label" for="email">E-Mail</label>
+                            <input class="formulario__campo__inputTexto" type="email" name="email"
                                 placeholder="Ingrese su correo electrónico" id="email" required>
                         </div>
 
-                        <div class="campo">
-                            <label for="telefono">Teléfono</label>
-                            <input class="inputTexto" type="tel" name="telefono" pattern="[0-9]{7,25}"
+                        <div class="formulario__contenedorCampos__campo">
+                            <label class="formulario__campo__label" for="telefono">Teléfono</label>
+                            <input class="formulario__campo__inputTexto" type="tel" name="telefono" pattern="[0-9]{7,25}"
                                 placeholder="Ingrese su móvil o un teléfono fijo" id="telefono" required>
                         </div>
 
-                        <div class="campo">
-                            <label for="ciudad">Ciudad</label>
-                            <input class="inputTexto" type="text" name="ciudad"
+                        <div class="formulario__contenedorCampos__campo">
+                            <label class="formulario__campo__label" for="ciudad">Ciudad</label>
+                            <input class="formulario__campo__inputTexto" type="text" name="ciudad"
                                 placeholder="Ingrese ciudad de residencia" id="ciudad">
                         </div>
 
-                        <div class="campo">
-                            <label for="asunto">Asunto</label>
-                            <select class="inputTexto" name="asunto" id="asunto">
-                                <option class="inputTexto" value="sugerencia">Sugerencia</option>
-                                <option class="inputTexto" value="consulta">Consulta</option>
-                                <option class="inputTexto" value="critica">Crítica</option>
-                                <option class="inputTexto" value="reclamo">Reclamo</option>
-                                <option class="inputTexto" value="elogio">Elogio</option>
-                                <option class="inputTexto" value="otros">Otros</option>
+                        <div class="formulario__contenedorCampos__campo">
+                            <label class="formulario__campo__label" for="asunto">Asunto</label>
+                            <select class="formulario__campo__select formulario__campo__inputTexto" name="asunto" id="asunto">
+                                <option class="formulario__campo__inputTexto" value="sugerencia">Sugerencia</option>
+                                <option class="formulario__campo__inputTexto" value="consulta">Consulta</option>
+                                <option class="formulario__campo__inputTexto" value="critica">Crítica</option>
+                                <option class="formulario__campo__inputTexto" value="reclamo">Reclamo</option>
+                                <option class="formulario__campo__inputTexto" value="elogio">Elogio</option>
+                                <option class="formulario__campo__inputTexto" value="otros">Otros</option>
                             </select>
-
                         </div>
 
-                        <div class="campo">
-                            <label for="mensaje">Mensaje</label>
-                            <textarea class="inputTexto" name="mensaje"
+                        <div class="formulario__contenedorCampos__campo">
+                            <label class="formulario__campo__label" for="mensaje">Mensaje</label>
+                            <textarea class="formulario__campo__inputTexto" name="mensaje"
                                 placeholder="Ingrese un mensaje que quiera hacernos llegar" id="mensaje"
                                 required></textarea>
                         </div>
@@ -165,9 +165,8 @@
 
                     <!-- Botones -->
                     <div class="contenedorBotones">
-                        <button class="boton widht100" type="submit">Enviar</button>
+                        <button class="contenedorBotones__boton contenedorBotones__boton--widht100" type="submit">Enviar</button>
                     </div>
-
 
                 </fieldset>
 
@@ -205,7 +204,7 @@
         </ul>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="./js/main.js"></script>
 
 </body>
 
