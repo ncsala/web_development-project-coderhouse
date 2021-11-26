@@ -12,9 +12,7 @@
 
         .formulario__legend {
             text-align: center;
-            font-size: 1.8rem;
-            font-family: $font1;
-            font-weight: 700;
+            @include fonts($font1, $tamano5, 700);
             color: $secundario;
             text-transform: uppercase;
             margin-bottom: 2rem;
@@ -24,18 +22,15 @@
             margin-bottom: 1rem;
             
             .formulario__campo__label {
-                font-family: $font1;
-                font-weight: 400;
+                @include fonts($font1 , $tamano5, 700);
                 color: $blanco;
-                font-weight: 700;
                 margin-bottom: 0.5rem;
                 display: block; 
             }
             
             .formulario__campo__inputTexto {
                 border-color: $primario;
-                font-family: $font1;
-                font-weight: 400;
+                @include fonts($font1 , $tamano3, 400);
                 width: 100%;
                 border: none;
                 padding: 1.5rem;

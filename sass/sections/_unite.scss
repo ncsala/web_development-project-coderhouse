@@ -16,9 +16,7 @@
 
 .textoFormularioUnite p {
     width: 95%;
-    font-family: $font1;
-    font-weight: 500;
-    font-size: 2.1rem;
+    @include fonts(($font1, Charter, Georgia, serif), $tamano7, 500);
     margin: 2rem auto 3rem auto;
 }
 
@@ -41,10 +39,8 @@
     }
 
     #labelAdjuntarCV {
-        font-family: $font1;
+        @include fonts(($font1, Charter, Georgia, serif), $tamano1, 700);
         color: $blanco;
-        font-weight: 700;
-        font-size: 1.4rem;
         margin-bottom: 0.5rem;
         margin-top: 1.5rem;
         padding: 1.5rem 4rem;

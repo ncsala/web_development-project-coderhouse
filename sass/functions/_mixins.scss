@@ -10,3 +10,9 @@
     height: $height;
 }
 
+@mixin fonts($ff, $fs, $fw) {
+    font-family: $ff; 
+    font-size: $fs;
+    font-weight: $fw;
+}
+

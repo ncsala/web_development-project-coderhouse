@@ -21,33 +21,25 @@
             padding: 2rem 4rem;
             
             .body-error404_section__h1 {
-                font-family: $font6;
-                font-weight: 700;
-                font-size: 10.5rem;
+                @include fonts($font2 , $tamano16, 700);
             }
     
             .body-error404_section__h2 {
-                font-family: $font6;
-                font-weight: 700;
-                font-size: 4rem;
+                @include fonts($font2, $tamano14, 700);
             }
     
             .body-error404_section__p {
-                font-family: $font6;
-                font-weight: 400;
-                font-size: 2.5rem;
+                @include fonts($font2 , $tamano10, 400);
     
                 .body-error404_section__p__a {
-                    font-family: $font6;
-                    font-weight: 500;
-                    font-size: 3rem;
+                    @include fonts($font2 , $tamano12, 500);
                     color: $blanco;
                     text-decoration: none;
                     padding: 0 1rem;
                 }
     
                 .body-error404_section__p__a:hover {
-                    color: $rojo;
+                    color: $terciario;
                 }
             }
         }

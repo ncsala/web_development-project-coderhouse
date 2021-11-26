@@ -29,9 +29,9 @@
             top: 0;
             left: 0;
             @include wH(100%, 100%);
+            @include flexbox(column, center, center);
             color: $blanco;
             text-align: center;
-            @include flexbox(column, center, center);
             transform: translateX(100%);
             cursor: pointer;
             transition: transform 0.3s ease-in-out;
@@ -43,9 +43,7 @@
 
         .fotosEquipo__item__p {
             margin: 0.4rem;
-            font-family: $font6;
-            font-weight: 500;
-            font-size: 1.4rem;
+            @include fonts(($font2, Charter, Georgia, serif), $tamano1, 500);
         }
     }
 

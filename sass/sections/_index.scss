@@ -32,17 +32,13 @@
         
             .slider__titulos__h1 {
                 margin: 0;
-                font-family: $font1;
-                font-size: 3.4rem;
-                font-weight: 700;
+                @include fonts($font2 , $tamano13, 700);
                 color: $blanco;
             }
         
             .slider__titulos__h2 {
                 margin: 0;
-                font-family: $font1;
-                font-size: 2.8rem;
-                font-weight: 700;
+                @include fonts($font2 , $tamano11, 700);
                 color: $blanco;
             }
         
@@ -61,11 +57,11 @@
         
             @media (min-width: 769px) {
                 .slider__titulos__h1 {
-                    font-size: 5rem;
+                    font-size: $tamano15;
                 }
         
                 .slider__titulos__h2 {
-                    font-size: 2.8rem;
+                    font-size: $tamano11;
                 }
             }
         }
@@ -174,9 +170,7 @@
         border-bottom-right-radius: 2rem;
         border-top: $primario 0.7rem solid;
         border-bottom: $primario 0.7rem solid;
-        font-family: $font1, Charter, Georgia, serif;
-        font-weight: 500;
-        font-size: 1.5rem;
+        @include fonts(($font1, Charter, Georgia, serif), $tamano2, 500);
         text-align: center;
         line-height: 3rem;
     }
@@ -205,10 +199,8 @@
 .sectionPlatillos {
     .sectionPlatillos__h3 {
         text-align: center;
-        font-family: $font1;
+        @include fonts(($font1, Charter, Georgia, serif), $tamano13, 600);
         margin-bottom: 2rem;
-        font-size: 3.4rem;
-        font-weight: 600;
         color: $azulOscuro;
     }
     
@@ -220,15 +212,13 @@
         overflow: hidden;
 
         .sectionPlatillos__txt {
-            font-size: 1.5rem;
+            @include fonts(($font1, Charter, Georgia, serif), $tamano2, 500);
             color: $blanco;
-            font-family: $font1;
             background-color: $primario;
 
             .sectionPlatillos__txt__h4 {
-                font-size: 2.2rem;
-                color: $rojo;
-                font-family: $font1;
+                @include fonts(($font1, Charter, Georgia, serif), $tamano8, 600);
+                color: $terciario;
             }
         }
 
@@ -242,7 +232,6 @@
 
         .sectionPlatillos__img {
             @include wH(100%, 100%);
-            // object-position: 5rem;
         }
 
         @media (min-width: 769px) {

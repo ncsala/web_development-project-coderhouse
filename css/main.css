@@ -3,6 +3,7 @@
 /*Defino fuentes a usar*/
 /* Se agregan fuentes de google */
 @import url("https://fonts.googleapis.com/css2?family=Krub:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+/*Tamaños*/
 .fotosEquipo .fotosEquipo__item .fotosEquipo__item__img, .contenedorImgPrincipalUnite .contenedorImgPrincipalUnite__imgPrincipal, .contenedorImgContacto .contenedorImgContacto__img {
   width: 100%;
   height: 100%;
@@ -13,7 +14,9 @@
   margin-top: 8rem;
   padding: 1rem;
   color: #f8f3e3;
+  font-family: "Krub", sans-serif;
   font-size: 3rem;
+  font-weight: 700;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -22,7 +25,7 @@
   background-color: #242121; }
   .footer .footer__p {
     text-align: center;
-    font-family: "Krub", sans-serif;
+    font-family: "Krub", sans-serif, Charter, Georgia, serif;
     font-size: 2rem;
     font-weight: 500;
     color: #f8f3e3;
@@ -122,8 +125,8 @@
     -webkit-transform: scale(1, 1) translate(2rem, 0);
     transform: scale(1, 1) translate(2rem, 0); } }
     .header .header__nav .header__nav__logo .header__logo__txt {
-      font-size: 2.5rem;
       font-family: "Krub", sans-serif;
+      font-size: 2.5rem;
       font-weight: 700;
       font-style: italic; }
     .header .header__nav .header__nav__iconoHamb {
@@ -148,8 +151,8 @@
           text-decoration: none;
           color: #f8f3e3;
           font-family: "Krub", sans-serif;
-          font-weight: 600;
-          font-size: 2rem; }
+          font-size: 2rem;
+          font-weight: 600; }
         .header .header__nav .header__nav__enlaces .header__nav__enlaces__li .header__nav__enlaces__a:hover {
           cursor: pointer;
           color: #d83863; }
@@ -233,10 +236,10 @@
     padding: 1rem 3rem;
     margin-top: 2rem;
     background-color: #d83863;
-    font-family: "Krub", sans-serif;
+    font-family: "PT Sans", sans-serif;
     font-size: 2rem;
-    text-transform: uppercase;
     font-weight: 700;
+    text-transform: uppercase;
     border-radius: 0.5rem;
     color: #f8f3e3;
     background-color: transparent;
@@ -278,8 +281,8 @@
     /*para poner el formulario en tres columnas cuando es mas grande que 769 pixeles*/ }
     .formulario .formulario__fieldset .formulario__legend {
       text-align: center;
-      font-size: 1.8rem;
       font-family: "PT Sans", sans-serif;
+      font-size: 1.8rem;
       font-weight: 700;
       color: #f8c25c;
       text-transform: uppercase;
@@ -288,14 +291,15 @@
       margin-bottom: 1rem; }
       .formulario .formulario__fieldset .formulario__contenedorCampos__campo .formulario__campo__label {
         font-family: "PT Sans", sans-serif;
-        font-weight: 400;
-        color: #f8f3e3;
+        font-size: 1.8rem;
         font-weight: 700;
+        color: #f8f3e3;
         margin-bottom: 0.5rem;
         display: block; }
       .formulario .formulario__fieldset .formulario__contenedorCampos__campo .formulario__campo__inputTexto {
         border-color: #242121;
         font-family: "PT Sans", sans-serif;
+        font-size: 1.6rem;
         font-weight: 400;
         width: 100%;
         border: none;
@@ -347,20 +351,20 @@
       padding: 2rem 4rem; }
       .body-error404 .body-error404_main .body-error404_main_section .body-error404_section__h1 {
         font-family: "Krub", sans-serif;
-        font-weight: 700;
-        font-size: 10.5rem; }
+        font-size: 10.5rem;
+        font-weight: 700; }
       .body-error404 .body-error404_main .body-error404_main_section .body-error404_section__h2 {
         font-family: "Krub", sans-serif;
-        font-weight: 700;
-        font-size: 4rem; }
+        font-size: 4rem;
+        font-weight: 700; }
       .body-error404 .body-error404_main .body-error404_main_section .body-error404_section__p {
         font-family: "Krub", sans-serif;
-        font-weight: 400;
-        font-size: 2.5rem; }
+        font-size: 2.5rem;
+        font-weight: 400; }
         .body-error404 .body-error404_main .body-error404_main_section .body-error404_section__p .body-error404_section__p__a {
           font-family: "Krub", sans-serif;
-          font-weight: 500;
           font-size: 3rem;
+          font-weight: 500;
           color: #f8f3e3;
           text-decoration: none;
           padding: 0 1rem; }
@@ -396,12 +400,13 @@ body {
 h1,
 h2,
 h3 {
-  font-family: "Krub", sans-serif; }
+  font-family: "Krub", sans-serif;
+  font-size: 3.4rem;
+  font-weight: 700; }
 
 h1 {
   margin-top: 2rem;
   margin-bottom: 2rem;
-  font-size: 3.5rem;
   text-align: center;
   color: #000000; }
 
@@ -437,13 +442,13 @@ h1 {
       margin: 0; }
       .slider .slider__slides .slider__slides__titulos .slider__titulos__h1 {
         margin: 0;
-        font-family: "PT Sans", sans-serif;
+        font-family: "Krub", sans-serif;
         font-size: 3.4rem;
         font-weight: 700;
         color: #f8f3e3; }
       .slider .slider__slides .slider__slides__titulos .slider__titulos__h2 {
         margin: 0;
-        font-family: "PT Sans", sans-serif;
+        font-family: "Krub", sans-serif;
         font-size: 2.8rem;
         font-weight: 700;
         color: #f8f3e3; }
@@ -538,8 +543,8 @@ h1 {
     border-top: #242121 0.7rem solid;
     border-bottom: #242121 0.7rem solid;
     font-family: "PT Sans", sans-serif, Charter, Georgia, serif;
-    font-weight: 500;
     font-size: 1.5rem;
+    font-weight: 500;
     text-align: center;
     line-height: 3rem; }
   @media (min-width: 769px) {
@@ -560,10 +565,10 @@ h1 {
 
 .sectionPlatillos .sectionPlatillos__h3 {
   text-align: center;
-  font-family: "PT Sans", sans-serif;
-  margin-bottom: 2rem;
+  font-family: "PT Sans", sans-serif, Charter, Georgia, serif;
   font-size: 3.4rem;
   font-weight: 600;
+  margin-bottom: 2rem;
   color: #06273a; }
 
 .sectionPlatillos .sectionPlatillos__platos {
@@ -573,14 +578,16 @@ h1 {
   grid-template-rows: fr 1fr 1fr 1fr 1fr 1fr;
   overflow: hidden; }
   .sectionPlatillos .sectionPlatillos__platos .sectionPlatillos__txt {
+    font-family: "PT Sans", sans-serif, Charter, Georgia, serif;
     font-size: 1.5rem;
+    font-weight: 500;
     color: #f8f3e3;
-    font-family: "PT Sans", sans-serif;
     background-color: #242121; }
     .sectionPlatillos .sectionPlatillos__platos .sectionPlatillos__txt .sectionPlatillos__txt__h4 {
+      font-family: "PT Sans", sans-serif, Charter, Georgia, serif;
       font-size: 2.2rem;
-      color: #d83863;
-      font-family: "PT Sans", sans-serif; }
+      font-weight: 600;
+      color: #d83863; }
   .sectionPlatillos .sectionPlatillos__platos .sectionPlatillos__txt--sopa {
     grid-row: 4; }
   .sectionPlatillos .sectionPlatillos__platos .sectionPlatillos__txt .centrar {
@@ -639,12 +646,12 @@ h1 {
       left: 0;
       width: 100%;
       height: 100%;
-      color: #f8f3e3;
-      text-align: center;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      color: #f8f3e3;
+      text-align: center;
       transform: translateX(100%);
       cursor: pointer;
       transition: transform 0.3s ease-in-out; }
@@ -652,9 +659,9 @@ h1 {
       margin-bottom: 0.4rem; }
     .fotosEquipo .fotosEquipo__item .fotosEquipo__item__p {
       margin: 0.4rem;
-      font-family: "Krub", sans-serif;
-      font-weight: 500;
-      font-size: 1.4rem; }
+      font-family: "Krub", sans-serif, Charter, Georgia, serif;
+      font-size: 1.4rem;
+      font-weight: 500; }
   .fotosEquipo .fotosEquipo__item:hover .fotosEquipo__item__hover {
     transform: translateX(0%); }
 
@@ -683,10 +690,10 @@ h1 {
 #sectionUbicacion__typewriter {
   margin-top: 0.5rem;
   margin-bottom: 4rem;
-  font-family: "PT Sans", sans-serif;
-  color: #f8c25c;
+  font-family: "Krub", sans-serif, Charter, Georgia, serif;
   font-size: 2.8rem;
-  font-weight: 600; }
+  font-weight: 600;
+  color: #f8c25c; }
 
 @media (min-width: 769px) {
   .sectionUbicacion {
@@ -713,24 +720,25 @@ h1 {
     color: #f8f3e3;
     height: 44rem; }
     .sectionSucursal .sectionSucursal__contenedor .sectionSucursal__listado_h3 {
+      font-family: "PT Sans", sans-serif, Charter, Georgia, serif;
       font-size: 2.3rem;
       font-weight: 500;
-      font-family: "PT Sans", sans-serif;
       color: #d83863;
       margin-bottom: 2rem;
       margin-top: 2rem; }
     .sectionSucursal .sectionSucursal__contenedor .sectionSucursal__listado__ul {
       padding: 0;
       margin: 1rem;
-      font-family: "PT Sans", sans-serif;
+      font-family: "PT Sans", sans-serif, Charter, Georgia, serif;
       font-size: 2.2rem;
+      font-weight: 400;
       margin-top: 1.5rem;
       list-style: none; }
       .sectionSucursal .sectionSucursal__contenedor .sectionSucursal__listado__ul .sectionSucursal__listado_h4 {
         margin-top: 4rem;
+        font-family: "PT Sans", sans-serif, Charter, Georgia, serif;
         font-size: 2.3rem;
         font-weight: 500;
-        font-family: "PT Sans", sans-serif;
         color: #f8c25c; }
       .sectionSucursal .sectionSucursal__contenedor .sectionSucursal__listado__ul .sectionSucursal__listado__ul__ul {
         list-style: none; }
@@ -767,9 +775,9 @@ h1 {
 
 .textoFormularioUnite p {
   width: 95%;
-  font-family: "PT Sans", sans-serif;
-  font-weight: 500;
+  font-family: "PT Sans", sans-serif, Charter, Georgia, serif;
   font-size: 2.1rem;
+  font-weight: 500;
   margin: 2rem auto 3rem auto; }
 
 @media (min-width: 769px) {
@@ -787,10 +795,10 @@ h1 {
     position: absolute;
     z-index: -1; }
   .formulario--unite #labelAdjuntarCV {
-    font-family: "PT Sans", sans-serif;
-    color: #f8f3e3;
-    font-weight: 700;
+    font-family: "PT Sans", sans-serif, Charter, Georgia, serif;
     font-size: 1.4rem;
+    font-weight: 700;
+    color: #f8f3e3;
     margin-bottom: 0.5rem;
     margin-top: 1.5rem;
     padding: 1.5rem 4rem;

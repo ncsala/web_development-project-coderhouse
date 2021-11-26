@@ -27,10 +27,8 @@
 #sectionUbicacion__typewriter {
     margin-top: 0.5rem;
     margin-bottom: 4rem;
-    font-family: $font1;
+    @include fonts(($font2, Charter, Georgia, serif), $tamano11, 600);
     color: $secundario;
-    font-size: 2.8rem;
-    font-weight: 600;
 }
 
 @media (min-width: 769px) {
@@ -62,10 +60,8 @@
         
         .sectionSucursal__listado_h3
         {
-            font-size: 2.3rem;
-            font-weight: 500;
-            font-family: $font1;
-            color: $rojo;
+            @include fonts(($font1, Charter, Georgia, serif), $tamano9, 500);
+            color: $terciario;
             margin-bottom: 2rem;
             margin-top: 2rem;
         }
@@ -73,16 +69,13 @@
         .sectionSucursal__listado__ul {
             padding: 0;
             margin: 1rem;
-            font-family: $font1;
-            font-size: 2.2rem;
+            @include fonts(($font1, Charter, Georgia, serif), $tamano8, 400);
             margin-top: 1.5rem;
             list-style: none;
             
             .sectionSucursal__listado_h4 {
                 margin-top: 4rem;
-                font-size: 2.3rem;
-                font-weight: 500;
-                font-family: $font1;
+                @include fonts(($font1, Charter, Georgia, serif), $tamano9, 500);
                 color: $secundario;
             }
             

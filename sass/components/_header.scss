@@ -51,7 +51,7 @@
             }
 
             .txtColor .header__logo__animForma:nth-child(5) {
-                fill: $rojo;
+                fill: $terciario
             }
 
             .header__logo__sombra {
@@ -90,9 +90,7 @@
             }
 
             .header__logo__txt {
-                font-size: 2.5rem;
-                font-family: $font6;
-                font-weight: 700;
+                @include fonts($font2 , $tamano10, 700);
                 font-style: italic;
             }
         } /*fin de logo-----------------------------------------------------*/
@@ -118,18 +116,16 @@
                 .header__nav__enlaces__a {
                     text-decoration: none;
                     color: $blanco;
-                    font-family: $font6;
-                    font-weight: 600;
-                    font-size: 2rem;
+                    @include fonts($font2 , $tamano6, 600);
                 }
 
                 .header__nav__enlaces__a:hover {
                     cursor: pointer;
-                    color: $rojo;
+                    color: $terciario;
                 }
 
                 .header__nav__enlaces__a--active {
-                    color: $rojo;
+                    color: $terciario;
                 }
             }
         }/*enlaces páginas fin */
@@ -158,14 +154,14 @@
                     
                     .header__nav__enlaces__a:hover {
                         cursor: pointer;
-                        color: $rojo;
+                        color: $terciario;
                     }
                     
                     /*animacion linea hacia la izquierda*/
                     .header__nav__enlaces__a--pse::before {
                         content: "";
                         display: block;
-                        background: $rojo;
+                        background: $terciario;
                         width: 100%;
                         margin-bottom: 0.4rem;
                         height: 0.3rem;
@@ -177,7 +173,7 @@
                     .header__nav__enlaces__a--pse::after {
                         content: "";
                         display: block;
-                        background: $rojo;
+                        background: $terciario;
                         width: 100%;
                         margin-top: 0.4rem;
                         height: 0.3rem;
@@ -188,11 +184,11 @@
                     /*muestra las lineas horizontales en los enlaces*/
                     .header__nav__enlaces__a--pse:hover:before {
                         --clippy1: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-                        color: $rojo;
+                        color: $terciario;
                     }
                     .header__nav__enlaces__a--pse:hover:after {
                         --clippy2: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-                        color: $rojo;
+                        color: $terciario;
                     }
                 }
             }

@@ -6,11 +6,9 @@
         position: relative;
         padding: 1rem 3rem;
         margin-top: 2rem;
-        background-color: $rojo;
-        font-family: $font6;
-        font-size: 2rem;
+        background-color: $terciario;
+        @include fonts($font1 , $tamano6, 700);
         text-transform: uppercase;
-        font-weight: 700;
         border-radius: 0.5rem;
         color: $blanco;
         background-color: transparent;

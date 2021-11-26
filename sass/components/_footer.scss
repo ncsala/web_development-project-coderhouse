@@ -3,16 +3,14 @@
     margin-top: 8rem;
     padding: 1rem;
     color: $blanco;
-    font-size: 3rem;
+    @include fonts($font2 , $tamano12, 700);
     @include flexbox(column, center, center);
     width: 100%;
     background-color: $primario;
 
     .footer__p {
         text-align: center;
-        font-family: $font6;
-        font-size: 2rem;
-        font-weight: 500;
+        @include fonts(($font2, Charter, Georgia, serif), $tamano6, 500);
         color: $blanco;
         margin-bottom: 0.7rem;
     }    
